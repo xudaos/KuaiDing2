@@ -1,0 +1,734 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh-cn">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>快订-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
+
+<meta name="baidu-site-verification" content="zcXqQTs5gr" />
+<link rel="shortcut icon" href="<%=path%>/pages/KD/images/200.png" />
+
+<link href="<%=path%>/pages/KD/css/common.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/pages/KD/css/msgbox.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/pages/KD/css/bootstrap_modal.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+var path = '';
+</style>
+
+<link href="<%=path%>/pages/KD/css/foodtogo.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="top">
+	<div class="container">
+    	<div class="top-left">
+        	<div>
+        		<a class="a1" href="javascript:;">收藏网站</a>
+            </div>
+            <div class="dz">
+                <a class="a2" id="city_addr" href="javascript:;">北京市[更换]</a>
+                <ul id="city_list">
+                	
+                		<li><a data-id="110100" href="javascript:;">北京市</a></li>
+                	
+                		<li><a data-id="120100" href="javascript:;">天津市</a></li>
+                	
+                		<li><a data-id="130100" href="javascript:;">石家庄市</a></li>
+                	
+                		<li><a data-id="130300" href="javascript:;">秦皇岛市</a></li>
+                	
+                		<li><a data-id="130400" href="javascript:;">邯郸市</a></li>
+                	
+                		<li><a data-id="130500" href="javascript:;">邢台市</a></li>
+                	
+                		<li><a data-id="130600" href="javascript:;">保定市</a></li>
+                	
+                		<li><a data-id="130900" href="javascript:;">沧州市</a></li>
+                	
+                		<li><a data-id="131000" href="javascript:;">廊坊市</a></li>
+                	
+                		<li><a data-id="131100" href="javascript:;">衡水市</a></li>
+                	
+                		<li><a data-id="140200" href="javascript:;">大同市</a></li>
+                	
+                		<li><a data-id="140400" href="javascript:;">长治市</a></li>
+                	
+                		<li><a data-id="140500" href="javascript:;">晋城市</a></li>
+                	
+                		<li><a data-id="140700" href="javascript:;">晋中市</a></li>
+                	
+                		<li><a data-id="140800" href="javascript:;">运城市</a></li>
+                	
+                		<li><a data-id="141000" href="javascript:;">临汾市</a></li>
+                	
+                		<li><a data-id="150100" href="javascript:;">呼和浩特市</a></li>
+                	
+                		<li><a data-id="150400" href="javascript:;">赤峰市</a></li>
+                	
+                		<li><a data-id="150900" href="javascript:;">乌兰察布市</a></li>
+                	
+                		<li><a data-id="210100" href="javascript:;">沈阳市</a></li>
+                	
+                		<li><a data-id="210200" href="javascript:;">大连市</a></li>
+                	
+                		<li><a data-id="210300" href="javascript:;">鞍山市</a></li>
+                	
+                		<li><a data-id="210400" href="javascript:;">抚顺市</a></li>
+                	
+                		<li><a data-id="210500" href="javascript:;">本溪市</a></li>
+                	
+                		<li><a data-id="210700" href="javascript:;">锦州市</a></li>
+                	
+                		<li><a data-id="211100" href="javascript:;">盘锦市</a></li>
+                	
+                		<li><a data-id="220100" href="javascript:;">长春市</a></li>
+                	
+                		<li><a data-id="220200" href="javascript:;">吉林市</a></li>
+                	
+                		<li><a data-id="220800" href="javascript:;">白城市</a></li>
+                	
+                		<li><a data-id="230100" href="javascript:;">哈尔滨市</a></li>
+                	
+                		<li><a data-id="230200" href="javascript:;">齐齐哈尔市</a></li>
+                	
+                		<li><a data-id="230300" href="javascript:;">鸡西市</a></li>
+                	
+                		<li><a data-id="230400" href="javascript:;">鹤岗市</a></li>
+                	
+                		<li><a data-id="230500" href="javascript:;">双鸭山市</a></li>
+                	
+                		<li><a data-id="230600" href="javascript:;">大庆市</a></li>
+                	
+                		<li><a data-id="230700" href="javascript:;">伊春市</a></li>
+                	
+                		<li><a data-id="230800" href="javascript:;">佳木斯市</a></li>
+                	
+                		<li><a data-id="230900" href="javascript:;">七台河市</a></li>
+                	
+                		<li><a data-id="231000" href="javascript:;">牡丹江市</a></li>
+                	
+                		<li><a data-id="231100" href="javascript:;">黑河市</a></li>
+                	
+                		<li><a data-id="231200" href="javascript:;">绥化市</a></li>
+                	
+                		<li><a data-id="320100" href="javascript:;">南京市</a></li>
+                	
+                		<li><a data-id="320200" href="javascript:;">无锡市</a></li>
+                	
+                		<li><a data-id="320300" href="javascript:;">徐州市</a></li>
+                	
+                		<li><a data-id="320400" href="javascript:;">常州市</a></li>
+                	
+                		<li><a data-id="320500" href="javascript:;">苏州市</a></li>
+                	
+                		<li><a data-id="330100" href="javascript:;">杭州市</a></li>
+                	
+                		<li><a data-id="330200" href="javascript:;">宁波市</a></li>
+                	
+                		<li><a data-id="330300" href="javascript:;">温州市</a></li>
+                	
+                		<li><a data-id="330700" href="javascript:;">金华市</a></li>
+                	
+                		<li><a data-id="331100" href="javascript:;">丽水市</a></li>
+                	
+                		<li><a data-id="340100" href="javascript:;">合肥市</a></li>
+                	
+                		<li><a data-id="340500" href="javascript:;">马鞍山市</a></li>
+                	
+                		<li><a data-id="340800" href="javascript:;">安庆市</a></li>
+                	
+                		<li><a data-id="341200" href="javascript:;">阜阳市</a></li>
+                	
+                		<li><a data-id="350100" href="javascript:;">福州市</a></li>
+                	
+                		<li><a data-id="350500" href="javascript:;">泉州市</a></li>
+                	
+                		<li><a data-id="360100" href="javascript:;">南昌市</a></li>
+                	
+                		<li><a data-id="360200" href="javascript:;">景德镇市</a></li>
+                	
+                		<li><a data-id="360300" href="javascript:;">萍乡市</a></li>
+                	
+                		<li><a data-id="360400" href="javascript:;">九江市</a></li>
+                	
+                		<li><a data-id="360500" href="javascript:;">新余市</a></li>
+                	
+                		<li><a data-id="361000" href="javascript:;">抚州市</a></li>
+                	
+                		<li><a data-id="361100" href="javascript:;">上饶市</a></li>
+                	
+                		<li><a data-id="370100" href="javascript:;">济南市</a></li>
+                	
+                		<li><a data-id="370200" href="javascript:;">青岛市</a></li>
+                	
+                		<li><a data-id="370300" href="javascript:;">淄博市</a></li>
+                	
+                		<li><a data-id="370400" href="javascript:;">枣庄市</a></li>
+                	
+                		<li><a data-id="370500" href="javascript:;">东营市</a></li>
+                	
+                		<li><a data-id="370600" href="javascript:;">烟台市</a></li>
+                	
+                		<li><a data-id="370700" href="javascript:;">潍坊市</a></li>
+                	
+                		<li><a data-id="370800" href="javascript:;">济宁市</a></li>
+                	
+                		<li><a data-id="370900" href="javascript:;">泰安市</a></li>
+                	
+                		<li><a data-id="371000" href="javascript:;">威海市</a></li>
+                	
+                		<li><a data-id="371100" href="javascript:;">日照市</a></li>
+                	
+                		<li><a data-id="371300" href="javascript:;">临沂市</a></li>
+                	
+                		<li><a data-id="371500" href="javascript:;">聊城市</a></li>
+                	
+                		<li><a data-id="371600" href="javascript:;">滨州市</a></li>
+                	
+                		<li><a data-id="410100" href="javascript:;">郑州市</a></li>
+                	
+                		<li><a data-id="410200" href="javascript:;">开封市</a></li>
+                	
+                		<li><a data-id="410300" href="javascript:;">洛阳市</a></li>
+                	
+                		<li><a data-id="410400" href="javascript:;">平顶山市</a></li>
+                	
+                		<li><a data-id="410500" href="javascript:;">安阳市</a></li>
+                	
+                		<li><a data-id="410700" href="javascript:;">新乡市</a></li>
+                	
+                		<li><a data-id="410800" href="javascript:;">焦作市</a></li>
+                	
+                		<li><a data-id="410900" href="javascript:;">濮阳市</a></li>
+                	
+                		<li><a data-id="411000" href="javascript:;">许昌市</a></li>
+                	
+                		<li><a data-id="411200" href="javascript:;">三门峡市</a></li>
+                	
+                		<li><a data-id="411300" href="javascript:;">南阳市</a></li>
+                	
+                		<li><a data-id="411400" href="javascript:;">商丘市</a></li>
+                	
+                		<li><a data-id="411500" href="javascript:;">信阳市</a></li>
+                	
+                		<li><a data-id="411600" href="javascript:;">周口市</a></li>
+                	
+                		<li><a data-id="411700" href="javascript:;">驻马店市</a></li>
+                	
+                		<li><a data-id="420100" href="javascript:;">武汉市</a></li>
+                	
+                		<li><a data-id="420600" href="javascript:;">襄樊市</a></li>
+                	
+                		<li><a data-id="429000" href="javascript:;">省直辖行政单位</a></li>
+                	
+                		<li><a data-id="430100" href="javascript:;">长沙市</a></li>
+                	
+                		<li><a data-id="430600" href="javascript:;">岳阳市</a></li>
+                	
+                		<li><a data-id="440100" href="javascript:;">广州市</a></li>
+                	
+                		<li><a data-id="440300" href="javascript:;">深圳市</a></li>
+                	
+                		<li><a data-id="440800" href="javascript:;">湛江市</a></li>
+                	
+                		<li><a data-id="450100" href="javascript:;">南宁市</a></li>
+                	
+                		<li><a data-id="450200" href="javascript:;">柳州市</a></li>
+                	
+                		<li><a data-id="450300" href="javascript:;">桂林市</a></li>
+                	
+                		<li><a data-id="510100" href="javascript:;">成都市</a></li>
+                	
+                		<li><a data-id="520100" href="javascript:;">贵阳市</a></li>
+                	
+                		<li><a data-id="520400" href="javascript:;">安顺市</a></li>
+                	
+                		<li><a data-id="522400" href="javascript:;">毕节地区</a></li>
+                	
+                		<li><a data-id="530100" href="javascript:;">昆明市</a></li>
+                	
+                		<li><a data-id="610100" href="javascript:;">西安市</a></li>
+                	
+                		<li><a data-id="610400" href="javascript:;">咸阳市</a></li>
+                	
+                		<li><a data-id="620600" href="javascript:;">武威市</a></li>
+                	
+                		<li><a data-id="620700" href="javascript:;">张掖市</a></li>
+                	
+                		<li><a data-id="630100" href="javascript:;">西宁市</a></li>
+                	
+                		<li><a data-id="632100" href="javascript:;">海东地区</a></li>
+                	
+                		<li><a data-id="640100" href="javascript:;">银川市</a></li>
+                	
+                		<li><a data-id="650100" href="javascript:;">乌鲁木齐市</a></li>
+                	
+                		<li><a data-id="659000" href="javascript:;">省直辖行政单位</a></li>
+                	
+                </ul>
+                </div>
+            <div style="padding-left: 10px; margin-top: 1px;">
+            	<a target="_blank" href="http://www.youmeishi.com.cn">紫光美食云</a>
+            </div>
+            <br class="clear" />
+        </div>
+        <ul id="top-right" class="top-right">
+        	 <li class="li1">
+            	<a class="a3" href="javascript:;">食客中心</a>&nbsp;|
+            	<ul>
+                    <li><a target="_blank" href="/register-process/">用户帮助</a></li>
+                    <li><a href="javascript:;">售后服务</a></li>
+                    <li><a target="_blank"  href="http://chat.looyu.com/chat/chat/p.do?c=52642&f=117797&g=82368">在线客服</a></li>
+                    <li><a href="javascript:;">建议反馈</a></li>
+                </ul>
+            </li>
+            <li style="width: 88px;" class="li1">
+            	<a class="a3" href="javascript:;">商户中心</a>&nbsp;|
+            	<ul>
+            		<li><a target="_blank" href="http://platformucb.youmeishi.cn">商户入口</a></li>
+            		<!-- <li><a target="_blank" href="http://info.unisapp.cn/Agents/">代理商入口</a></li> -->
+                    <li><a target="_blank" href="http://platformucb.youmeishi.cn/company/reggg.do">免费开店</a></li>
+                    <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/page/download-center.html">下载中心</a></li>
+                    <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/page/video.jsp">培训中心</a></li>
+                    <li><a target="_blank"  href="http://chat.looyu.com/chat/chat/p.do?c=52642&f=117797&g=82368">在线客服</a></li>
+                </ul>
+            </li>
+            <li style="width: 88px;" class="li1">
+            	<a class="a3" href="javascript:;">代理中心</a>&nbsp;|
+            	<ul>
+            		<li><a target="_blank" href="http://info.unisapp.cn/Agents/">代理商入口</a></li>
+                    <li><a target="_blank" href="http://www.youmeishi.com.cn/ymsSite/downloads/紫光有美食·云餐饮管理系统agent.zip">软件下载</a></li>
+                </ul>
+            </li>
+            <li class="li1">
+            	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
+            	<ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="wm.html">外卖送餐</a></li>
+                    <li><a href="yd.html">预订点餐</a></li>
+                    <li><a href="coupons.html">优惠折扣</a></li>
+                    <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
+                    <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
+                </ul>
+            </li>
+            <li class="li1">
+            	<a class="a4" href="javascript:;"><span class="span1"></span>手机客户端<span class="span2"></span></a>
+            	<ul class="top-right-ewm">
+                    <li>
+                    	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                    	<div>
+                            <p>手机客户端</p>
+                            <a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载 </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                    	<div>
+                            <p>二维码</p>
+                            <a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <br class="clear" />
+        </ul>
+<p class="top-right">
+        	
+				<span>您好，欢迎来到快订！</span>
+	            <a target="_blank" href="../Login/login.html">[登录]</a>
+	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|
+			
+			
+        </p>
+        <br class="clear" />
+    </div>
+</div>
+<div class="header">
+	<div class="container">
+    	<div class="logo">
+        	<p>一网扫尽天下美食</p>
+        	<a href="index.html"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
+        </div>
+        <div class="search">
+        	<div id="top_search_form">
+                <input class="input1" type="text" id="top_search_text" placeholder="请输入美食分类、区域位置、商圈等关键字" value="" name="keywords"/>
+                <input class="input2" type="button" value="搜索" id="top_search_btn"/>
+            </div>
+            <p id="top_search_link">
+            	<a target="_blank" title="湘间小灶" href="javascript:;">湘间小灶</a>
+                <a target="_blank" title="北京土著部落" href="javascript:;">北京土著部落</a>
+                <a target="_blank" title="波斯波利斯餐厅" href="javascript:;">波斯波利斯餐厅</a>
+                <a target="_blank" title="佐译茶餐厅" href="javascript:;">佐译茶餐厅</a>
+            </p>
+        </div>
+        <div class="order">
+        	<a class="a1" href="/Order/submit/">查看购物车
+        		<span>0</span>
+                
+            </a>
+            <a class="a2" href="/Center/order/">我的订单</a>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+	<div class="container clearfix">
+    	<ul class="nav-ul clearfix">
+        	<li><a  href="index.html">首页</a></li>
+            <li><a class="ahover" href="wm.html">外卖送餐</a></li>
+            <li><a  href="yd.html">预订点餐</a></li>
+            <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
+            <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
+        </ul>
+        <div class="shangquan">
+        	<p>热门商圈：</p>
+            <ul>
+            	
+            		<li><a href="/BusinessCircle/1/">五道口</a></li>
+            	
+            		<li><a href="/BusinessCircle/2/">中关村</a></li>
+            	
+            		<li><a href="/BusinessCircle/11/">西直门</a></li>
+            	     
+            		<li><a href="/BusinessCircle/4/">马家堡</a></li>       	
+            		<li><a href="/BusinessCircle/3/">工体</a></li>
+                    
+            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>
+            	
+            		<li><a href="/BusinessCircle/5/">广安门</a></li>
+            	
+            		<li><a href="/BusinessCircle/13/">魏公村</a></li>
+            	
+            </ul>
+            <a class="qbsq" href="/businesscircle/">全部商圈</a>
+        </div>
+    </div>
+</div>
+
+<div class="foodtogo">
+	<div class="container">
+    	<div class="left">
+        	<img class="img1" src="<%=path%>/pages/KD/images/foodtogo-img.png" />
+            <div class="foodtogo-main"><!-- <input class="input2" type="button" value="积分商城" /> -->
+                <div id="load_map" class="map">
+                	
+                </div>
+                <input class="input1" type="button" value="叫外卖" />
+                <div class="foodtogo-search">
+                	<form>
+                    	<!-- <input class="input4" type="button" value="火速查找" /> -->
+                    	<input class="input3" id="suggestId" type="text"  />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+        	<div class="div1">
+            	<img src="<%=path%>/pages/KD/images/banner-app.png" />
+                <div>
+                    <p>快订手机客户端</p>
+                    <a class="down" target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
+                </div>
+            </div>
+            <div class="div1">
+            	<img src="<%=path%>/pages/KD/images/footer-ewm.png" />
+                <div>
+                    <p>快订微信点餐</p>
+                    <p class="p1">随时掌握美食新动态</p>
+                </div>
+            </div>
+            <img class="div1" src="<%=path%>/pages/KD/images/booking-table-right.png" />
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+    	<div class="footer-about">
+        	<div>
+            	<p class="p1">关于我们</p>
+                <ul>
+                	<li><a target="_blank" href="/introduction/">快订简介</a></li>
+                    <li><a target="_blank" href="/contact/">联系我们</a></li>
+                    <li><a target="_blank" href="/partners/">合作伙伴</a></li>
+                    <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/RecType/ConListPre.do">诚聘英才</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="p2">加入我们</p>
+                <ul>
+                	<li><a target="_blank" href="http://platformucb.youmeishi.cn">商户入口</a></li>
+                    <li><a target="_blank" href="http://info.unisapp.cn/Agents/">代理商入口</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="p3">网站条款</p>
+                <ul>
+                	<li><a target="_blank" href="/member/">会员条款</a></li>
+                    <li><a target="_blank" href="/bbsguide/">社区指南</a></li>
+                    <li><a target="_blank" href="/copyright/">版权声明</a></li>
+                    <li><a target="_blank" href="/disclaimer/">免责声明</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="p4">帮助中心</p>
+                <ul>
+                	<li><a target="_blank" href="/register-process/">用户帮助</a></li>
+                    <li><a href="javascript:;">商家帮助</a></li>
+                    <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/page/video.jsp">培训中心</a></li>
+                    <li><a target="_blank" href="http://chat.looyu.com/chat/chat/p.do?c=52642&f=117797&g=82368" target="_blank">在线客服</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="p5">关注我们</p>
+                <ul>
+                	<li><a target="_blank" href="http://weibo.com/youmeishi">新浪微博</a></li>
+                	<li><a target="_blank" href="http://www.youmeishi.com.cn">紫光美食云</a></li>
+                </ul>
+            </div>
+            <div class="div1">
+            	<p>快订微信</p>
+                <img src="<%=path%>/pages/KD/images/footer-ewm.png" />
+                <a href="javascript:;">扫描二维码</a>
+                <a href="javascript:;">关注快订微信</a>
+            </div>
+            <div class="div1">
+            	<p>快订APP</p>
+                <img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                <a href="javascript:;">扫描二维码</a>
+                <a href="javascript:;">下载快订APP</a>
+            </div>
+            <div class="div1">
+            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/KD/images/footer-sj.png" /></a>
+            </div>
+        </div>
+        <div class="blogroll">
+        	<span>友情链接：</span>
+        	<a target="_blank" href="http://www.thunis.com/">紫光股份有限公司</a>
+            <a target="_blank" href="http://www.tusholdings.com/">启迪控股</a>
+            <a target="_blank" href="http://www.tsinghua.edu.cn/publish/newthu/index.html">清华大学</a>
+            <a target="_blank" href="http://www.unisapp.cn/">Unis紫光</a>
+        </div>
+        <div class="div1">
+            <p><a target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">京ICP备15022253号</a>&nbsp;Copyright&nbsp;&copy;&nbsp;2014&nbsp;紫光美食云(北京)信息服务有限公司.All&nbsp;rights&nbsp;reserved</p>
+            <p>公司地址：北京市海淀区清华大学紫光大楼&nbsp;&nbsp;邮编：100084&nbsp;&nbsp;电话：010-62789898&nbsp;&nbsp;传真：010-62547462</p>
+        </div>
+    </div>
+</div>
+<div id="go_top"><a href="javascript:;" title="返回顶部">返回顶部</a></div>
+
+<!-- 弹框提示 -->
+<div id="bj_div" style="top:0;left:0;position:absolute;z-index:10000;background:#666;filter:alpha(opacity=50);opacity:0.5; display:none;"></div>
+<div id="msg_box" class="msg-box">
+	<div class="p1"><a id="close_msg" href="javascript:;">&times;</a>快订提醒您！</div>
+	<p class="p2" id="msg_info"></p>
+    <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
+    <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>
+</div>
+<script type="text/javascript">
+var collectCompany = '';
+//收藏方法
+function collectp(n,t){
+	if(true){
+		$(this).pointMsg({msg:"登录后可添加收藏！"});
+	}else{
+		$.post(path+"/Function/CollectProduct.do", {no:n,type:t}, function(data) {
+        	if(data=='1'){
+        		var call = function(){
+        			if(t=='1'){$("#c_"+n).text("已收藏");}
+        			$.fn.closePublicBox(0);
+        		};
+        		$(this).alertMsg({msg:"收藏成功！",callback:call});
+				
+			}else if(data=='2'){
+				$(this).pointMsg({msg:"您已收藏成功！"});
+			}else{
+				$(this).pointMsg({msg:"收藏失败,请稍后再试！"});
+			}
+     	},"text");
+	}
+}
+</script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
+<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jGSddAohMsoaGeprPfMtHDIm"></script>
+<script language="javascript" type="text/javascript">
+// 百度地图API功能
+var marker1;//循环餐厅 标注
+var loc_marker;//定位标注
+var map = new BMap.Map("load_map");    // 创建Map实例
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+//map.addControl(new BMap.MapTypeControl());	//添加地图类型控件
+map.enableScrollWheelZoom(true);	//缩放地图
+map.enableDragging();   //开启拖拽
+map.setCurrentCity("北京");	// 设置地图显示的城市 此项是必须设置的
+
+
+var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+//var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+var top_left_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
+/*
+缩放控件type有四种类型:
+BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；
+BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；
+BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮
+*/
+//添加图例 比例尺
+map.addControl(top_left_control);        
+map.addControl(top_left_navigation);  
+
+//地图点击事件  点击定位
+/* map.addEventListener("click", function(e){
+	if(!e.overlay){  
+    	//alert(e.point.lng + ", " + e.point.lat);
+		map.clearOverlays();    //清除地图上所有覆盖物
+		addMarker(e.point);
+		
+		//加载店铺信息
+		dataStoreByPoint(e.point);
+    }
+}); */
+
+var ac = new BMap.Autocomplete({"input" : "suggestId","location" : map});    //建立一个自动完成的对象
+
+ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+	var str = "";
+	var _value = e.fromitem.value;
+	var value = "";
+	if (e.fromitem.index > -1) {
+		value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+	}    
+	str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+	
+	value = "";
+	if (e.toitem.index > -1) {
+		_value = e.toitem.value;
+		value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+	}    
+	str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+	//$("#searchResultPanel").innerHTML = str;
+});
+
+var myValue;
+ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+	var _value = e.item.value;
+	myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+	//$("#searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+
+	setPlace();
+});
+
+function setPlace(){
+	map.clearOverlays();    //清除地图上所有覆盖物
+	function myFun(){
+		var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+		addMarker(pp);//添加标注
+		
+		dataStoreByPoint(pp);//加载店铺信息
+	}
+	var local = new BMap.LocalSearch(map, { //智能搜索
+	  onSearchComplete: myFun
+	});
+	local.search(myValue);
+}
+
+//加载店铺信息
+function dataStoreByPoint(p){
+	var loc = p.lng+","+p.lat;
+	//$("#wm_list").attr("href",path+"/wm/list/"+loc+"/");
+	$.ajax({
+       type: 'POST',
+       url: path+'/Operate/DataCompanyByPoint.do',
+       data: 'lng='+p.lng+'&lat='+p.lat,
+       dataType: 'json',
+       success: function(data) {
+		  if(data.rows.length>0){
+		  	var result_content = "<div style='width:200px;height:10px;'>附近共搜索出 "+data.rows.length+" 家餐厅<br/><br/><a href='"+path+"/wm/list/"+loc+"/'>查看列表</a></div>";
+			var search_infoWindow = new BMap.InfoWindow(result_content,{enableMessage:false});  // 创建信息窗口对象
+			map.openInfoWindow(search_infoWindow,p); //开启信息窗口
+			loc_marker.addEventListener("click", function(){          
+				this.openInfoWindow(search_infoWindow);
+			});
+		  	var con = '';
+		  	$.each(data.rows,function(i,n) {
+				con += call_back(data.rows[i],(i+1));
+			});
+			
+		  }else{
+		  	//con = '&nbsp;&nbsp;&nbsp;周围没有太多门店，请从新定位您的位置';
+		  }
+       },
+       error: function(data) {alert('加载门店失败！');}
+	});
+}
+//回调函数 && 铺点门店 
+function call_back(data,n){
+	var point = new BMap.Point(data.longitude, data.latitude);
+	//var label = new BMap.Label(n+":<a target=_blank' href='"+path+"/Store/info/2/"+data.companyNo+"/'>"+data.companyName+"</a>",{offset:new BMap.Size(20,-10)});
+	var label = new BMap.Label(n+":"+data.companyName,{offset:new BMap.Size(20,-10)});
+	label.setStyle({borderColor:"#89c935"});
+	
+	var sContent = '<div style="width:400px; height:100px; ">'+
+	'<div style="float:left;width:280px; font-size:12px;"><div style="padding:5px;">店铺名称:<a style="color:blue;font-size:15px;" target="_blank" href="'+path+'/Store/info/2/'+data.companyNo+'/">'+data.companyName+'</a></div>'+
+	'<div style="padding:5px;">店铺地址:'+data.companyAddress+'</div><div style="padding:5px;">口味:'+data.tasteType+'&nbsp;/&nbsp;人均消费:￥'+data.perCapita+'元</div>'+
+	'<div style="padding:5px 10px; border-top:1px dashed #ccc;">'+
+	'<a style="color:blue;" target="_blank" href="'+path+'/Store/info/2/'+data.companyNo+'/">进入店铺</a>&nbsp;&nbsp;<a style="color:blue;" onclick="collectp('+data.comapanyNo+',1)" href="javascript:void(0);">收藏店铺</a>'+
+	'</div></div><div style="float:right;margin:10px 5px; width:100px;">'+
+	'<img src="'+data.companyPhoto+'" id="imgDemo" width="100" height="90" /></div>'+
+	'<div style="clear:both;"></div></div>';
+	var infoWindow = new BMap.InfoWindow(sContent,{enableMessage:false});  // 创建信息窗口对象 
+	
+	var myIcon = new BMap.Icon("../images/ct_dw.png", new BMap.Size(20,30));
+	marker1 = new BMap.Marker(point,{icon:myIcon,title:data.companyName});
+	marker1.setLabel(label);
+	marker1.disableDragging();
+	map.addOverlay(marker1);
+	marker1.addEventListener("click", function(){          
+		this.openInfoWindow(infoWindow);
+	   	//图片加载完毕重绘infowindow
+	   	$('#imgDemo').onload = function (){
+		   infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+	   	};
+	});
+	
+}
+
+function addMarker(loc){
+	//$("#suggestId").val('');//清空搜索框
+	map.centerAndZoom(loc, 16);
+	var myIcon = new BMap.Icon("../images/dw.png", new BMap.Size(20,30));
+	loc_marker = new BMap.Marker(loc,{icon:myIcon,title:"定位信息",zIndex:1000});
+	//marker.enableDragging();   //开启标注拖拽
+	loc_marker.addEventListener("dragend", function (e) {
+    	map.clearOverlays();
+    	addMarker(e.point);
+    	dataStoreByPoint(e.point);
+    });
+    
+	map.addOverlay(loc_marker);//地图添加标注
+	
+	/* var label = new BMap.Label("我的位置",{offset:new BMap.Size(20,-10)});
+	marker.setLabel(label); */
+}
+
+$(function(){
+	
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<import resource="com/deepblue/kuaiding/config/spring.biz.xml" />
+	<import resource="com/deepblue/kuaiding/config/spring.action.xml" />
+	
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url"
+			value="jdbc:sqlserver://192.168.0.104:1433;databaseName=SQL server(local)">
+		</property>
+		<property name="username" value="sa"></property>
+		<property name="password" value="wt1012"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>
+					com/deepblue/kuaiding/entity/KdOrder.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdTable.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdRestaurant.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/ComNews.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/BcomPost.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdCustomers.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/ComActivities.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdGroupdiscount.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdMenu.hbm.xml
+				</value></list>
+		</property></bean>
+	<bean id="KdRestaurantDAO"
+		class="com.deepblue.kuaiding.dao.KdRestaurantDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="BcomPostDAO"
+		class="com.deepblue.kuaiding.dao.BcomPostDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdTableDAO"
+		class="com.deepblue.kuaiding.dao.KdTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ComNewsDAO"
+		class="com.deepblue.kuaiding.dao.ComNewsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdMenuDAO" class="com.deepblue.kuaiding.dao.KdMenuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdCustomersDAO"
+		class="com.deepblue.kuaiding.dao.KdCustomersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ComActivitiesDAO"
+		class="com.deepblue.kuaiding.dao.ComActivitiesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdOrderDAO"
+		class="com.deepblue.kuaiding.dao.KdOrderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdGroupdiscountDAO"
+		class="com.deepblue.kuaiding.dao.KdGroupdiscountDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean></beans>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>快订登录</title>
+<link rel="stylesheet" type="text/css" href="css/agent/common.css" />
+<link rel="stylesheet" type="text/css" href="css/agent/login-merchant.css" />
+<link rel="stylesheet" href="css/agent/easyui.css" type="text/css" />
+<link rel="stylesheet" href="css/agent/icon.css" type="text/css" />
+
+<script type="text/javascript" src="js/agent/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/agent/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/agent/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="js/agent/common.js"></script>
+<script type="text/javascript" src="js/agent/jquery_form.js"></script>
+<script type="text/javascript" src="js/agent/jquery.blockUI.js"></script>
+<script type="text/javascript" src="js/agent/package.js"></script>
+<script src="js/agent/messagecenter.js"></script>
+
+<script type="text/javascript">
+    $package('Ucb.login');
+	Ucb.login = function() {
+		return {
+			toLogin : function() {
+				try {
+					
+					$('#btn').attr('disabled','disabled');
+					$('#sjmc').text("");
+					$('#mm').text("");
+					$('#yzm').text("");
+					$('#czy').text("");
+					if ($('#companyName').val() != '') {
+						if ($('#password').val() != '') {
+							if ($('#verifyCode').val() != '') {
+								$('#loginForm').ajaxSubmit(
+												{
+													success : function(data) {
+														
+														if (data == 'success') {
+															window.open('/Agents/Identity/MainPage.do','_self');
+															return;
+														}else if (data == 'noverify') {
+															$.messager.alert('提示','亲，还没有审核哦！','error');
+															return;
+														}else if (data == 'noverify2') {
+															$.messager.alert('提示','亲，审核没有通过哦 请查看原因！','error');
+															return;
+														}  else if (data == 'vcodeError') {
+															$('#verifyCode').val('');
+															//$.messager.alert('提示','验证码输入错误！','error');
+															$('#yzm').text("验证码错误！");
+														}else if (data == 'companyNameError') {
+															$('#companyName').val('');
+															$('#loginName').val('');
+															$('#password').val('');
+															$('#verifyCode').val('');
+															//$.messager.alert('提示','此门店不存在！','error');
+															$('#sjmc').text("手机号异常！");
+														} else if (data == 'nameAndPassError') {
+															//$('.companyName').val('');
+															$('#loginName').val('');
+															$('#password').val('');
+															$('#verifyCode').val('');
+															//$.messager.alert('提示','操作员或密码错误！','error');
+															$('#mm').text("密码错误！");
+														} else if (data == 'userInactive') {
+															$('#loginName').val('');
+															$('#password').val('');
+															$('#verifyCode').val('');
+															//$.messager.alert('提示','此操作员已被禁用！','error');
+															$('#czy').text("代理人禁用！");
+														} else if (data == 'forbidden') {
+															$('#companyName').val('');
+															$('#loginName').val('');
+															$('#password').val('');
+															$('#verifyCode').val('');
+															//$.messager.alert('提示','此门店已被禁用！','error');
+															$('#sjmc').text("公司禁用！！");
+														}else if (data == 'notExit') {
+															$('#companyName').val('');
+															$('#loginName').val('');
+															$('#password').val('');
+															$('#verifyCode').val('');
+															//$.messager.alert('提示','此门店已被禁用！','error');
+															$('#sjmc').text("公司不存在！");
+														} else {
+															$('#companyName').val('');
+															$('#loginName').val('');
+															$('#password').val('');
+															$('#verifyCode').val('');
+															$.messager.alert('提示','系统故障，请联系管理员！','error');
+														}
+														$('#btn').removeAttr('disabled');
+														Ucb.login.loadVrifyCode();//刷新验证码
+													},
+													error : function(data) {
+														$('#verifyCode').val('');
+														Ucb.login.loadVrifyCode();//刷新验证码
+														$.messager.alert('提示','系统故障，请联系管理员！','error');
+													}
+												});
+							} else {
+								$('#btn').removeAttr('disabled');
+							//	$.messager.alert('提示', '请输入验证码！');
+							$('#yzm').text("请输入验证码！");
+							}
+						} else {
+							$('#btn').removeAttr('disabled');
+							//$.messager.alert('提示', '请输入密码！');
+							$('#mm').text("请输入密码！");
+						}
+					} else {
+						$('#btn').removeAttr('disabled');
+						//$.messager.alert('提示', '请输入店铺名称！');
+						$('#sjmc').text("请输入公司！");
+					}
+				} catch (e) {
+
+				}
+				return false;
+			},
+			loadVrifyCode : function() {//刷新验证码
+				var _url = '/Agents/ImageServlet?time='
+						+ new Date().getTime();
+				$(".vc-pic").attr('src', _url);
+			},
+			init : function() {
+				if (window.top != window.self) {
+					window.top.location = window.self.location;
+				}
+				//验证码图片绑定点击事件
+				$(".vc-pic").click(Ucb.login.loadVrifyCode);
+
+				var form = $("#loginForm");
+				form.submit(Ucb.login.toLogin);
+			}
+		};
+	}();
+
+$(function() {
+		
+		var companyName = '';
+		
+		if(companyName!='') {
+			$('#companyName').val(companyName);
+		}
+		
+		Ucb.login.init();
+		
+		
+		$('#btn').click(function(){
+			//$("#loginForm").submit();
+		});
+		
+		
+	});
+	
+	function checkParent() {
+		if (window.parent.length > 0) {
+			window.parent.location = "../";
+			alert('页面已过期，请重新登录！');
+		}
+	}
+	function resetform(formname) {
+		for ( var i = 0; i < formname.elements.length; i++) {
+			formname.elements[i].value = "";
+		}
+	}
+</script>
+</head>
+
+<body onload="checkParent();">
+<div class="login">
+	<div class="login-logo">
+    	<a href="../YMS/index.html"><img src="images/logo.png" /></a>
+        <h1>网络餐厅代理人登录</h1>
+    </div>
+    
+    <div class="login-main">
+    	<div class="main-left">
+        	<img src="images/login-img.png" width="451" />
+        </div>
+        
+        <div class="login-main-right">
+            <form id="loginForm" method="post" action="/Agents/Identity/Login.do" name="form1">
+            	<div class="div1">
+                	<span class="span1">公&nbsp;&nbsp;&nbsp;司：</span>
+                    <input id="companyName" name="companyName" class="input1" type="text" placeholder="公司名称" />
+                    <span id="sjmc" class="false"></span>
+                </div>
+                <div class="div1">
+                    <span class="span1">登录名：</span>
+                    <input id="loginName" name="loginName" class="input1" type="text" placeholder="请输入登录名" />
+                   <span id="czy" class="false"></span>
+                </div>
+                <div class="div1">
+                    <span class="span1">密&nbsp;&nbsp;&nbsp;码：</span>
+                    <input id="password" name="password" class="input1" type="password" placeholder="请输入密码"/>
+                 	 <span id="mm" class="false"></span>
+                </div>
+                <div class="div2">
+                	<div>
+                    	<span class="span1">验证码：</span>
+                    	<input id="verifyCode" name="verifyCode" class="input2" type="text" />
+                    </div>
+                    <div class="yzmtp">
+                    	<img class="vc-pic" alt="点击刷新验证码" src='/Agents/ImageServlet?time=+new Date().getTime()' style="cursor:pointer;width:100px;height:33px;display:block;" id="v_pic" name="v_pic" />
+                   		<div class="gh">
+	                        <span>看不清？</span>
+	                        <a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
+                    	</div>
+                    </div>
+                    <span id="yzm" class="false" style="margin-top:7px"></span>
+                    
+                </div>
+               
+                <input type="submit" class="go go-hui" id="btn" value="登录" tabindex="8" />
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+    	<p>公司地址：北京市海淀区清华大学紫光大楼 邮编：100084 电话：010-62789898 传真：010-62547462<br />京ICP备15022253号   Copyright © 2014 紫光股份有限公司.All rights reserved</p>
+    </div>
+</div>
+
+</body>
+</html>

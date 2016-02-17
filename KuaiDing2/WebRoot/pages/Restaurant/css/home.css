@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+.rst .container,.rst-left, .rst-right, .rst-right ul, .rst-lists ul{ overflow:hidden; zoom:1;/*ie6*/}
+.rst-left,.rst-left li{ float:left; display:inline;}
+.rst-right,.rst-right li{float:right; display:inline;}
+
+/* 餐厅信息 */
+.rst-left { width:200px; _width:auto;}/*防止页面缩放布局乱*/
+.rst-left{margin-top:20px; margin-left:10px;}
+.rst-left h4{ color:#000; font-size:14px;}
+.rst-right li {border:1px solid #dbdbdb;/* overflow:hidden;*/}
+.rst-right { margin-top:20px;}
+.rst-right li { width:180px; height:60px; cursor:pointer;}
+.rst-right .bg1 { background:#636363;}
+.rst-right .bg2 { background:#facb33;}
+.rst-right .bg3 { background:#a1c450;}
+.rst-right .bg4 { background:#32b3ed;}
+.rst-right .bg5 { background:#f93;}
+.rst-right li:hover, .rst-right .li1 { background-color:#89c935;}
+.rst-right h4 { margin-top:15px;}
+
+/* 菜单（rst-menu） */
+.menu-top{ cursor:pointer; margin-top:30px;}
+.rst-menu .bg1 {background:#636363; height:50px; padding-top:15px;}
+.rst-menu{background:#CCC; padding-bottom:10px;}
+.menu-kinds{ background:#fff; margin:10px; padding-bottom:10px;}
+.menu-lists{margin-bottom:10px;}
+.menu-meals,.menu-drinks,.menu-snacks{ background:#fff; margin:0px 10px; padding-bottom:10px;}
+.list-title{background:#eee;}
+h1{margin:30px;}
+h2{ font-size:18px; margin-left:100px; float:left;}
+h3{font-size:20px; margin-left:30px; margin-top:5px;}
+.menu-meals li,.menu-drinks li,.menu-snacks li{float:left; display:inline;}
+.button1{float:right; font-size:18px;background: #ccc; margin:10px; padding:3px 15px;}
+.button2{margin-left:400px; margin-top:5px; padding:3px 25px 3px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 6px;}
+.list-meals{margin-top:30px; cursor:pointer;}
+.list-meals h2{margin-top:5px;}
+.list-meals span{margin-left:150px; margin-top:5px;}
+.list-meals span h5{font-size:12px; margin-left:170px;}
+.price{padding:15px; background:#ccc:}
+
+
+/* 商家信息（rst-sjxx） */
+.rst-sjxx{background:#FC9; padding-bottom:3px;}
+.sjxx-top{cursor:pointer; margin-top:30px;}
+.sjxx-top .bg2 {background:#facb33; height:50px; padding-top:15px;}
+.sjxx-info{ background:#fff; margin:10px; padding-bottom:10px;}
+.sjxx-lists{margin-bottom:10px;}
+h5{font-size:16px; margin:15px 0px 10px 120px;}
+
+/* 美食墙（rst-pics） */
+.rst-pics{background:#a3c499; padding-bottom:3px;}
+.pics-top{cursor:pointer; margin-top:30px;}
+.pics-top .bg3 {background:#a3c450; height:50px; padding-top:15px;}
+.pics-info .title{background:#fff; margin:10px;}
+.pics-info .title li{float:left; margin-left:20px;}
+.button3{font-size:18px; float:left; background:#fff; padding:5px 15px; margin:15px 10px;}
+.button4{margin-top:5px; float:right; padding:5px 25px 5px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 6px;}
+.pics-lists li{float:left; padding:26px; margin:10px 20px 20px 0px; background:#fff;}
+.pics-lists{margin-left:10px;}
+h6{font-size:16px; margin:10px;}
+
+
+/* 评价（rst-evaluate） */
+.rst-evaluate{background:#399; padding-bottom:3px;}
+.evaluate-top{cursor:pointer; margin-top:30px;}
+.evaluate-top .bg4 {background:#32b3ed; height:50px; padding-top:15px;}
+.evaluate-rst {background:#fff; margin:10px; padding:10px;}
+.evaluate-rst li{float:left; margin-left:20px;}
+.p0 span{margin-left:20px;}
+.pingjia1{margin-top:80px; padding-left:100px;}
+.pingjia2,.pingjia3{margin-top:80px;}
+.pingjia2 p{margin-top:7px;}
+.pingjia3 p{margin-top:2px;}
+.rectangle5{width:90px; height:10px; background:#F60;}
+.rectangle4{width:70px; height:10px; background:#F60;}
+.rectangle3{width:50px; height:10px; background:#F60;}
+.rectangle2{width:30px; height:10px; background:#F60;}
+.rectangle1{width:10px; height:10px; background:#F60;}
+.evaluate-info .title{background:#fff; margin:10px;}
+.evaluate-info .title li{float:left; margin-left:20px;}
+.evaluate-lists li{float:left; width:485px; height:100px; padding:50px; margin:0px 10px 10px 0px; background:#fff;}
+.evaluate-lists{margin:20px 0px 0px 10px;}
+.evaluate-text{font-size:16px; margin:30px;}
+.evaluate-lists .pj2{float:right;}
+
+/* 留言（rst-comments） */
+.rst-comments{background:#C93; padding-bottom:10px;}
+.comments-top{cursor:pointer; margin-top:30px;}
+.comments-top .bg5{background:#f93; height:50px; padding-top:15px;}
+.comments-info .title{background:#fff; margin:10px;}
+.comments-lists li{width:1120px; height:70px; padding:30px;background:#fff; margin-top:10px;}
+.comments-lists{margin:10px 0px 0px 10px;}
+.comments-text{font-size:16px; margin:10px 0px 10px 30px;}

@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美食社区-外卖、订餐、玩社区上有美食</title>
+<meta name="keywords" content="快订,餐饮O2O平台,外卖订餐,预订点餐,餐厅订桌,打折优惠,美食社区,网上订餐,快餐外卖,美食资讯" />
+<meta name="description" content="快订-拥有众多优质餐厅,为您提供快速,便捷的线上订餐服务,为您提供最全,最新鲜的美食信息,致力打造中国最大的订餐平台和美食分享社区,轻松实现网上订餐,手机App订餐!" />
+<meta name="baidu-site-verification" content="zcXqQTs5gr" />
+
+<link rel="stylesheet" href="css/base.css" type="text/css"/>
+<link rel="stylesheet" href="css/common.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap_modal.css" type="text/css"/>
+<link rel="stylesheet" href="css/msgbox.css" type="text/css"/>
+
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/board.css" />
+<link rel="stylesheet" href="css/jBootstrapPage.css" type="text/css"/>
+
+<script type="text/javascript">
+var path = '/Community';
+</script>
+
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</head>
+
+<body>
+
+<div class="top">
+	<div class="container">
+    	<div class="fl">
+        	<a class="top_a1" href="http://www.youmeishi.cn">返回快订</a>
+        	<a class="top_a2" href="javascript:;" id="addToFavorite">收藏网站</a>
+        </div>
+        
+        <div class="fr">
+            <span>您好，欢迎来到快订互动社区！您尚未登录，请</span>
+            <a class="top_a" href="javascript:;" id="loginClient">[登录]</a>
+            <span>或</span>
+            <a class="top_a" href="/Community/register/" target="_blank">[免费注册]</a>
+         </div>  
+    </div>
+</div>
+
+<div class="header pt30">
+	<div class="container clear">
+    	<div class="logo mt15 fl">
+        	<a class="fl mr30" href="../KD/index.html"><img src="images/logo.png" alt="" /></a>
+            <h1>互动社区</h1>
+            <p class="f18 logo_p">一网扫尽天下美食</p>
+        </div>
+        <div class="search fl">
+        	<form id="top_search_form">
+                <input class="search_input1" type="text" placeholder="搜索美食、餐厅、饭友、优惠" value="" id="top_search_text"/>
+                <input type="text" class="none" />
+                <input class="search_input2" type="button" value="搜索" id="top_search_btn"/>
+            </form>
+        </div>
+        <div class="order fr">
+        	<input type="button" id="top_write" value="发表话题" onclick="postTopic()"/>
+        </div>
+    </div>
+</div>
+
+<div class="nav mt15">
+	<div class="container">
+    	<ul class="nav_ul clear pl30">
+        	<li><a  href="index.html">社区首页</a></li>
+            <li><a  href="board_1.html" target="_blank">主题活动</a></li>
+            <li><a  href="board_2.html" target="_blank">美食每刻</a></li>
+            <li><a  href="board_3.html" target="_blank">美食诱惑</a></li>
+            <li><a  href="board_4.html" target="_blank">美食记忆</a></li>
+            <li><a  href="board_5.html" target="_blank">食材档案</a></li>
+            <li><a  href="board_6.html" target="_blank">美食排行榜</a></li>
+            <li><a  href="board_7.html" target="_blank">吃货集结号</a></li>
+            <li><a class="ahover" href="board_8.html" target="_blank">美食探店</a></li>
+            <li><a  href="board_9.html" target="_blank">美食攻略</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="main mt20">
+	<div class="container clear">
+    	<div class="fl w670">
+        
+        <div class="cateTempt_banner">
+        		
+        		<div class="fl pr ct_b_div">
+                	<a href="http://self.youmeishi.cn/Community/invitation/678/"><img class="ct_b_img1" src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbsAd/1423467271341.JPG" /></a>
+                    <div class="ct_b_bg"></div>
+                    <div class="ct_b_name">
+                    	<span>探店九宫决 感受到纯正的巴蜀气息</span>
+                   	</div>
+                </div>
+        		
+        		<div class="fl">
+        		
+        			<div class="pr ct_b_div">
+                		<a href="http://self.youmeishi.cn/Community/invitation/600/"><img class="ct_b_img2" src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbsAd/1422256345844.jpg"/></a>
+                        <div class="ct_b_bg"></div>
+                        <div class="ct_b_name">
+                            <span>探店一茶一坐 精致的台湾美食</span>
+                        </div>
+                    </div>
+        		
+        			<div class="pr ct_b_div">
+                		<a href="http://self.youmeishi.cn/Community/invitation/643/"><img class="ct_b_img2" src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbsAd/1422256276756.jpg"/></a>
+                        <div class="ct_b_bg"></div>
+                        <div class="ct_b_name">
+                            <span>探店missi missi 每食.美食</span>
+                        </div>
+                    </div>
+        		
+        		</div>
+        		
+        			<div class="fl pr ct_b_div">
+                		<a href="http://self.youmeishi.cn/Community/invitation/601/"><img class="ct_b_img3" src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbsAd/1422256492905.jpg" /></a>
+                    	<div class="ct_b_bg"></div>
+                    	<div class="ct_b_name">
+                    		<span>探店烤肉宛 记忆中的老北京烤肉</span>
+                    	</div>
+                	</div>
+        		   
+            </div>
+            <div class="mt15">
+            	<div class="ct_m_head">
+                	<a class="ahover mr10" href="javascript:;" id="all">全部帖子</a>
+                    <a href="javascript:;" id="jh">精华帖子</a>
+                    <input type="hidden" value="71" id="boardID"/>
+                    <input type="hidden" id="jinghua"/>
+                    <input type="hidden" id="sortOrder" value="postTime"/>
+                    <input type="hidden" id="sortDesc" value="desc"/>
+                </div>
+                
+                <div>
+                	<div class="clear ct_m_main_head">
+                    	<div class="fl">标题</div>
+                        <div class="fr ml5 tc w120 up" id="reply">点赞&nbsp;/&nbsp;最后回复</div>
+                        <div class="fr tc w120 up" id="post">发表人&nbsp;/&nbsp;时间</div>
+                    </div>
+                	<ul class="ct_m_main_ul" id="page-content">
+    					
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="page clear">
+            	<ul class="pagination fr"></ul>
+            </div>
+        
+        </div>
+        
+        <div class="fr w300 f14">
+        	<div>
+            	<div class="main_r_head clear">
+                	<a class="fr f12" href="/Community/board/2/">更多&gt;&gt;</a>
+                	<h3>最新公告</h3>
+                </div>
+                <ul class="new_notice_ul p10">
+                
+                	<li><a href="/Community/invitation/675/">“九宫诀老火锅”探店名单公布啦！</a></li>
+                
+                	<li><a href="/Community/invitation/594/">“吃美食, 不花钱”名单公布啦！</a></li>
+                
+                	<li><a href="/Community/invitation/587/">“请你免费吃烧烤”名单公布啦！</a></li>
+                
+                	<li><a href="/Community/invitation/586/">有美食“特色美食”试吃中奖名单！</a></li>
+                
+                	<li><a href="/Community/invitation/582/">有美食“火锅免费吃”中奖名单！</a></li>
+                                                           
+                </ul>
+                 
+            </div>
+            
+            <div class="mt15">
+                <div class="main_r_head clear">
+                	<a class="fr f12" href="/Community/board/3/">更多&gt;&gt;</a>
+                	<h3>餐饮行业新鲜事</h3>
+                </div>
+                <ul class="new_industry_ul p10">
+                
+                	<li><a href="/Community/invitation/774/">【干货】经理人，你会给人”派活“吗？</a></li>
+                
+                	<li><a href="/Community/invitation/772/">【技巧】五招让你学会餐厅排队经济学！</a></li>
+                
+                	<li><a href="/Community/invitation/771/">【热点】翠花，上菜啦！</a></li>
+                
+                	<li><a href="/Community/invitation/770/">【干货】五大方法提升顾客体验，还愁做不大？</a></li>
+                
+                	<li><a href="/Community/invitation/769/">【头条】紫光推颠覆性产品，美食云公司要革服务员的命！</a></li>
+                
+                </ul>
+            </div>
+            
+            <div class="mt15">
+                <div class="main_r_head clear">
+                	<!--<a class="fr f12" href="javascript:;">更多&gt;&gt;</a>
+                	--><h3>24小时热贴</h3>
+                </div>
+                <ul class="new_hot_ul p10">
+                                                
+                </ul>
+            </div>
+            
+            <div class="mt15">
+                <div class="main_r_head clear">
+                	<!--<a class="fr f12" href="javascript:;">更多&gt;&gt;</a>
+                	--><h3>微信关注快订社区</h3>
+                </div>
+                <div class="tc">
+                    <a href="javascript:;"><img class="main_r_ewm" src="images/footer-ewm.png" /></a>
+                    <p>扫描二维码添加关注</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer pb50">
+	<div class="container">
+    	<div class="ft_about clear ml30 pt50">
+        	<div>
+            	<p class="ft_p1">关于我们</p>
+                <ul>
+                	<li><a href="http://www.youmeishi.cn/introduction/" target="_blank">快订简介</a></li>
+                    <li><a href="http://www.youmeishi.cn/contact/" target="_blank">联系我们</a></li>
+                    <li><a href="http://www.youmeishi.cn/partners/" target="_blank">合作伙伴</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="ft_p2">加入我们</p>
+                <ul>
+                	<li><a target="_blank" href="http://www.youmeishi.cn/EnterprisePlatform/Identity/MainPage.do?init=init">商户入口</a></li>
+                    <li><a href="javascript:;">招聘职位</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="ft_p3">网站条款</p>
+                <ul>
+                	<li><a href="http://www.youmeishi.cn/member/" target="_blank">会员条款</a></li>
+                    <li><a href="http://www.youmeishi.cn/bbsguide/" target="_blank">社区指南</a></li>
+                    <li><a href="http://www.youmeishi.cn/copyright/" target="_blank">版权声明</a></li>
+                    <li><a href="http://www.youmeishi.cn/disclaimer/" target="_blank">免责声明</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="ft_p4">帮助中心</p>
+                <ul>
+                	<li><a href="http://www.youmeishi.cn/register-process/" target="_blank">用户帮助</a></li>
+                    <li><a href="javascript:;">商家帮助</a></li>
+                    <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/page/video.jsp">培训中心</a></li>
+                    <li><a href="http://chat.looyu.com/chat/chat/p.do?c=52642&f=117797&g=82368" target="_blank">在线客服</a></li>
+                </ul>
+            </div>
+            <div>
+            	<p class="ft_p5">关注我们</p>
+                <ul>
+                	<li><a href="http://weibo.com/youmeishi" target="_blank">新浪微博</a></li>
+                </ul>
+            </div>
+            <div class="div1 tc">
+            	<p>快订微信</p>
+                <img src="images/footer-ewm.png" />
+                <a href="javascript:;">扫描二维码</a>
+                <a href="javascript:;">关注快订微信</a>
+            </div>
+            <div class="div1 tc">
+            	<p>快订APP</p>
+                <img src="images/yms-ewm.png" />
+                <a href="javascript:;">扫描二维码</a>
+                <a href="javascript:;">下载快订APP</a>
+            </div>
+            <div class="div1">
+            	<a href="http://www.youmeishi.cn/EnterprisePlatform/Identity/MainPage.do?init=init"><img class="img1" src="images/footer-sj.png" /></a>
+            </div>
+        </div>
+        <div class="blogroll tc">
+        	<span>友情链接：</span>
+        	<a target="_blank" href="http://www.thunis.com/">紫光股份有限公司</a>
+            <a target="_blank" href="http://www.tusholdings.com/">启迪控股</a>
+            <a target="_blank" href="http://www.tsinghua.edu.cn/publish/newthu/index.html">清华大学</a>
+            <a target="_blank" href="http://www.unisapp.cn/">Unis紫光</a>
+        </div>
+        <div class="tc">
+            <p>京ICP备11027192号-5&nbsp;Copyright&nbsp;&copy;&nbsp;2014&nbsp;紫光股份有限公司.All&nbsp;rights&nbsp;reserved<span style="padding-left:5px;display: inline-block;vertical-align: middle;"></span></p>
+            <p>公司地址：北京市海淀区清华大学紫光大楼&nbsp;&nbsp;邮编：100084&nbsp;&nbsp;电话：010-62789898&nbsp;&nbsp;传真：010-62547462</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	//判断用户是否登录
+	function checkUser(){
+		if(true){
+			$("#loginModal").modal("show");
+			return false;
+		}else{
+			return true;
+		}
+	} 
+</script>
+<div id="go_top"><a href="javascript:;" title="返回顶部">返回顶部</a></div>
+<!-- 弹框提示 -->
+<div id="bj_div" style="top:0;left:0;position:absolute;z-index:10000;background:#666;filter:alpha(opacity=50);opacity:0.5; display:none;"></div>
+<div id="msg_box" class="msg-box">
+	<div class="p1"><a id="close_msg" href="javascript:;">&times;</a>快订提醒您！</div>
+	<p class="p2" id="msg_info"></p>
+    <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
+    <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>
+</div>
+
+<!-- 弹出框 小窗 登录 modal -->
+<div class="modal hide fade" id="loginModal" style="width: 451px; overflow: hidden;">
+  <div class="modal-head">
+    <a class="close modal-close" data-dismiss="modal">×</a>
+    <span>登录</span>
+  </div>
+  <div style="min-height: 100px;overflow-y:auto;max-height:390px;padding:15px 30px;">
+  	<input id="login_type" type="hidden" value="1" />
+   	
+<script type="text/javascript">
+$(function(){
+	Operate.login.init();
+	Operate.mobile_login.init();
+	//头步切换
+	$(".right-nav li").live("click",function(){
+		$(".right-nav li").removeClass("lihover");
+		$(this).addClass("lihover");
+		if($(this).attr("data-type")==1){
+			$("#general_login").removeClass("fonm-none");
+			$("#dynamic_login").addClass("fonm-none");	
+		}else{
+			$("#general_login").addClass("fonm-none");
+			$("#dynamic_login").removeClass("fonm-none");
+		}
+	});
+	
+	//普通方式登录
+	$("#pt_login").click(function(){
+		_login_ing();
+		$("#general_login_form").submit();
+	});
+	
+	//动态方式登录
+	$("#dt_login").click(function(){
+		_login_ing();
+		$("#dynamic_login_form").submit();
+	});
+	
+	//获取动态验证码
+	$("#loadCode").click(function(){
+		var v = $('#loginMobile').val();
+		if(v =='' || !mfilter.test(v)){
+			$(".sj-yhmcw").html("请输入正确手机号！");
+			$(".sj-yhmcw").show();
+		}else{
+			$(".sj-yhmcw").html("");
+			$(".sj-yhmcw").hide();
+			$.ajax({
+			    type: 'POST', 
+	            dataType: 'text', 
+				url		:  path+'/Front/GetDynamicCode.do',
+				data	:  'mobile='+v,
+				error: function (XMLHttpRequest, textStatus, errorThrown) { },
+				success:function(data){
+					if(data==1){
+						yes_Send();
+					}else if(data=='4085'){
+						$(".sj-yhmcw").html("同一手机号一天只能接收5次短信!");
+						$(".sj-yhmcw").show();
+					}else {
+						no_Send();
+					}
+				}
+			});
+		}
+	});
+});
+
+</script>
+<div class="login-main-right">
+	<ul class="right-nav">
+    	<li data-type="1" class="li1 lihover">帐号密码登录</li>
+        <li data-type="2" class="li2">手机号登录</li>
+    </ul>
+    <div id="general_login" class="form" onkeydown="Enterpt(event)">
+    	<form action="/Community/Front/DoLogin.do" method="post" id="general_login_form">
+    	<p>
+        	<span class="span1">用户名：</span>
+            <input class="input1" name="loginName" id="loginName" type="text" placeholder="邮箱/手机号" />
+            
+        </p>
+        <p>
+            <span class="span1">密&nbsp;&nbsp;&nbsp;码：</span>
+            <input class="input1" name="loginPass" id="loginPass" type="password" />
+           
+        </p>
+        <div class="p1">
+        	<div>
+            	<span class="span1">验证码：</span>
+            	<input class="input2" type="text" name="vcode" id="verifyCode" />
+            </div>
+            <div class="yzmtp">
+            	<img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/Community/ImageServlet?time=+new Date().getTime()" />
+            </div>
+            <div class="gh">
+                <span>看不清？</span>
+                <a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
+            </div>
+        </div>
+        <p class="p2">
+            <span class="span1"></span>
+            <input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />
+            <label for="chkRememberLoginName">记住我</label>
+            <a class="a1" href="http://www.youmeishi.cn/findpass/">忘记密码</a>
+        </p>
+        <input type="button" id="pt_login" name="submit" class="go" value="登录" />
+    	</form>
+    	<p class="cuowu yhmcw"></p>
+        <p class="cuowu mmcw"></p>
+        <p class="cuowu yzmcw"></p>
+    </div>
+    
+    <div id="dynamic_login" class="form fonm-none" onkeydown="Enterdt(event)">
+    	<form id="dynamic_login_form" action="/Community/Front/DynamicLogin.do" method="post">
+    	<p class="shouji-p">
+        	<span class="span1">手机号：</span>
+            <input class="input1" id="loginMobile" name="loginMobile" type="text" placeholder="手机号" />
+        </p>
+         <p class="sj-yzm">
+        	<span class="span1"></span>
+        	<input id="loadCode" type="button" class="shouji-span" value="获取动态码" />
+        </p>
+        <p>
+            <span class="span1">动态码：</span>
+            <input class="input2" id="mobileCode" name="mobileCode" type="text" />
+        </p>
+        <p class="p2">
+            <span class="span1"></span>
+            <input class="input3" type="checkbox" name="rememberLoginMobile" id="rememberLoginMobile" />
+            <label for="rememberLoginMobile">记住手机</label>
+        </p>
+        <input type="button" class="go" name="submit" id="dt_login" value="登录" />
+    	</form>
+    	<p class="cuowu sj-yhmcw"></p>
+        <p class="cuowu sj-mmcw"></p>
+    </div>
+
+</div>
+
+  </div>
+</div>
+
+
+</body>
+</html>

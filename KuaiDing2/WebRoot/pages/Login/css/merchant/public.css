@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*整体定义*/
+*{padding:0px; margin:0px;}
+html,body{width:100%; height:100%; font-family:"微软雅黑";}
+div a{ color:#fff;}
+a{text-decoration:none; color:#000;}
+ul{list-style:none; padding:0em; margin:0em;}
+li{list-style:onne;}
+
+/*背景色定义*/
+.js{background-color:#f6ab00; margin-top:10px;}
+.bai{background-color:rgba(255,255,255,0.3); }
+.bai01{background-color:#fff; }
+.hui{background-color:#f5f5f5; }
+/*宽度定义*/
+.w100{width:100%;}
+.w380{width:380px;}
+.w370{width:370;}
+.w340{width:340px;}
+.w1000{width:1000px;}
+
+/*浮动定义*/
+/*左浮动*/.zfd{float:left;}
+/*右浮动*/.yfd{float:right;}
+
+/*清除浮动*/
+.clear:after { content:' '; display:block; height:0; overflow:hidden; clear:both;}
+.clear {zoom:1;}
+
+/*外边距定义*/
+/*居中*/.ma{margin:auto;}
+.mt10{ margin-top:10px;}
+.mt20{ margin-top:20px;}
+.mt30{ margin-top:30px;}
+.mt40{ margin-top:40px;}
+.mt01{ margin-top:1px;}
+.mt05{ margin-top:5px;}
+.mt60{ margin-top:60px;}
+.mb10{ margin-bottom:10px;}
+.ml10{ margin-left:10px;}
+.mr10{ margin-right:10px;}
+
+/*内边距定义*/
+.p{padding:10px;}
+.p20{padding:20px;}
+.pt05{ padding-top:5px;}
+.pt10{ padding-top:10px;}
+.pb10{ padding-bottom:10px;}
+.pl10{ padding-left:10px;}
+.pr10{ padding-right:10px;}
+.pl50{padding-left:150px;}
+
+/*文字定义*/
+.f32{font-size:32px; color:#CCC;line-height:80px;}
+.f24{font-size:24px; color:#666; line-height:80px;}
+.f14{font-size:14px; color:#333;}
+.f14r{font-size:16px; color:#F00;}
+.f12{font-size:12px; color:#666;}
+.f12 a{color: #69C;}
+.f12 a:hover{color: #333;}
+.f18{font-size:18px; color:#fff; line-height:40px; text-align:left;}
+.f14j{font-size:14px; color:#f90;}
+.f14j a{ color:#f90;}
+.f14j a:hover{ color:#333;}
+.f14b{font-size:14px; color:#666; line-height:25px; text-align:center;}
+.f14w{font-size:14px; color:#fff; line-height:25px; text-align:center;}
+.f12r{font-size:12px; color:#F00;}
+
+/*行高定义*/
+.lh25{line-height:25px;}
+.lh21{line-height:21px;}
+.lh30{line-height:30px;}
+
+/*文本框定义*/
+.wb1{width:275px; height:28px; border:1px solid #ccc; line-height:25px;}
+.wb2{width:170px; height:28px; border:1px solid #ccc; line-height:25px;}
+.wb3{width:327px; height:28px; border:1px solid #ccc; line-height:25px;}
+.wb4{width:160px; height:28px; border:1px solid #ccc; line-height:25px;}
+.fxk{width:20px; height:20px; border:1px solid #ccc;}
+
+/*边框定义*/
+.ht{border-top:1px solid #ccc;}

@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* 页面整个定义 */
+body,html{margin:0; padding:0; font-family:"微软雅黑";background-color: #fff;}
+ul{padding:0;}
+li{list-style:none;}
+a{text-decoration:none;}
+
+
+/*清除浮动*/
+div{ overflow:hidden;}
+
+/*浮动定义*/
+.fl0{float:left;}
+.fl1{float:right;}
+
+/*背景色定义*/
+.bai{background-color:#fff;}
+.hui{background-color:#fff;}
+.ju{background-color:#f98400;}
+.shenhui{background-color:#333;}
+
+/*宽度定义*/
+.w0{width:100%;}
+.w1{width:1200px;}
+
+/*外边距定义*/
+.m0{margin:auto;}
+.m1{margin-top:10px;}
+.m10{margin-top:30px;}
+.m2{margin-bottom:10px;}
+.m3{margin-left:20px;}
+.m4{margin-right:20px;}
+
+
+/*内边距定义*/
+.p0{padding:5px;}
+.p1{padding-left:5px;}
+.p2{padding-right:5px;}
+.p3{padding-bottom:30px;}
+.p4{padding-top:20px;}
+
+/*文字定义*/
+/*头部文字*/.f0{font-size:12px; color:#000; }
+/*下载文字*/.f1{font-size:36px; color:#fff;}
+		   .f1 a{color:#fff;}
+		   .f1 a:hover{color:#fff;}
+/*热线电话*/.ftell{font-size:32px; line-height:30px; color:#000;}
+/*免费开通*/.f2{font-size:28px; line-height:36px; color:#000;}
+/*网上餐厅*/.f3{font-size:36px; line-height:36px; color:#f90; font-weight:bold;}
+/*微信餐厅步骤*/.f4{font-size:24px;color:#fff;}
+/*网站底部*/.fb{font-size:18px; line-height:30px;}
+/*底部文字菜单*/.f6{font-size:14px; color:#666;}
+			.f6 a{color:#999;}
+			.f6 a:hover{color:#fff;}
+
+
+/*文本对齐*/
+.t0{text-align:center;}
+.t1{text-align:left;}
+.t2{text-align:right;}
+
+/*行高定义*/
+.lh0{line-height:25px;}
+.lh1{line-height:30px;}
+.lh2{line-height:35px;}
+.lh3{line-height:40px;}
+.lh4{line-height:80px;}
+
+/*边框定义*/
+.h{ border-bottom:1px solid #ccc;}
+.h1{ border-bottom:2px solid #ccc;}
+.l{ border-top:1px solid #090;}
+.l1{ border-bottom:2px solid #090;}
+.hxx{border-bottom:1px dotted #666;}
+.hxs{border-top:1px dotted #666;}
+.wbk{border-style:none;}
+
+/*小黄条*/
+.xht{width:5px; height:30px; background-color:#f90; margin:5px;}
