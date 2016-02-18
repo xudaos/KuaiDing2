@@ -1,5 +1,7 @@
 package com.deepblue.kuaiding.entity;
 
+import java.sql.Timestamp;
+
 /**
  * KdMenu entity. @author MyEclipse Persistence Tools
  */
@@ -10,13 +12,17 @@ public class KdMenu implements java.io.Serializable {
 
 	private String objectid;
 	private String name;
+	private String address;
 	private String pic;
-	private String taste;
-	private Long price;
+	private String phone;
+	private Double distance;
+	private String region;
+	private Integer avgprice;
+	private String type;
 	private String description;
-	private Long orderno;
+	private Integer orderno;
 	private String creator;
-	private String createtime;
+	private Timestamp createtime;
 
 	// Constructors
 
@@ -25,25 +31,35 @@ public class KdMenu implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public KdMenu(String objectid, String name, String pic, String taste,
-			Long price, String createtime) {
+	public KdMenu(String objectid, String name, String address, String pic,
+			String phone, Double distance, String region, Integer avgprice,
+			String type, String creator) {
 		this.objectid = objectid;
 		this.name = name;
+		this.address = address;
 		this.pic = pic;
-		this.taste = taste;
-		this.price = price;
-		this.createtime = createtime;
+		this.phone = phone;
+		this.distance = distance;
+		this.region = region;
+		this.avgprice = avgprice;
+		this.type = type;
+		this.creator = creator;
 	}
 
 	/** full constructor */
-	public KdMenu(String objectid, String name, String pic, String taste,
-			Long price, String description, Long orderno, String creator,
-			String createtime) {
+	public KdMenu(String objectid, String name, String address, String pic,
+			String phone, Double distance, String region, Integer avgprice,
+			String type, String description, Integer orderno, String creator,
+			Timestamp createtime) {
 		this.objectid = objectid;
 		this.name = name;
+		this.address = address;
 		this.pic = pic;
-		this.taste = taste;
-		this.price = price;
+		this.phone = phone;
+		this.distance = distance;
+		this.region = region;
+		this.avgprice = avgprice;
+		this.type = type;
 		this.description = description;
 		this.orderno = orderno;
 		this.creator = creator;
@@ -68,6 +84,14 @@ public class KdMenu implements java.io.Serializable {
 		this.name = name;
 	}
 
+	public String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public String getPic() {
 		return this.pic;
 	}
@@ -76,20 +100,44 @@ public class KdMenu implements java.io.Serializable {
 		this.pic = pic;
 	}
 
-	public String getTaste() {
-		return this.taste;
+	public String getPhone() {
+		return this.phone;
 	}
 
-	public void setTaste(String taste) {
-		this.taste = taste;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	public Long getPrice() {
-		return this.price;
+	public Double getDistance() {
+		return this.distance;
 	}
 
-	public void setPrice(Long price) {
-		this.price = price;
+	public void setDistance(Double distance) {
+		this.distance = distance;
+	}
+
+	public String getRegion() {
+		return this.region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+	public Integer getAvgprice() {
+		return this.avgprice;
+	}
+
+	public void setAvgprice(Integer avgprice) {
+		this.avgprice = avgprice;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getDescription() {
@@ -100,11 +148,11 @@ public class KdMenu implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Long getOrderno() {
+	public Integer getOrderno() {
 		return this.orderno;
 	}
 
-	public void setOrderno(Long orderno) {
+	public void setOrderno(Integer orderno) {
 		this.orderno = orderno;
 	}
 
@@ -116,11 +164,11 @@ public class KdMenu implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public String getCreatetime() {
+	public Timestamp getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
 	}
 

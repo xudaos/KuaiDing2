@@ -31,10 +31,10 @@ public class KdRestaurantDAO extends HibernateDaoSupport {
 	public static final String DISTANCE = "distance";
 	public static final String REGION = "region";
 	public static final String AVGPRICE = "avgprice";
+	public static final String TYPE = "type";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
-	public static final String CREATETIME = "createtime";
 
 	protected void initDao() {
 		// do nothing
@@ -128,6 +128,10 @@ public class KdRestaurantDAO extends HibernateDaoSupport {
 		return findByProperty(AVGPRICE, avgprice);
 	}
 
+	public List findByType(Object type) {
+		return findByProperty(TYPE, type);
+	}
+
 	public List findByDescription(Object description) {
 		return findByProperty(DESCRIPTION, description);
 	}
@@ -138,10 +142,6 @@ public class KdRestaurantDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
-	}
-
-	public List findByCreatetime(Object createtime) {
-		return findByProperty(CREATETIME, createtime);
 	}
 
 	public List findAll() {

@@ -9,7 +9,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import com.deepblue.kuaiding.entity.KdTable;
-import com.deepblue.kuaiding.entity.KdTableId;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -24,8 +23,18 @@ import com.deepblue.kuaiding.entity.KdTableId;
  */
 public class KdTableDAO extends HibernateDaoSupport {
 	private static final Log log = LogFactory.getLog(KdTableDAO.class);
-
 	// property constants
+	public static final String NAME = "name";
+	public static final String ADDRESS = "address";
+	public static final String PIC = "pic";
+	public static final String PHONE = "phone";
+	public static final String DISTANCE = "distance";
+	public static final String REGION = "region";
+	public static final String AVGPRICE = "avgprice";
+	public static final String TYPE = "type";
+	public static final String DESCRIPTION = "description";
+	public static final String ORDERNO = "orderno";
+	public static final String CREATOR = "creator";
 
 	protected void initDao() {
 		// do nothing
@@ -53,7 +62,7 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public KdTable findById(KdTableId id) {
+	public KdTable findById(java.lang.String id) {
 		log.debug("getting KdTable instance with id: " + id);
 		try {
 			KdTable instance = (KdTable) getHibernateTemplate().get(
@@ -89,6 +98,50 @@ public class KdTableDAO extends HibernateDaoSupport {
 			log.error("find by property name failed", re);
 			throw re;
 		}
+	}
+
+	public List findByName(Object name) {
+		return findByProperty(NAME, name);
+	}
+
+	public List findByAddress(Object address) {
+		return findByProperty(ADDRESS, address);
+	}
+
+	public List findByPic(Object pic) {
+		return findByProperty(PIC, pic);
+	}
+
+	public List findByPhone(Object phone) {
+		return findByProperty(PHONE, phone);
+	}
+
+	public List findByDistance(Object distance) {
+		return findByProperty(DISTANCE, distance);
+	}
+
+	public List findByRegion(Object region) {
+		return findByProperty(REGION, region);
+	}
+
+	public List findByAvgprice(Object avgprice) {
+		return findByProperty(AVGPRICE, avgprice);
+	}
+
+	public List findByType(Object type) {
+		return findByProperty(TYPE, type);
+	}
+
+	public List findByDescription(Object description) {
+		return findByProperty(DESCRIPTION, description);
+	}
+
+	public List findByOrderno(Object orderno) {
+		return findByProperty(ORDERNO, orderno);
+	}
+
+	public List findByCreator(Object creator) {
+		return findByProperty(CREATOR, creator);
 	}
 
 	public List findAll() {

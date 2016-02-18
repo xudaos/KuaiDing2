@@ -25,16 +25,16 @@ public class KdOrderDAO extends HibernateDaoSupport {
 	private static final Log log = LogFactory.getLog(KdOrderDAO.class);
 	// property constants
 	public static final String NAME = "name";
-	public static final String BUYER = "buyer";
-	public static final String RESTAURANT = "restaurant";
-	public static final String BPHONE = "bphone";
-	public static final String RPHONE = "rphone";
-	public static final String BADRESS = "badress";
-	public static final String RADRESS = "radress";
+	public static final String ADDRESS = "address";
+	public static final String PIC = "pic";
+	public static final String PHONE = "phone";
+	public static final String DISTANCE = "distance";
+	public static final String REGION = "region";
+	public static final String AVGPRICE = "avgprice";
+	public static final String TYPE = "type";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
-	public static final String CREATETIME = "createtime";
 
 	protected void initDao() {
 		// do nothing
@@ -104,28 +104,32 @@ public class KdOrderDAO extends HibernateDaoSupport {
 		return findByProperty(NAME, name);
 	}
 
-	public List findByBuyer(Object buyer) {
-		return findByProperty(BUYER, buyer);
+	public List findByAddress(Object address) {
+		return findByProperty(ADDRESS, address);
 	}
 
-	public List findByRestaurant(Object restaurant) {
-		return findByProperty(RESTAURANT, restaurant);
+	public List findByPic(Object pic) {
+		return findByProperty(PIC, pic);
 	}
 
-	public List findByBphone(Object bphone) {
-		return findByProperty(BPHONE, bphone);
+	public List findByPhone(Object phone) {
+		return findByProperty(PHONE, phone);
 	}
 
-	public List findByRphone(Object rphone) {
-		return findByProperty(RPHONE, rphone);
+	public List findByDistance(Object distance) {
+		return findByProperty(DISTANCE, distance);
 	}
 
-	public List findByBadress(Object badress) {
-		return findByProperty(BADRESS, badress);
+	public List findByRegion(Object region) {
+		return findByProperty(REGION, region);
 	}
 
-	public List findByRadress(Object radress) {
-		return findByProperty(RADRESS, radress);
+	public List findByAvgprice(Object avgprice) {
+		return findByProperty(AVGPRICE, avgprice);
+	}
+
+	public List findByType(Object type) {
+		return findByProperty(TYPE, type);
 	}
 
 	public List findByDescription(Object description) {
@@ -138,10 +142,6 @@ public class KdOrderDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
-	}
-
-	public List findByCreatetime(Object createtime) {
-		return findByProperty(CREATETIME, createtime);
 	}
 
 	public List findAll() {

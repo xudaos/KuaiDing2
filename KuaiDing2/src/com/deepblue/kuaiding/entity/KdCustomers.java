@@ -1,5 +1,7 @@
 package com.deepblue.kuaiding.entity;
 
+import java.sql.Timestamp;
+
 /**
  * KdCustomers entity. @author MyEclipse Persistence Tools
  */
@@ -13,10 +15,14 @@ public class KdCustomers implements java.io.Serializable {
 	private String address;
 	private String pic;
 	private String phone;
+	private String mycollection;
+	private Integer coupon;
+	private String myorder;
+	private Integer score;
 	private String description;
 	private Integer orderno;
 	private String creator;
-	private String createtime;
+	private Timestamp createtime;
 
 	// Constructors
 
@@ -26,24 +32,29 @@ public class KdCustomers implements java.io.Serializable {
 
 	/** minimal constructor */
 	public KdCustomers(String objectid, String name, String address,
-			String pic, String phone, String createtime) {
+			String pic, String phone, String creator) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
 		this.pic = pic;
 		this.phone = phone;
-		this.createtime = createtime;
+		this.creator = creator;
 	}
 
 	/** full constructor */
 	public KdCustomers(String objectid, String name, String address,
-			String pic, String phone, String description, Integer orderno,
-			String creator, String createtime) {
+			String pic, String phone, String mycollection, Integer coupon,
+			String myorder, Integer score, String description, Integer orderno,
+			String creator, Timestamp createtime) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
 		this.pic = pic;
 		this.phone = phone;
+		this.mycollection = mycollection;
+		this.coupon = coupon;
+		this.myorder = myorder;
+		this.score = score;
 		this.description = description;
 		this.orderno = orderno;
 		this.creator = creator;
@@ -92,6 +103,38 @@ public class KdCustomers implements java.io.Serializable {
 		this.phone = phone;
 	}
 
+	public String getMycollection() {
+		return this.mycollection;
+	}
+
+	public void setMycollection(String mycollection) {
+		this.mycollection = mycollection;
+	}
+
+	public Integer getCoupon() {
+		return this.coupon;
+	}
+
+	public void setCoupon(Integer coupon) {
+		this.coupon = coupon;
+	}
+
+	public String getMyorder() {
+		return this.myorder;
+	}
+
+	public void setMyorder(String myorder) {
+		this.myorder = myorder;
+	}
+
+	public Integer getScore() {
+		return this.score;
+	}
+
+	public void setScore(Integer score) {
+		this.score = score;
+	}
+
 	public String getDescription() {
 		return this.description;
 	}
@@ -116,11 +159,11 @@ public class KdCustomers implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public String getCreatetime() {
+	public Timestamp getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
 	}
 

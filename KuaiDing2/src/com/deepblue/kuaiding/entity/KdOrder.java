@@ -1,5 +1,7 @@
 package com.deepblue.kuaiding.entity;
 
+import java.sql.Timestamp;
+
 /**
  * KdOrder entity. @author MyEclipse Persistence Tools
  */
@@ -10,16 +12,17 @@ public class KdOrder implements java.io.Serializable {
 
 	private String objectid;
 	private String name;
-	private String buyer;
-	private String restaurant;
-	private String bphone;
-	private String rphone;
-	private String badress;
-	private String radress;
+	private String address;
+	private String pic;
+	private String phone;
+	private Double distance;
+	private String region;
+	private Integer avgprice;
+	private String type;
 	private String description;
-	private Long orderno;
+	private Integer orderno;
 	private String creator;
-	private String createtime;
+	private Timestamp createtime;
 
 	// Constructors
 
@@ -28,34 +31,35 @@ public class KdOrder implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public KdOrder(String objectid, String name, String buyer,
-			String restaurant, String bphone, String rphone, String badress,
-			String radress, String creator, String createtime) {
+	public KdOrder(String objectid, String name, String address, String pic,
+			String phone, Double distance, String region, Integer avgprice,
+			String type, String creator) {
 		this.objectid = objectid;
 		this.name = name;
-		this.buyer = buyer;
-		this.restaurant = restaurant;
-		this.bphone = bphone;
-		this.rphone = rphone;
-		this.badress = badress;
-		this.radress = radress;
+		this.address = address;
+		this.pic = pic;
+		this.phone = phone;
+		this.distance = distance;
+		this.region = region;
+		this.avgprice = avgprice;
+		this.type = type;
 		this.creator = creator;
-		this.createtime = createtime;
 	}
 
 	/** full constructor */
-	public KdOrder(String objectid, String name, String buyer,
-			String restaurant, String bphone, String rphone, String badress,
-			String radress, String description, Long orderno, String creator,
-			String createtime) {
+	public KdOrder(String objectid, String name, String address, String pic,
+			String phone, Double distance, String region, Integer avgprice,
+			String type, String description, Integer orderno, String creator,
+			Timestamp createtime) {
 		this.objectid = objectid;
 		this.name = name;
-		this.buyer = buyer;
-		this.restaurant = restaurant;
-		this.bphone = bphone;
-		this.rphone = rphone;
-		this.badress = badress;
-		this.radress = radress;
+		this.address = address;
+		this.pic = pic;
+		this.phone = phone;
+		this.distance = distance;
+		this.region = region;
+		this.avgprice = avgprice;
+		this.type = type;
 		this.description = description;
 		this.orderno = orderno;
 		this.creator = creator;
@@ -80,52 +84,60 @@ public class KdOrder implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public String getBuyer() {
-		return this.buyer;
+	public String getAddress() {
+		return this.address;
 	}
 
-	public void setBuyer(String buyer) {
-		this.buyer = buyer;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public String getRestaurant() {
-		return this.restaurant;
+	public String getPic() {
+		return this.pic;
 	}
 
-	public void setRestaurant(String restaurant) {
-		this.restaurant = restaurant;
+	public void setPic(String pic) {
+		this.pic = pic;
 	}
 
-	public String getBphone() {
-		return this.bphone;
+	public String getPhone() {
+		return this.phone;
 	}
 
-	public void setBphone(String bphone) {
-		this.bphone = bphone;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	public String getRphone() {
-		return this.rphone;
+	public Double getDistance() {
+		return this.distance;
 	}
 
-	public void setRphone(String rphone) {
-		this.rphone = rphone;
+	public void setDistance(Double distance) {
+		this.distance = distance;
 	}
 
-	public String getBadress() {
-		return this.badress;
+	public String getRegion() {
+		return this.region;
 	}
 
-	public void setBadress(String badress) {
-		this.badress = badress;
+	public void setRegion(String region) {
+		this.region = region;
 	}
 
-	public String getRadress() {
-		return this.radress;
+	public Integer getAvgprice() {
+		return this.avgprice;
 	}
 
-	public void setRadress(String radress) {
-		this.radress = radress;
+	public void setAvgprice(Integer avgprice) {
+		this.avgprice = avgprice;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getDescription() {
@@ -136,11 +148,11 @@ public class KdOrder implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Long getOrderno() {
+	public Integer getOrderno() {
 		return this.orderno;
 	}
 
-	public void setOrderno(Long orderno) {
+	public void setOrderno(Integer orderno) {
 		this.orderno = orderno;
 	}
 
@@ -152,11 +164,11 @@ public class KdOrder implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public String getCreatetime() {
+	public Timestamp getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
 	}
 

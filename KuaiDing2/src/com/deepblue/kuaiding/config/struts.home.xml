@@ -15,5 +15,7 @@
 				/WEB-INF/pages/home.jsp
 			</result>
 		</action>
+		<action name="getLunbo" class="HomeAction" method="getLunbo">
+		</action>
 	</package>
 </struts>

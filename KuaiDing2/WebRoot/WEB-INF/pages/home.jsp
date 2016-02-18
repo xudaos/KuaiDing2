@@ -777,7 +777,24 @@ var path = '';
     <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
     <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>
 </div>
+<!-- jQuery -->
+<script src="<%=path%>/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
+
+//加载轮播数据
+function getLunbo(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getLunbo.do',
+		data: {
+			type: '1'
+		},
+		dataType: 'json',
+		success: function(result){
+			alert(JSON.stringify(result));
+		}
+	});
+}
 var collectCompany = '';
 //收藏方法
 function collectp(n,t){

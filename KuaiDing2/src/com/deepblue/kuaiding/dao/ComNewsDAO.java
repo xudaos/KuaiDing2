@@ -25,12 +25,11 @@ public class ComNewsDAO extends HibernateDaoSupport {
 	private static final Log log = LogFactory.getLog(ComNewsDAO.class);
 	// property constants
 	public static final String TITLE = "title";
-	public static final String CONTENT = "content";
 	public static final String PIC = "pic";
+	public static final String CONTENT = "content";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
-	public static final String CREATETIME = "createtime";
 
 	protected void initDao() {
 		// do nothing
@@ -100,12 +99,12 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		return findByProperty(TITLE, title);
 	}
 
-	public List findByContent(Object content) {
-		return findByProperty(CONTENT, content);
-	}
-
 	public List findByPic(Object pic) {
 		return findByProperty(PIC, pic);
+	}
+
+	public List findByContent(Object content) {
+		return findByProperty(CONTENT, content);
 	}
 
 	public List findByDescription(Object description) {
@@ -118,10 +117,6 @@ public class ComNewsDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
-	}
-
-	public List findByCreatetime(Object createtime) {
-		return findByProperty(CREATETIME, createtime);
 	}
 
 	public List findAll() {

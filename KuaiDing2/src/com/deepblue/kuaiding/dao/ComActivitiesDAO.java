@@ -31,7 +31,6 @@ public class ComActivitiesDAO extends HibernateDaoSupport {
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
-	public static final String CREATETIME = "createtime";
 
 	protected void initDao() {
 		// do nothing
@@ -123,10 +122,6 @@ public class ComActivitiesDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
-	}
-
-	public List findByCreatetime(Object createtime) {
-		return findByProperty(CREATETIME, createtime);
 	}
 
 	public List findAll() {

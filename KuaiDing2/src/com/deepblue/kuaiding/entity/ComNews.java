@@ -12,13 +12,13 @@ public class ComNews implements java.io.Serializable {
 
 	private String objectid;
 	private String title;
-	private String content;
 	private String pic;
+	private String content;
 	private Timestamp vardate;
 	private String description;
-	private Long orderno;
+	private Integer orderno;
 	private String creator;
-	private String createtime;
+	private Timestamp createtime;
 
 	// Constructors
 
@@ -27,25 +27,24 @@ public class ComNews implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public ComNews(String objectid, String title, String content, String pic,
-			Timestamp vardate, String creator, String createtime) {
+	public ComNews(String objectid, String pic, String content,
+			Timestamp vardate, String creator, Timestamp createtime) {
 		this.objectid = objectid;
-		this.title = title;
-		this.content = content;
 		this.pic = pic;
+		this.content = content;
 		this.vardate = vardate;
 		this.creator = creator;
 		this.createtime = createtime;
 	}
 
 	/** full constructor */
-	public ComNews(String objectid, String title, String content, String pic,
-			Timestamp vardate, String description, Long orderno,
-			String creator, String createtime) {
+	public ComNews(String objectid, String title, String pic, String content,
+			Timestamp vardate, String description, Integer orderno,
+			String creator, Timestamp createtime) {
 		this.objectid = objectid;
 		this.title = title;
-		this.content = content;
 		this.pic = pic;
+		this.content = content;
 		this.vardate = vardate;
 		this.description = description;
 		this.orderno = orderno;
@@ -71,20 +70,20 @@ public class ComNews implements java.io.Serializable {
 		this.title = title;
 	}
 
-	public String getContent() {
-		return this.content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
 	public String getPic() {
 		return this.pic;
 	}
 
 	public void setPic(String pic) {
 		this.pic = pic;
+	}
+
+	public String getContent() {
+		return this.content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public Timestamp getVardate() {
@@ -103,11 +102,11 @@ public class ComNews implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Long getOrderno() {
+	public Integer getOrderno() {
 		return this.orderno;
 	}
 
-	public void setOrderno(Long orderno) {
+	public void setOrderno(Integer orderno) {
 		this.orderno = orderno;
 	}
 
@@ -119,11 +118,11 @@ public class ComNews implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public String getCreatetime() {
+	public Timestamp getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
 	}
 

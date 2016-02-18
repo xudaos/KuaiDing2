@@ -28,10 +28,13 @@ public class KdCustomersDAO extends HibernateDaoSupport {
 	public static final String ADDRESS = "address";
 	public static final String PIC = "pic";
 	public static final String PHONE = "phone";
+	public static final String MYCOLLECTION = "mycollection";
+	public static final String COUPON = "coupon";
+	public static final String MYORDER = "myorder";
+	public static final String SCORE = "score";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
-	public static final String CREATETIME = "createtime";
 
 	protected void initDao() {
 		// do nothing
@@ -113,6 +116,22 @@ public class KdCustomersDAO extends HibernateDaoSupport {
 		return findByProperty(PHONE, phone);
 	}
 
+	public List findByMycollection(Object mycollection) {
+		return findByProperty(MYCOLLECTION, mycollection);
+	}
+
+	public List findByCoupon(Object coupon) {
+		return findByProperty(COUPON, coupon);
+	}
+
+	public List findByMyorder(Object myorder) {
+		return findByProperty(MYORDER, myorder);
+	}
+
+	public List findByScore(Object score) {
+		return findByProperty(SCORE, score);
+	}
+
 	public List findByDescription(Object description) {
 		return findByProperty(DESCRIPTION, description);
 	}
@@ -123,10 +142,6 @@ public class KdCustomersDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
-	}
-
-	public List findByCreatetime(Object createtime) {
-		return findByProperty(CREATETIME, createtime);
 	}
 
 	public List findAll() {

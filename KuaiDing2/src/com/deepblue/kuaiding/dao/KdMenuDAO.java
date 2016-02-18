@@ -25,13 +25,16 @@ public class KdMenuDAO extends HibernateDaoSupport {
 	private static final Log log = LogFactory.getLog(KdMenuDAO.class);
 	// property constants
 	public static final String NAME = "name";
+	public static final String ADDRESS = "address";
 	public static final String PIC = "pic";
-	public static final String TASTE = "taste";
-	public static final String PRICE = "price";
+	public static final String PHONE = "phone";
+	public static final String DISTANCE = "distance";
+	public static final String REGION = "region";
+	public static final String AVGPRICE = "avgprice";
+	public static final String TYPE = "type";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
-	public static final String CREATETIME = "createtime";
 
 	protected void initDao() {
 		// do nothing
@@ -101,16 +104,32 @@ public class KdMenuDAO extends HibernateDaoSupport {
 		return findByProperty(NAME, name);
 	}
 
+	public List findByAddress(Object address) {
+		return findByProperty(ADDRESS, address);
+	}
+
 	public List findByPic(Object pic) {
 		return findByProperty(PIC, pic);
 	}
 
-	public List findByTaste(Object taste) {
-		return findByProperty(TASTE, taste);
+	public List findByPhone(Object phone) {
+		return findByProperty(PHONE, phone);
 	}
 
-	public List findByPrice(Object price) {
-		return findByProperty(PRICE, price);
+	public List findByDistance(Object distance) {
+		return findByProperty(DISTANCE, distance);
+	}
+
+	public List findByRegion(Object region) {
+		return findByProperty(REGION, region);
+	}
+
+	public List findByAvgprice(Object avgprice) {
+		return findByProperty(AVGPRICE, avgprice);
+	}
+
+	public List findByType(Object type) {
+		return findByProperty(TYPE, type);
 	}
 
 	public List findByDescription(Object description) {
@@ -123,10 +142,6 @@ public class KdMenuDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
-	}
-
-	public List findByCreatetime(Object createtime) {
-		return findByProperty(CREATETIME, createtime);
 	}
 
 	public List findAll() {

@@ -1,5 +1,7 @@
 package com.deepblue.kuaiding.entity;
 
+import java.sql.Timestamp;
+
 /**
  * KdRestaurant entity. @author MyEclipse Persistence Tools
  */
@@ -13,13 +15,14 @@ public class KdRestaurant implements java.io.Serializable {
 	private String address;
 	private String pic;
 	private String phone;
-	private Integer distance;
+	private Double distance;
 	private String region;
 	private Integer avgprice;
+	private String type;
 	private String description;
 	private Integer orderno;
 	private String creator;
-	private String createtime;
+	private Timestamp createtime;
 
 	// Constructors
 
@@ -29,8 +32,8 @@ public class KdRestaurant implements java.io.Serializable {
 
 	/** minimal constructor */
 	public KdRestaurant(String objectid, String name, String address,
-			String pic, String phone, Integer distance, String region,
-			Integer avgprice, String creator, String createtime) {
+			String pic, String phone, Double distance, String region,
+			Integer avgprice, String type, String creator) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
@@ -39,15 +42,15 @@ public class KdRestaurant implements java.io.Serializable {
 		this.distance = distance;
 		this.region = region;
 		this.avgprice = avgprice;
+		this.type = type;
 		this.creator = creator;
-		this.createtime = createtime;
 	}
 
 	/** full constructor */
 	public KdRestaurant(String objectid, String name, String address,
-			String pic, String phone, Integer distance, String region,
-			Integer avgprice, String description, Integer orderno,
-			String creator, String createtime) {
+			String pic, String phone, Double distance, String region,
+			Integer avgprice, String type, String description, Integer orderno,
+			String creator, Timestamp createtime) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
@@ -56,6 +59,7 @@ public class KdRestaurant implements java.io.Serializable {
 		this.distance = distance;
 		this.region = region;
 		this.avgprice = avgprice;
+		this.type = type;
 		this.description = description;
 		this.orderno = orderno;
 		this.creator = creator;
@@ -104,11 +108,11 @@ public class KdRestaurant implements java.io.Serializable {
 		this.phone = phone;
 	}
 
-	public Integer getDistance() {
+	public Double getDistance() {
 		return this.distance;
 	}
 
-	public void setDistance(Integer distance) {
+	public void setDistance(Double distance) {
 		this.distance = distance;
 	}
 
@@ -126,6 +130,14 @@ public class KdRestaurant implements java.io.Serializable {
 
 	public void setAvgprice(Integer avgprice) {
 		this.avgprice = avgprice;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getDescription() {
@@ -152,11 +164,11 @@ public class KdRestaurant implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public String getCreatetime() {
+	public Timestamp getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
 	}
 

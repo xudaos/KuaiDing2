@@ -18,9 +18,9 @@ public class BcomPost implements java.io.Serializable {
 	private Timestamp vardate;
 	private Timestamp retime;
 	private String description;
-	private Long orderno;
+	private Integer orderno;
 	private String creator;
-	private String createtime;
+	private Timestamp createtime;
 
 	// Constructors
 
@@ -31,7 +31,7 @@ public class BcomPost implements java.io.Serializable {
 	/** minimal constructor */
 	public BcomPost(String objectid, String name, String title, String pic,
 			String content, Timestamp vardate, Timestamp retime,
-			String creator, String createtime) {
+			String creator, Timestamp createtime) {
 		this.objectid = objectid;
 		this.name = name;
 		this.title = title;
@@ -46,7 +46,8 @@ public class BcomPost implements java.io.Serializable {
 	/** full constructor */
 	public BcomPost(String objectid, String name, String title, String pic,
 			String content, Timestamp vardate, Timestamp retime,
-			String description, Long orderno, String creator, String createtime) {
+			String description, Integer orderno, String creator,
+			Timestamp createtime) {
 		this.objectid = objectid;
 		this.name = name;
 		this.title = title;
@@ -126,11 +127,11 @@ public class BcomPost implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public Long getOrderno() {
+	public Integer getOrderno() {
 		return this.orderno;
 	}
 
-	public void setOrderno(Long orderno) {
+	public void setOrderno(Integer orderno) {
 		this.orderno = orderno;
 	}
 
@@ -142,11 +143,11 @@ public class BcomPost implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public String getCreatetime() {
+	public Timestamp getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(String createtime) {
+	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
 	}
 
