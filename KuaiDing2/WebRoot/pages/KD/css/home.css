@@ -16,7 +16,7 @@
 .banner-div { overflow:hidden; height:373px; position:relative; width:957px;}
 .banner-div ul { position:absolute; left:0;}
 .banner-ico { position:absolute; top:340px; left:383px;}
-.banner-ico li { width:17px; height:17px; margin-right:25px; background:url(../images/banner-ico1.png) no-repeat;/* _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/banner-ico1.png" rel="nofollow");*/}
+.banner-ico li { width:16px; height:16px; margin-right:25px; background:url(../images/banner-ico1.png) no-repeat;/* _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/banner-ico1.png" rel="nofollow");*/}
 .banner-ico .ico { background:url(../images/banner-ico2.png) no-repeat;/*  _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/banner-ico2.png" rel="nofollow");*/}
 .banner-nav { padding-top:8px;}
 .banner-nav li { width:237px; height:74px; cursor:pointer;}
