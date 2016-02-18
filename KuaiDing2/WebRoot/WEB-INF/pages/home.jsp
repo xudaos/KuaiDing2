@@ -415,29 +415,10 @@ var path = '';
     	<div class="banner-left">
         	<div class="banner-div">
               
-                <ul id="banner-img">
-                
-                <li><a href="/Store/join/1431774642570/" target="_blank"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/6/22d698bbda34b87f23cb766d6b45f77c.jpg" /></a></li>
-                
-                 <li><a href="/Store/join/1428380151749/" target="_blank"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/6/686e7ad808e9715306e72de6c74650c1.jpg" /></a></li>
-                    
-                 <li><a href="/Store/join/1431054023999/" target="_blank"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/6/1d531f4fdc3003cca91f2d78e2eedc04.jpg" /></a></li>
-                    
-                 <li><a href="/Store/join/1431947381557/" target="_blank"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/6/f20c8b03f7bac931acafc32229d4645e.jpg" /></a></li>
-                    
-                 <li><a href="/Store/join/1419498357598/" target="_blank"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/6/338712b9eb3be369c9eb4fb63276d25b.jpg" /></a></li>
-                    
-                 <li><a href="/Store/join/1432440241038/" target="_blank"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/4aa960072cb79c0358ff6d9079f71366.jpg" /></a></li>
-                
+                <ul id="banner-img">  
                 </ul>
             </div>
-                <ul id="banner-ico" class="banner-ico">      
-                  <li class="ico"></li>
-                  <li></li>
-            	  <li></li>
-            	  <li></li>
-            	  <li></li>
-            	  <li></li>                
+                <ul id="banner-ico" class="banner-ico">               
                 </ul>
                 
                 <ul class="banner-nav">
@@ -781,6 +762,10 @@ var path = '';
 <script src="<%=path%>/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
 
+$(function(){
+	getLunbo();
+});
+
 //加载轮播数据
 function getLunbo(){
 	$.ajax({
@@ -791,7 +776,19 @@ function getLunbo(){
 		},
 		dataType: 'json',
 		success: function(result){
-			alert(JSON.stringify(result));
+			var data = result.dataList;
+			var htmlStr1 = '';
+			var htmlStr2 = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr1 += '<li><a href="javascript:void(0);" target="_blank"><img src="'+data[i].pic+'"/></a></li>';
+				if(i===0)
+					htmlStr2 += '<li class="ico"></li>';
+				else
+					htmlStr2 += '<li></li>';
+			}
+			$('#banner-img').html(htmlStr1);
+			$('#banner-ico').html(htmlStr2);
+			banner();
 		}
 	});
 }
