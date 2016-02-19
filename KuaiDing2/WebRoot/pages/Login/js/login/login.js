@@ -23,7 +23,7 @@ Operate.login = function(){
 					        		//$.messager.progress('close');
 					                if(data == 'memSuccess') {
 					                	if($("#chkRememberLoginName").attr("checked")=="checked"){
-					                		SetCookie("LOGIN_NAME",ln.trim(),7);//娣囨繂鐡ㄩ崚鐧坥okie娑擄拷  娣囨繂鐡�婢讹拷
+					                		SetCookie("LOGIN_NAME",ln.trim(),7);
 					                	}
 					                	if(login_type==1){
 					                		window.location.reload();
@@ -61,14 +61,14 @@ Operate.login = function(){
 					                	}
 					                }
 					                $('#verifyCode').val('');
-					                Operate.login.loadVrifyCode();//閸掗攱鏌婃宀冪槈閻拷
+					                Operate.login.loadVrifyCode();
 					            },
 					            error: function(data) {
 					            	//$.messager.progress('close');
 					            	$(this).pointMsg({msg:'鎮ㄨ緭鍏ョ殑鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛�'});
 					            	_login_ed();
 					                $('#verifyCode').val('');
-					                Operate.login.loadVrifyCode();//閸掗攱鏌婃宀冪槈閻拷
+					                Operate.login.loadVrifyCode();
 					            }
 							});
 						}else{
@@ -91,7 +91,7 @@ Operate.login = function(){
 			}
 			return false;
 		},
-		loadVrifyCode:function(){//閸掗攱鏌婃宀冪槈閻拷
+		loadVrifyCode:function(){
 			var _url = path+"/ImageServlet?time="+new Date().getTime();
 			$('#v_pic').attr('src',_url);
 		},
@@ -99,7 +99,6 @@ Operate.login = function(){
 			if(window.top != window.self){
 				window.top.location =  window.self.location;
 			}
-			//妤犲矁鐦夐惍浣告禈閻楀洨绮︾�姘卞仯閸戣绨ㄦ禒锟�
 			$('#v_pic').click(Operate.login.loadVrifyCode);
 			var form = $('#general_login_form');
 			form.submit(Operate.login.toLogin);
@@ -113,7 +112,6 @@ Operate.login = function(){
 	};
 }();
 
-//閸斻劍鈧礁鐦戦惍浣烘瑜帮拷
 var mfilter=/^(((1[3|5|8][0-9]{1}))+\d{8})$/;
 Operate.mobile_login = function(){
 	return {
@@ -135,7 +133,7 @@ Operate.mobile_login = function(){
 					        	success: function(data) {
 					                if(data == 'memSuccess') {
 					                	if($("#rememberLoginMobile").attr("checked")=="checked"){
-					                		SetCookie("LOGIN_MOBILE",$('#loginMobile').val().trim().trim(),7);//娣囨繂鐡ㄩ崚鐧坥okie娑擄拷  娣囨繂鐡�婢讹拷
+					                		SetCookie("LOGIN_MOBILE",$('#loginMobile').val().trim().trim(),7);
 					                	}
 					                	if(login_type==1){
 					                		window.location.reload();
@@ -208,28 +206,28 @@ function _login_ed(){
 }
 
 function yes_Send(){
-	$("#loadCode").attr('disabled',true);//濞ｈ濮瀌isabled
+	$("#loadCode").attr('disabled',true);
 	$("#loadCode").addClass("shouji-hui");
     $("#loadCode").val("鍔ㄦ�鐮佸彂閫佹垚鍔�"+timeout+"鍚庡彲閲嶆柊鍙戦�锛�");
 	timeout--;
 	if(timeout == 0) {
 		$("#loadCode").val("閼惧嘲褰囬崝銊︹偓浣虹垳");
 		$("#loadCode").removeClass("shouji-hui");
-		$("#loadCode").attr('disabled',false); //缁夊娅巇isabled鐏炵偞鈧拷
+		$("#loadCode").attr('disabled',false); 
 		timeout=60;
 	}else{
 		setTimeout("yes_Send()", 1000);
 	}
 }
 function no_Send(){
-	$("#loadCode").attr('disabled',true);//濞ｈ濮瀌isabled
+	$("#loadCode").attr('disabled',true);
 	$("#loadCode").addClass("shouji-hui");
 	$("#loadCode").val("鍔ㄦ�鐮佸彂閫佹垚鍔�"+timeout+"鍚庡彲閲嶆柊鍙戦�锛�");
 	timeout--;
 	if(timeout == 0) {
 		$("#loadCode").val("閼惧嘲褰囬崝銊︹偓浣虹垳");
 		$("#loadCode").removeClass("shouji-hui");
-		$("#loadCode").attr('disabled',false); //缁夊娅巇isabled鐏炵偞鈧拷
+		$("#loadCode").attr('disabled',false);
 		timeout=60;
 	}else{
 		setTimeout("no_Send()", 1000);

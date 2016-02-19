@@ -314,10 +314,10 @@ var path = '';
             <li class="li1">
             	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
             	<ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="wm.html">外卖送餐</a></li>
-                    <li><a href="yd.html">预订点餐</a></li>
-                    <li><a href="coupons.html">优惠折扣</a></li>
+                    <li><a href="home.do">首页</a></li>
+                    <li><a href="wm.do">外卖送餐</a></li>
+                    <li><a href="yd.do">预订点餐</a></li>
+                    <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
@@ -346,7 +346,7 @@ var path = '';
 <p class="top-right">
         	
 				<span>您好，欢迎来到快订！</span>
-	            <a target="_blank" href="../Login/login.html">[登录]</a>
+	            <a target="_blank" href="login.do">[登录]</a>
 	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|
 			
 			
@@ -385,9 +385,9 @@ var path = '';
 <div class="nav">
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
-        	<li><a class="ahover" href="index.html">首页</a></li>
-            <li><a  href="wm.html">外卖送餐</a></li>
-            <li><a  href="yd.html">预订点餐</a></li>
+        	<li><a class="ahover" href="home.do">首页</a></li>
+            <li><a  href="wm.do">外卖送餐</a></li>
+            <li><a  href="yd.do">预订点餐</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
             <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
         </ul>
@@ -415,7 +415,7 @@ var path = '';
     	<div class="banner-left">
         	<div class="banner-div">
               
-                <ul id="banner-img">  
+                <ul id="banner-img">
                 </ul>
             </div>
                 <ul id="banner-ico" class="banner-ico">               
@@ -465,17 +465,7 @@ var path = '';
             </div>
             <div class="div1">
             	<h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->热门推荐</h3>
-                <ul>
-                	
-                		<li><span>1</span><a title="杨国福麻辣烫(角门店)" href="/Store/join/1434519195779/">杨国福麻辣烫(角门店</a></li>
-                	
-                		<li><span>2</span><a title="马可波罗意粉工坊（长楹天街店）" href="/Store/join/1425366130534/">马可波罗意粉工坊（长</a></li>
-                	
-                		<li><span>3</span><a title="关东煮物（新世界百货店）" href="/Store/join/1425366723294/">关东煮物（新世界百货</a></li>
-                	
-                		<li><span>4</span><a title="好伦哥" href="/Store/join/1429437436321/">好伦哥</a></li>
-                	
-                		<li><span>5</span><a title="婺源小镇江西菜（北航店）" href="/Store/join/1414027818961/">婺源小镇江西菜（北航</a></li>               	
+                <ul id="banner-rmtj">       	
                 </ul>
             </div>
         </div>
@@ -764,6 +754,7 @@ var path = '';
 
 $(function(){
 	getLunbo();
+	getRemen();
 });
 
 //加载轮播数据
@@ -792,6 +783,28 @@ function getLunbo(){
 		}
 	});
 }
+
+
+//加载热门推荐
+function getRemen(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getLunbo.do',
+		data: {
+			type: '2'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><span>'+data[i].orderno+'</span><a href="javascript:void(0);">'+data[i].name+'</a></li>';				
+			}
+			$('#banner-rmtj').html(htmlStr);
+		}
+	});
+}
+
 var collectCompany = '';
 //收藏方法
 function collectp(n,t){

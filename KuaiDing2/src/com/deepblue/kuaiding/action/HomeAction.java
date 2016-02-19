@@ -21,13 +21,15 @@ public class HomeAction extends ActionSupport implements iJsonable{
 	private KdRestaurantBiz kdRestaurantBiz;
 	
 	private String type;
-	private String username;
-	private String password;
+	private String loginName;
+	private String loginPass;
 	
 	public String login () {
-		if (StringUtils.isBlank(username)||StringUtils.isBlank(password)) {
+		System.out.println("loginName: "+loginName);
+		System.out.println("loginPass: "+loginPass);
+		if (StringUtils.isBlank(loginName)||StringUtils.isBlank(loginPass)) {
 			return INPUT;
-		} else if (StringUtils.equals("admin", username)&&StringUtils.equals("admin", password)) {
+		} else if (StringUtils.equals("admin", loginName)&&StringUtils.equals("admin", loginPass)) {
 			feedback.setSuccess(true);
 		} else {
 			feedback.setSuccess(false);
@@ -50,24 +52,25 @@ public class HomeAction extends ActionSupport implements iJsonable{
 	
 	/* get set
 	 * -----------------------------------------------------------------*/
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public KdRestaurantBiz getKdRestaurantBiz() {
 		return kdRestaurantBiz;
+	}
+
+	public String getLoginName() {
+		return loginName;
+	}
+
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+
+	public String getLoginPass() {
+		return loginPass;
+	}
+
+	public void setLoginPass(String loginPass) {
+		this.loginPass = loginPass;
 	}
 
 	public void setKdRestaurantBiz(KdRestaurantBiz kdRestaurantBiz) {

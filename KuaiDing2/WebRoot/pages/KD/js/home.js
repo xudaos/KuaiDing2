@@ -29,23 +29,21 @@ function ico(obj,iClick){
 }
 
 function banner(){
-	var banner_img = document.getElementById('banner-img');//閸ュ墽澧栭柇锝勯嚋ul
+	var banner_img = document.getElementById('banner-img');
 	var imgLi = banner_img.getElementsByTagName('li');
-	var banner_ico = document.getElementById('banner-ico');//鐏忓繒鍋ｉ悙褰掑亝娑撶尳l
+	var banner_ico = document.getElementById('banner-ico');
 	var icoLi = banner_ico.getElementsByTagName('li');
 	var iClick = 0;
-	var timer = null;//閼奉亜濮╂潪顔芥尡鐎规碍妞傞崳锟�
+	var timer = null;
 	var i = 0;
 	
-	//閺�懓褰塽l鐎硅棄瀹虫稊瀣閼惧嘲褰囩仦蹇撶閸掑棜椴搁悳鍥╃舶li閸ュ搫鐣剧�钘夊閿涳拷
 	banner_img.style.width = imgLi[0].offsetWidth * imgLi.length + 'px';
 
 	function move(){
-		startMove(banner_img,'left',-imgLi[0].offsetWidth*iClick);//鏉╂劕濮﹗l
-		ico(icoLi,iClick);//閺�懓鐨悙鍦仯閻ㄥ嫰顤侀懝锟�
+		startMove(banner_img,'left',-imgLi[0].offsetWidth*iClick);
+		ico(icoLi,iClick);
 	}
 	
-	//娑撳娼扮亸蹇曞仯閻愮懓濮炴禍瀣╂
 	for(i=0;i<icoLi.length;i++){
 		icoLi[i].index = i;
 		icoLi[i].onmouseover = function(){
@@ -54,7 +52,6 @@ function banner(){
 		};
 	}
 	
-	//閼奉亜濮╅幘顓熸杹
 	function autoPlay(){
 		clearInterval(timer);
 		timer = setInterval(function(){
@@ -62,7 +59,7 @@ function banner(){
 			move();	
 		},4000);
 	}
-	//姒х姵鐖ｇ粔璇插弳閸嬫粍顒涢懛顏勫З閹绢厽鏂�
+
 	banner_img.onmouseover = function(){
 		clearInterval(timer);
 	};

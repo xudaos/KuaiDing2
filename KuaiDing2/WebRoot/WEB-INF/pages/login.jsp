@@ -44,129 +44,63 @@ var path = '';
         	<img src="<%=path%>/pages/Login/images/login-img.png" />
         </div>
         <input id="login_type" type="hidden" value="0" />
-        
-<script type="text/javascript" src="<%=path%>/pages/Login/js/login/package.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/Login/js/login/jquery_form.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/Login/js/login/login.js"></script>
 
-<script type="text/javascript">
-
-$(function(){
-	Operate.login.init();
-	Operate.mobile_login.init();
-	//头步切换
-	$(".right-nav li").live("click",function(){
-		$(".right-nav li").removeClass("lihover");
-		$(this).addClass("lihover");
-		if($(this).attr("data-type")==1){
-			$("#general_login").removeClass("fonm-none");
-			$("#dynamic_login").addClass("fonm-none");	
-		}else{
-			$("#general_login").addClass("fonm-none");
-			$("#dynamic_login").removeClass("fonm-none");
-		}
-	});
-	
-	//普通方式登录
-	$("#pt_login").click(function(){
-		_login_ing();
-		$("#general_login_form").submit();
-	});
-	
-	//动态方式登录
-	$("#dt_login").click(function(){
-		_login_ing();
-		$("#dynamic_login_form").submit();
-	});
-	
-	//获取动态验证码
-	$("#loadCode").click(function(){
-		var v = $('#loginMobile').val();
-		if(v =='' || !mfilter.test(v)){
-			$(".sj-yhmcw").html("请输入正确手机号！");
-			$(".sj-yhmcw").show();
-		}else{
-			$(".sj-yhmcw").html("");
-			$(".sj-yhmcw").hide();
-			$.ajax({
-			    type: 'POST', 
-	            dataType: 'text', 
-				url		:  path+'/Operate/GetDynamicCode.do',
-				data	:  'mobile='+v,
-				error: function (XMLHttpRequest, textStatus, errorThrown) { },
-				success:function(data){
-					if(data==1){
-						yes_Send();
-					}else if(data=='4085'){
-						$(".sj-yhmcw").html("同一手机号一天只能接收5次短信!");
-						$(".sj-yhmcw").show();
-					}else {
-						no_Send();
-					}
-				}
-			});
-		}
-	});
-});
-
-</script>
-
-<div class="login-main-right">
-	<ul class="right-nav">
-    	<li data-type="1" class="li1 lihover">帐号密码登录</li>
-        <li data-type="2" class="li2">手机号登录</li>
-    </ul>
-    <div id="general_login" class="form" onkeydown="Enterpt(event)">
-    	<form action="/Operate/Login.do" method="post" id="general_login_form">
-    	<p>
-        	<span class="span1">用户名：</span>
-            <input class="input1" name="loginName" id="loginName" type="text" placeholder="邮箱/手机号" />
+        <div class="login-main-right">
+	        <ul class="right-nav">
+    	         <li data-type="1" class="li1 lihover">帐号密码登录</li>
+                 <li data-type="2" class="li2">手机号登录</li>
+            </ul>
+            <div id="general_login" class="form" onkeydown="Enterpt(event)">
+    	         <form action="/Operate/Login.do" method="post" id="general_login_form">
+    	             <p>
+        	              <span class="span1">用户名：</span>
+                          <input class="input1" name="loginName" id="loginName" type="text" placeholder="邮箱/手机号" />
             
-        </p>
-        <p>
-            <span class="span1">密&nbsp;&nbsp;&nbsp;码：</span>
-            <input class="input1" name="loginPass" id="loginPass" type="password" />
+                     </p>
+                     <p>
+                          <span class="span1">密&nbsp;&nbsp;&nbsp;码：</span>
+                          <input class="input1" name="loginPass" id="loginPass" type="password" />
            
-        </p>
+                     </p>
         
-        <p class="p2">
-            <span class="span1"></span>
-            <input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />
-            <label for="chkRememberLoginName">记住我</label>
-            <a class="a1" href="/findpass/">忘记密码</a>
-        </p>
-        <input type="button" id="pt_login" name="submit" class="go" value="登录" />
-    	</form>
-    	<p class="cuowu yhmcw"></p>
-        <p class="cuowu mmcw"></p>
-        <p class="cuowu yzmcw"></p>
-    </div>
+                    <p class="p2">
+                          <span class="span1"></span>
+                          <input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />
+                          <label for="chkRememberLoginName">记住我</label>
+                          <a class="a1" href="/findpass/">忘记密码</a>
+                    </p>
+                    <input type="button" id="pt_login" name="submit" class="go" value="登录" />
+    	         </form>
+    	         <p class="cuowu yhmcw"></p>
+                 <p class="cuowu mmcw"></p>
+                 <p class="cuowu yzmcw"></p>
+            </div>
     
-    <div id="dynamic_login" class="form fonm-none" onkeydown="Enterdt(event)">
-    	<form id="dynamic_login_form" action="/Operate/DynamicLogin.do" method="post">
-    	<p class="shouji-p">
-        	<span class="span1">手机号：</span>
-            <input class="input1" id="loginMobile" name="loginMobile" type="text" placeholder="手机号" />
-        </p>
-         <p class="sj-yzm">
-        	<span class="span1"></span>
-        	<input id="loadCode" type="button" class="shouji-span" value="获取动态码" />
-        </p>
-        <p>
-            <span class="span1">动态码：</span>
-            <input class="input2" id="mobileCode" name="mobileCode" type="text" />
-        </p>
-        <p class="p2">
-            <span class="span1"></span>
-            <input class="input3" type="checkbox" name="rememberLoginMobile" id="rememberLoginMobile" />
-            <label for="rememberLoginMobile">记住手机</label>
-        </p>
-        <input type="button" class="go" name="submit" id="dt_login" value="登录" />
-    	</form>
-    	<p class="cuowu sj-yhmcw"></p>
-        <p class="cuowu sj-mmcw"></p>
-    </div>
-  </div>
+            <div id="dynamic_login" class="form fonm-none" onkeydown="Enterdt(event)">
+    	        <form id="dynamic_login_form" action="/Operate/DynamicLogin.do" method="post">
+    	            <p class="shouji-p">
+        	            <span class="span1">手机号：</span>
+                        <input class="input1" id="loginMobile" name="loginMobile" type="text" placeholder="手机号" />
+                    </p>
+                    <p class="sj-yzm">
+        	            <span class="span1"></span>
+        	            <input id="loadCode" type="button" class="shouji-span" value="获取动态码" />
+                    </p>
+                    <p>
+                        <span class="span1">动态码：</span>
+                        <input class="input2" id="mobileCode" name="mobileCode" type="text" />
+                    </p>
+                    <p class="p2">
+                        <span class="span1"></span>
+                        <input class="input3" type="checkbox" name="rememberLoginMobile" id="rememberLoginMobile" />
+                        <label for="rememberLoginMobile">记住手机</label>
+                    </p>
+                    <input type="button" class="go" name="submit" id="dt_login" value="登录" />
+    	        </form>
+    	        <p class="cuowu sj-yhmcw"></p>
+                <p class="cuowu sj-mmcw"></p>
+            </div>
+      </div>
       <a class="zc" href="/register/">免费注册&raquo;</a>
 </div>
 <div class="footer">
@@ -194,6 +128,12 @@ $(function(){
     <script type="text/javascript" src="<%=path%>/pages/Login/js/login/msgbox.js"></script>
     <!-- Move-top -->
     <script type="text/javascript" src="<%=path%>/pages/Login/js/login/move-top.js"></script>
+    <!-- package -->
+    <script type="text/javascript" src="<%=path%>/pages/Login/js/login/package.js"></script>
+    <!-- jquery_form -->
+	<script type="text/javascript" src="<%=path%>/pages/Login/js/login/jquery_form.js"></script>
+	<!-- login -->
+	<script type="text/javascript" src="<%=path%>/pages/Login/js/login/login.js"></script>
     
     <script>
     	$("#pt_login").click(function(){
