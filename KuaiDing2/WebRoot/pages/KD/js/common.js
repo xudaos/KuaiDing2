@@ -406,7 +406,7 @@ $(document).ready(function(){
 	        	}
 	        },
 	        error: function(data) {
-	        	alert('閸掑洦宕查崷鏉挎絻娣団剝浼呮径杈Е閿涘瞼鈼㈤崥搴″晙鐠囷拷!');
+	        	alert('您选择的城市不存在或不提供服务');
 	        }
 	    });
 	});
@@ -437,7 +437,7 @@ $(document).ready(function(){
 		noCallback = function() {
 			$.fn.closePublicBox(0);
 		};
-		$(this).miniConfirm({msg:'绾喖鐣鹃柅鈧崙鐑樻拱濞嗭紕娅ヨぐ鏇吹',callback:callback,noCallback:noCallback});
+		$(this).miniConfirm({msg:'确定退出当前用户？',callback:callback,noCallback:noCallback});
 		
 	});
 	//document.onkeydown = onKeyDown;
