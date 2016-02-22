@@ -45,7 +45,7 @@ Operate.login = function(){
 					                    
 					                } else if(data == 'userInactive'){
 					                	_login_ed();
-					                	$(".yhmcw").html("濮濄倛澶勯幋宄板嚒鐞氼偆顩﹂悽锟�");
+					                	$(".yhmcw").html("您输入的用户名不存在");
 					                	$(".yhmcw").show();
 					                    $('#loginPass').val('');
 					                }else if(data == 'userNoExamMobile'){
@@ -57,7 +57,7 @@ Operate.login = function(){
 					                	if(data.length>10){
 						                	window.open(data, '_self');
 						                }else{
-						                	$(this).pointMsg({msg:'鎮ㄨ緭鍏ョ殑鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛�'});
+						                	$(this).pointMsg({msg:'您输入的用户名或密码错误'});
 					                	}
 					                }
 					                $('#verifyCode').val('');
@@ -65,7 +65,7 @@ Operate.login = function(){
 					            },
 					            error: function(data) {
 					            	//$.messager.progress('close');
-					            	$(this).pointMsg({msg:'鎮ㄨ緭鍏ョ殑鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛�'});
+					            	$(this).pointMsg({msg:'您输入的用户名或密码错误'});
 					            	_login_ed();
 					                $('#verifyCode').val('');
 					                Operate.login.loadVrifyCode();
@@ -73,17 +73,17 @@ Operate.login = function(){
 							});
 						}else{
 							_login_ed();
-							$(".yzmcw").html("璇疯緭鍏ラ獙璇佺爜锛�");
+							$(".yzmcw").html("请输入验证码");
 							$(".yzmcw").show();
 						}
 					}else{
 						_login_ed();
-						$(".mmcw").html("璇疯緭鍏ュ瘑鐮侊紒");
+						$(".mmcw").html("请输入密码");
 						$(".mmcw").show();
 					}
 				}else{
 					_login_ed();
-					$(".yhmcw").html("璇疯緭鍏ラ偖绠憋紒");
+					$(".yhmcw").html("请输入用户名");
 					$(".yhmcw").show();
 				} 
 			}catch(e){
@@ -123,7 +123,7 @@ Operate.mobile_login = function(){
 					$(".sj-yhmcw").hide();
 					if(!mfilter.test($('#loginMobile').val().trim())){
 						_login_ed();
-						$(".sj-yhmcw").html("璇疯緭鍏ユ墜鏈哄彿锛�");
+						$(".sj-yhmcw").html("请输入正确的手机号");
 						$(".sj-yhmcw").show();
 					}else{
 						if($('#mobileCode').val() != ''){
@@ -142,35 +142,35 @@ Operate.mobile_login = function(){
 					                	}
 					                } else if(data == 'vcodeError'){
 					                	_login_ed();
-					                	$(".sj-mmcw").html("閸斻劍鈧胶鐖滈柨娆掝嚖閿涳拷");
+					                	$(".sj-mmcw").html("您输入的密码错误");
 					                	$(".sj-mmcw").show();
 										$('#mobileCode').select();
 					                } else if(data == 'userInactive'){
 					                	_login_ed();
-					                	$(".sj-yhmcw").html("濮濄倛澶勯幋宄板嚒鐞氼偆顩﹂悽锟�");
+					                	$(".sj-yhmcw").html("您输入的用户名不存在");
 					                	$(".sj-yhmcw").show();
 					                    $('#mobileCode').val('');
 					                } else{
-					                	$(this).pointMsg({msg:'鎮ㄨ緭鍏ョ殑鎵嬫満鍙锋垨鍔ㄦ�鐮侀敊璇紒'});
+					                	$(this).pointMsg({msg:'您输入的手机号或动态码错误'});
 					                	_login_ed();
 					                }
 					                $('#mobileCode').val('');
 					            },
 					            error: function(data) {
-					            	$(this).pointMsg({msg:'鎮ㄨ緭鍏ョ殑鎵嬫満鍙锋垨鍔ㄦ�鐮侀敊璇紒'});
+					            	$(this).pointMsg({msg:'您输入的手机号或动态码错误'});
 					                $('#mobileCode').val('');
 					                _login_ed();
 					        	}
 					        });
 						}else{
 							_login_ed();
-							$(".sj-mmcw").html("璇疯緭鍏ュ姩鎬佺爜锛�");
+							$(".sj-mmcw").html("请输入动态码");
 							$(".sj-mmcw").show();
 						}
 					}
 				}else{
 					_login_ed();
-					$(".sj-yhmcw").html("璇疯緭鍏ユ墜鏈哄彿锛�");
+					$(".sj-yhmcw").html("请输入手机号");
 					$(".sj-yhmcw").show();
 				}
 			}catch(e){}
@@ -197,21 +197,21 @@ Operate.mobile_login = function(){
 function _login_ing(){
 	$("input[name='submit']").attr("disabled",true);
 	$("input[name='submit']").addClass("go-hui");
-	$("input[name='submit']").val("濮濓絽婀惂璇茬秿..");
+	$("input[name='submit']").val("正在加载..");
 }
 function _login_ed(){
 	$("input[name='submit']").attr("disabled",false);
 	$("input[name='submit']").removeClass("go-hui");
-	$("input[name='submit']").val("鐧诲綍");
+	$("input[name='submit']").val("确定");
 }
 
 function yes_Send(){
 	$("#loadCode").attr('disabled',true);
 	$("#loadCode").addClass("shouji-hui");
-    $("#loadCode").val("鍔ㄦ�鐮佸彂閫佹垚鍔�"+timeout+"鍚庡彲閲嶆柊鍙戦�锛�");
+    $("#loadCode").val("请在"+timeout+"秒后重新登录");
 	timeout--;
 	if(timeout == 0) {
-		$("#loadCode").val("閼惧嘲褰囬崝銊︹偓浣虹垳");
+		$("#loadCode").val("点击获取动态码");
 		$("#loadCode").removeClass("shouji-hui");
 		$("#loadCode").attr('disabled',false); 
 		timeout=60;
@@ -222,10 +222,10 @@ function yes_Send(){
 function no_Send(){
 	$("#loadCode").attr('disabled',true);
 	$("#loadCode").addClass("shouji-hui");
-	$("#loadCode").val("鍔ㄦ�鐮佸彂閫佹垚鍔�"+timeout+"鍚庡彲閲嶆柊鍙戦�锛�");
+	$("#loadCode").val("请在"+timeout+"秒后重新登录");
 	timeout--;
 	if(timeout == 0) {
-		$("#loadCode").val("閼惧嘲褰囬崝銊︹偓浣虹垳");
+		$("#loadCode").val("点击获取动态码");
 		$("#loadCode").removeClass("shouji-hui");
 		$("#loadCode").attr('disabled',false);
 		timeout=60;
