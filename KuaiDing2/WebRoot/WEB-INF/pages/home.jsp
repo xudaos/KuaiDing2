@@ -476,28 +476,9 @@ var path = '';
 	<div class="container">   
       <div class="forestall-left">
       
-      <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->抢先上市</h3>
-         <ul>
-            <li>
-                <a href="/Store/join/1409191508088/" target="_blank" ><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/3d276bbf059b9eeaafeec88c439b158f.jpg" /></a>
-				<a class="a1" title="天外天烤鸭店" href="/Store/join/1409191508088/">天外天烤鸭店</a>
-	            <a class="a3" href="/Store/join/1409191508088/">2015-07-06</a>
-			</li>
-            <li>
-                <a href="/Store/join/1401327745234/" target="_blank" ><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/2c3ccc71664015d249114718b572f142.jpg" /></a>
-				<a class="a1" title="老诚一锅" href="/Store/join/1401327745234/">老诚一锅</a>
-	            <a class="a3" href="/Store/join/1401327745234/">2015-07-06</a>
-			</li>
-            <li>
-            	<a href="/Store/join/1409299343964/" target="_blank" ><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/8e4c863a4cc1c3ee1279a938544bc532.jpg" /></a>
-				<a class="a1" title="龙顺园(亚运村店)" href="/Store/join/1409299343964/">龙顺园(亚运村店)</a>
-	            <a class="a3" href="/Store/join/1409299343964/">2015-07-06</a>
-			</li>
-            <li>
-            	<a href="/Store/join/1411372920821/" target="_blank" ><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/c34a476551adc4db5a5301033ba5a287.jpg" /></a>
-				<a class="a1" title="ZOO COFFEE" href="/Store/join/1411372920821/">ZOO COFFE</a>
-	            <a class="a3" href="/Store/join/1411372920821/">2015-07-06</a>
-			</li>
+         <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->抢先上市</h3>
+         <ul id="forestall-qiangxian">
+            
          </ul>     
       </div>
       
@@ -516,86 +497,15 @@ var path = '';
 	<div class="container">
     	<div class="recommend-left">        
         <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->精品推荐</h3>
-            <ul>
-            	<li class="li1">
-            		<a href="/Store/join/1419908277502/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/9/c8de80b5ed9c8c18402492a48299b7d1.jpg" /></a>
-                    <div class="recommend-user">
-                        <div class="user">
-                            <a class="a1" href="/Store/join/1419908277502/"><img src="http://www.youmeishi.cn/EnterprisePlatform/uploadfiles/companyPhoto/1419990023938.jpg" /></a>
-                            <a class="a2" title="百万庄园（对外经贸店）" href="/Store/join/1419908277502/">
-                            百万庄园（对外经贸店）
-	                        </a>
-                            <!-- <a class="a3" href="/Store/join/1419908277502/">作者：百万庄园对外经贸店</a> -->
-                        </div>
-                        <p class="p1">
-                        	目前国内最具特色的本土餐饮连锁企业，专注于向消费者提供优质的环球美食餐饮服务。
-                        </p>
-                    </div>
-                    <p class="p2"><span class="span1">2015-07-08</span>来自：百万庄园对外经贸店</p>
-                </li>
-            		
-            	<li class="li2">
-            		<a href="/Store/join/1410241179550/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/eaa0c42c04a1c95c081613d2fc8bf08f.jpg" /></a>
-                    <div class="recommend-user">
-                        <div class="user">
-                            <a class="a1" href="/Store/join/1410241179550/"><img src="http://www.youmeishi.cn/EnterprisePlatform/uploadfiles/companyPhoto/1410243740934.jpg" /></a>
-                            <a class="a2" title="虾宝贝" href="/Store/join/1410241179550/">
-                            	虾宝贝
-	                        </a>
-                            <!-- <a class="a3" href="/Store/join/1410241179550/">作者：虾宝贝 </a> -->
-                        </div>
-                        <p class="p1">
-                        	别名：我敢大口吃海鲜的餐厅， 推荐菜：麻辣小龙虾、  原味小红扇贝、虾贝共舞、芝士焗大虾、自制酸奶。
-                        </p>
-                    </div>
-                    <p class="p2"><span class="span1">2015-07-07</span>来自：虾宝贝 </p>
-                </li>
-            		
-            	<li class="li1">
-            		<a href="/Store/join/1402452425238/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/e638fd590436a7174d2545b7bdcead98.jpg" /></a>
-                    <div class="recommend-user">
-                        <div class="user">
-                            <a class="a1" href="/Store/join/1402452425238/"><img src="http://www.youmeishi.cn/EnterprisePlatform/uploadfiles/companyPhoto/1409560514178.jpg" /></a>
-                            <a class="a2" title="宛平居老北京炸酱面" href="/Store/join/1402452425238/">
-                            宛平居老北京炸酱面
-	                        </a>
-                            <!-- <a class="a3" href="/Store/join/1402452425238/">作者：宛平居</a> -->
-                        </div>
-                        <p class="p1">
-                        	有老北京气息，带有京腔京韵，古典与现代的结合的餐厅，主营京味，让您体会到老北京当年的味道。
-                        </p>
-                    </div>
-                    <p class="p2"><span class="span1">2015-07-07</span>来自：宛平居</p>
-                </li>
-            		
-            	<li class="li2">
-            		<a href="/Store/join/1415942693249/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/7/50343a7e6406b024782cd80e7ea509e4.jpg" /></a>
-                    <div class="recommend-user">
-                        <div class="user">
-                            <a class="a1" href="/Store/join/1415942693249/"><img src="http://www.youmeishi.cn/EnterprisePlatform/uploadfiles/companyPhoto/1415949488746.jpg" /></a>
-                            <a class="a2" title="拿拿家" href="/Store/join/1415942693249/">
-                            拿拿家
-	                        </a>
-                            <!-- <a class="a3" href="/Store/join/1415942693249/">作者：拿拿家</a> -->
-                        </div>
-                        <p class="p1">
-                        	各种拌饭、盖饭、汤类、沙拉/凉菜、炒饭、紫菜包饭类、面食。
-                        </p>
-                    </div>
-                    <p class="p2"><span class="span1">2015-07-07</span>来自：拿拿家</p>
-                </li>           	
+            <ul id="recommend-jptj">
+            	           	
             </ul>       
         </div>
                 
         <div class="recommend-right"> 
         <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->美食优惠</h3>
-            <ul>
-                <li>
-	                <a href="/Store/join/1429349285636/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/8/73625fbdfbce6a35d560c11749d30278.jpg" /></a>
-	                </li>
-                <li>
-	                <a href="/Store/join/1425366804062/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/8/1ceb90b7d8303360fc5405757fa57477.jpg" /></a>
-	            </li>                
+            <ul id="recommend-msyh">
+                                
             </ul> 
         </div>   
     </div>
@@ -755,6 +665,9 @@ var path = '';
 $(function(){
 	getLunbo();
 	getRemen();
+	getQiangxian();
+	getJingpin();
+	getYouhui();
 });
 
 //加载轮播数据
@@ -801,6 +714,66 @@ function getRemen(){
 				htmlStr += '<li><span>'+data[i].orderno+'</span><a href="javascript:void(0);">'+data[i].name+'</a></li>';				
 			}
 			$('#banner-rmtj').html(htmlStr);
+		}
+	});
+}
+
+//加载抢先上市
+function getQiangxian(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getLunbo.do',
+		data: {
+			type: '3'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><img src="'+data[i].pic+'"/><a class="a1" href="javascript:void(0);">'+data[i].name+'</a><a class="a3" href="javascript:void(0);">'+data[i].date+'</a></li>';				
+			}
+			$('#forestall-qiangxian').html(htmlStr);
+		}
+	});
+}
+
+//加载精品推荐
+function getJingpin(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getLunbo.do',
+		data: {
+			type: '4'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><a><img src="'+data[i].pic+'"/></a><div class="recommend-user"><div class="user"><a class="a1"><img src="'+data[i].pic2+'"/></a><a class="a2" href="javascript:void(0);">'+data[i].name+'</a></div><p class="p1" href="javascript:void(0);">'+data[i].description+'</p></div><p class="p2" href="javascript:void(0);">'+data[i].remarks+'<span class="span1" href="javascript:void(0);">'+data[i].date+'</span></p></li>';				
+			}
+			$('#recommend-jptj').html(htmlStr);
+		}
+	});
+}
+
+//加载美食优惠
+function getYouhui(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getLunbo.do',
+		data: {
+			type: '5'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><a><img src="'+data[i].pic+'"/></a></li>';				
+			}
+			$('#recommend-msyh').html(htmlStr);
 		}
 	});
 }

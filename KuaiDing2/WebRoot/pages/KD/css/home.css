@@ -37,6 +37,7 @@
 .more { color:#888; font-size:12px; line-height:40px; font-weight:400; padding-right:10px;}
 .banner-right li { border-top:1px solid #dbdbdb; line-height:40px; font-size:14px;}
 .banner-right li span, .recommend-right .p2 {line-height:30px; font-size:30px; vertical-align:middle; color:#d0df00; padding:0 15px;}
+.banner-right ul {width:250px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}.
 
 /*抢先一步*/
 .forestall-left, .recommend li { margin-top:11px;}
