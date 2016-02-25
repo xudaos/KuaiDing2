@@ -15,7 +15,24 @@
 				/WEB-INF/pages/home.jsp
 			</result>
 		</action>
-		<action name="getLunbo" class="HomeAction" method="getLunbo">
+		<action name="getRst" class="HomeAction" method="getRst">
+		</action>
+		<action name="yd" class="YdAction" method="yd">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/yd.jsp
+			</result>
+		</action>
+		<action name="getRest" class="YdAction" method="getRest">
+		</action>
+		<action name="wm" class="WmAction" method="wm">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/wm.jsp
+			</result>
+		</action>
+		<action name="coupons" class="CouponsAction" method="coupons">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/coupons.jsp
+			</result>
 		</action>
 	</package>
 </struts>

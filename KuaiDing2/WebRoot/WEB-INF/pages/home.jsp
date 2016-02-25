@@ -358,7 +358,7 @@ var path = '';
 	<div class="container">
     	<div class="logo">
         	<p>一网扫尽天下美食</p>
-        	<a href="index.html"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
+        	<a href="home.do"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
         </div>
         <div class="search">
         	<div id="top_search_form">
@@ -674,7 +674,7 @@ $(function(){
 function getLunbo(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/getLunbo.do',
+		url: '<%=path%>/getRst.do',
 		data: {
 			type: '1'
 		},
@@ -702,7 +702,7 @@ function getLunbo(){
 function getRemen(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/getLunbo.do',
+		url: '<%=path%>/getRst.do',
 		data: {
 			type: '2'
 		},
@@ -722,7 +722,7 @@ function getRemen(){
 function getQiangxian(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/getLunbo.do',
+		url: '<%=path%>/getRst.do',
 		data: {
 			type: '3'
 		},
@@ -742,7 +742,7 @@ function getQiangxian(){
 function getJingpin(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/getLunbo.do',
+		url: '<%=path%>/getRst.do',
 		data: {
 			type: '4'
 		},
@@ -762,7 +762,7 @@ function getJingpin(){
 function getYouhui(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/getLunbo.do',
+		url: '<%=path%>/getRst.do',
 		data: {
 			type: '5'
 		},

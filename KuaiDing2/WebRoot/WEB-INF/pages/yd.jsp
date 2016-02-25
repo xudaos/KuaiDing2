@@ -315,10 +315,10 @@ var path = '';
             <li class="li1">
             	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
             	<ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="wm.html">外卖送餐</a></li>
-                    <li><a href="yd.html">预订点餐</a></li>
-                    <li><a href="coupons.html">优惠折扣</a></li>
+                    <li><a href="home.do">首页</a></li>
+                    <li><a href="wm.do">外卖送餐</a></li>
+                    <li><a href="yd.do">预订点餐</a></li>
+                    <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
@@ -359,7 +359,7 @@ var path = '';
 	<div class="container">
     	<div class="logo">
         	<p>一网扫尽天下美食</p>
-        	<a href="index.html"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
+        	<a href="home.do"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
         </div>
         <div class="search">
         	<div id="top_search_form">
@@ -386,9 +386,9 @@ var path = '';
 <div class="nav">
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
-        	<li><a  href="index.html">首页</a></li>
-            <li><a  href="wm.html">外卖送餐</a></li>
-            <li><a class="ahover" href="yd.html">预订点餐</a></li>
+        	<li><a  href="home.do">首页</a></li>
+            <li><a  href="wm.do">外卖送餐</a></li>
+            <li><a class="ahover" href="yd.do">预订点餐</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
             <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
         </ul>
@@ -588,6 +588,15 @@ var path = '';
     <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
     <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>
 </div>
+
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
+<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jBootstrapPage.js"></script> 
+
 <script type="text/javascript">
 var collectCompany = '';
 //收藏方法
@@ -612,15 +621,6 @@ function collectp(n,t){
 	}
 }
 </script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
-<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jBootstrapPage.js"></script> 
-
-
 
 <script type="text/javascript">
 $(function(){

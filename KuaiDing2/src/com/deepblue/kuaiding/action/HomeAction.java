@@ -41,7 +41,7 @@ public class HomeAction extends ActionSupport implements iJsonable{
 		return SUCCESS;
 	}
 	
-	public String getLunbo(){
+	public String getRst(){
 		System.out.println("type: "+type);
 		List<KdRestaurant> kdRestaurants = kdRestaurantBiz.getRestaurantByType(type);
 		feedback.setDataList(kdRestaurants, new AJsonConverter<KdRestaurant>());
