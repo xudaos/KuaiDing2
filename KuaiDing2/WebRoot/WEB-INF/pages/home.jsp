@@ -423,19 +423,19 @@ var path = '';
                 
                 <ul class="banner-nav">
                 <li class="bg1">
-                	<a href="wm.html">
+                	<a href="wm.do">
                 		<h4>外卖送餐</h4>
                     	<p>送餐到家服务</p>
                 	</a>
                 </li>
                 <li class="bg2">
-                	<a href="yd.html">
+                	<a href="yd.do">
                 		<h4>预订点餐</h4>
                     	<p>提前点餐不排队</p>
                     </a>
                 </li>
                 <li class="bg3">
-                	<a href="coupons.html">
+                	<a href="coupons.do">
                 		<h4>优惠折扣</h4>
                     	<p>先到先得实惠多多</p>
                     </a>
