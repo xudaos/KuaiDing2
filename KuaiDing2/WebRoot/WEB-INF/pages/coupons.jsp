@@ -314,10 +314,10 @@ var path = '';
             <li class="li1">
             	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
             	<ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="wm.html">外卖送餐</a></li>
-                    <li><a href="yd.html">预订点餐</a></li>
-                    <li><a href="#">优惠折扣</a></li>
+                    <li><a href="home.do">首页</a></li>
+                    <li><a href="wm.do">外卖送餐</a></li>
+                    <li><a href="yd.do">预订点餐</a></li>
+                    <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
@@ -358,7 +358,7 @@ var path = '';
 	<div class="container">
     	<div class="logo">
         	<p>一网扫尽天下美食</p>
-        	<a href="index.html"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
+        	<a href="home.do"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
         </div>
         <div class="search">
         	<div id="top_search_form">
@@ -385,9 +385,9 @@ var path = '';
 <div class="nav">
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
-        	<li><a  href="index.html">首页</a></li>
-            <li><a  href="wm.html">外卖送餐</a></li>
-            <li><a  href="yd.html">预订点餐</a></li>
+        	<li><a  href="home.do">首页</a></li>
+            <li><a  href="wm.do">外卖送餐</a></li>
+            <li><a  href="yd.do">预订点餐</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
             <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
         </ul>

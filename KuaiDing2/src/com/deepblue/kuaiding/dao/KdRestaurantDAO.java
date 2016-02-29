@@ -35,6 +35,9 @@ public class KdRestaurantDAO extends HibernateDaoSupport {
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
+	public static final String DATE = "date";
+	public static final String PIC2 = "pic2";
+	public static final String REMARKS = "remarks";
 
 	protected void initDao() {
 		// do nothing
@@ -142,6 +145,18 @@ public class KdRestaurantDAO extends HibernateDaoSupport {
 
 	public List findByCreator(Object creator) {
 		return findByProperty(CREATOR, creator);
+	}
+	
+	public List findByDate(Object date) {
+		return findByProperty(DATE, date);
+	}
+	
+	public List findByPic2(Object pic2) {
+		return findByProperty(PIC2, pic2);
+	}
+	
+	public List findByRemarks(Object remarks) {
+		return findByProperty(REMARKS, remarks);
 	}
 
 	public List findAll() {

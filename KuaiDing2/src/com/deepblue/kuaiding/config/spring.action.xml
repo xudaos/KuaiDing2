@@ -10,5 +10,15 @@
 		</property>
 	</bean>
 	
-	
+	<bean id="YdAction" class="com.deepblue.kuaiding.action.YdAction" scope="prototype">
+		<property name="kdRestaurantBiz">
+			<ref bean="KdRestaurantBiz" />
+		</property>
+	</bean>
+	<bean id="WmAction" class="com.deepblue.kuaiding.action.WmAction" scope="prototype">
+
+	</bean>
+	<bean id="CouponsAction" class="com.deepblue.kuaiding.action.CouponsAction" scope="prototype">
+
+	</bean>
 </beans>

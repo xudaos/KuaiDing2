@@ -23,6 +23,9 @@ public class KdRestaurant implements java.io.Serializable {
 	private Integer orderno;
 	private String creator;
 	private Timestamp createtime;
+	private Timestamp date;
+	private String pic2;
+	private String remarks;
 
 	// Constructors
 
@@ -43,14 +46,15 @@ public class KdRestaurant implements java.io.Serializable {
 		this.region = region;
 		this.avgprice = avgprice;
 		this.type = type;
-		this.creator = creator;
+		this.creator = creator;		
 	}
 
 	/** full constructor */
 	public KdRestaurant(String objectid, String name, String address,
 			String pic, String phone, Double distance, String region,
 			Integer avgprice, String type, String description, Integer orderno,
-			String creator, Timestamp createtime) {
+			String creator, Timestamp createtime,Timestamp date,
+			String pic2, String remarks) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
@@ -64,6 +68,9 @@ public class KdRestaurant implements java.io.Serializable {
 		this.orderno = orderno;
 		this.creator = creator;
 		this.createtime = createtime;
+		this.date = date;
+		this.pic2 = pic2;
+		this.remarks = remarks;
 	}
 
 	// Property accessors
@@ -170,6 +177,30 @@ public class KdRestaurant implements java.io.Serializable {
 
 	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
+	}
+	
+	public Timestamp getDate() {
+		return this.date;
+	}
+
+	public void setDate(Timestamp date) {
+		this.date = date;
+	}
+	
+	public String getPic2() {
+		return this.pic2;
+	}
+
+	public void setPic2(String pic2) {
+		this.pic2 = pic2;
+	}
+	
+	public String getRemarks() {
+		return this.remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
 	}
 
 }
