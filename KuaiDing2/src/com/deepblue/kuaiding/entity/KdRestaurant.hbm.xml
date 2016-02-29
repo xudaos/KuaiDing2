@@ -55,8 +55,5 @@
         <property name="remarks" type="java.lang.String">
             <column name="remarks" length="100" />
         </property>
-        <property name="time" type="java.lang.String">
-            <column name="time" length="36" />
-        </property>
     </class>
 </hibernate-mapping>

@@ -37,9 +37,6 @@
 					com/deepblue/kuaiding/entity/KdOrder.hbm.xml
 				</value>
 				<value>
-					com/deepblue/kuaiding/entity/KdTable.hbm.xml
-				</value>
-				<value>
 					com/deepblue/kuaiding/entity/KdRestaurant.hbm.xml
 				</value>
 				<value>
@@ -59,6 +56,12 @@
 				</value>
 				<value>
 					com/deepblue/kuaiding/entity/KdShoppingcart.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdActivity.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdRstinfo.hbm.xml
 				</value></list>
 		</property></bean>
 	<bean id="KdRestaurantDAO"
@@ -69,12 +72,6 @@
 	</bean>
 	<bean id="BcomPostDAO"
 		class="com.deepblue.kuaiding.dao.BcomPostDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-	<bean id="KdTableDAO"
-		class="com.deepblue.kuaiding.dao.KdTableDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
@@ -110,6 +107,18 @@
 	</bean>
 	<bean id="KdShoppingcartDAO"
 		class="com.deepblue.kuaiding.dao.KdShoppingcartDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdActivityDAO"
+		class="com.deepblue.kuaiding.dao.KdActivityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdRstinfoDAO"
+		class="com.deepblue.kuaiding.dao.KdRstinfoDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

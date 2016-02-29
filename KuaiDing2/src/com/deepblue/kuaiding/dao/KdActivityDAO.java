@@ -8,30 +8,25 @@ import org.hibernate.LockMode;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.deepblue.kuaiding.entity.KdTable;
+import com.deepblue.kuaiding.entity.KdActivity;
 
 /**
  * A data access object (DAO) providing persistence and search support for
- * KdTable entities. Transaction control of the save(), update() and delete()
+ * KdActivity entities. Transaction control of the save(), update() and delete()
  * operations can directly support Spring container-managed transactions or they
  * can be augmented to handle user-managed Spring transactions. Each of these
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see com.deepblue.kuaiding.dao.KdTable
+ * @see com.deepblue.kuaiding.dao.KdActivity
  * @author MyEclipse Persistence Tools
  */
-public class KdTableDAO extends HibernateDaoSupport {
-	private static final Log log = LogFactory.getLog(KdTableDAO.class);
+public class KdActivityDAO extends HibernateDaoSupport {
+	private static final Log log = LogFactory.getLog(KdActivityDAO.class);
 	// property constants
 	public static final String NAME = "name";
-	public static final String ADDRESS = "address";
 	public static final String PIC = "pic";
-	public static final String PHONE = "phone";
-	public static final String DISTANCE = "distance";
-	public static final String REGION = "region";
-	public static final String AVGPRICE = "avgprice";
-	public static final String TYPE = "type";
+	public static final String REMARK = "remark";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
@@ -40,8 +35,8 @@ public class KdTableDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(KdTable transientInstance) {
-		log.debug("saving KdTable instance");
+	public void save(KdActivity transientInstance) {
+		log.debug("saving KdActivity instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
@@ -51,8 +46,8 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(KdTable persistentInstance) {
-		log.debug("deleting KdTable instance");
+	public void delete(KdActivity persistentInstance) {
+		log.debug("deleting KdActivity instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
 			log.debug("delete successful");
@@ -62,11 +57,11 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public KdTable findById(java.lang.String id) {
-		log.debug("getting KdTable instance with id: " + id);
+	public KdActivity findById(java.lang.String id) {
+		log.debug("getting KdActivity instance with id: " + id);
 		try {
-			KdTable instance = (KdTable) getHibernateTemplate().get(
-					"com.deepblue.kuaiding.dao.KdTable", id);
+			KdActivity instance = (KdActivity) getHibernateTemplate().get(
+					"com.deepblue.kuaiding.dao.KdActivity", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -74,8 +69,8 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(KdTable instance) {
-		log.debug("finding KdTable instance by example");
+	public List findByExample(KdActivity instance) {
+		log.debug("finding KdActivity instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
 			log.debug("find by example successful, result size: "
@@ -88,10 +83,10 @@ public class KdTableDAO extends HibernateDaoSupport {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding KdTable instance with property: " + propertyName
+		log.debug("finding KdActivity instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from KdTable as model where model."
+			String queryString = "from KdActivity as model where model."
 					+ propertyName + "= ?";
 			return getHibernateTemplate().find(queryString, value);
 		} catch (RuntimeException re) {
@@ -104,32 +99,12 @@ public class KdTableDAO extends HibernateDaoSupport {
 		return findByProperty(NAME, name);
 	}
 
-	public List findByAddress(Object address) {
-		return findByProperty(ADDRESS, address);
-	}
-
 	public List findByPic(Object pic) {
 		return findByProperty(PIC, pic);
 	}
 
-	public List findByPhone(Object phone) {
-		return findByProperty(PHONE, phone);
-	}
-
-	public List findByDistance(Object distance) {
-		return findByProperty(DISTANCE, distance);
-	}
-
-	public List findByRegion(Object region) {
-		return findByProperty(REGION, region);
-	}
-
-	public List findByAvgprice(Object avgprice) {
-		return findByProperty(AVGPRICE, avgprice);
-	}
-
-	public List findByType(Object type) {
-		return findByProperty(TYPE, type);
+	public List findByRemark(Object remark) {
+		return findByProperty(REMARK, remark);
 	}
 
 	public List findByDescription(Object description) {
@@ -145,9 +120,9 @@ public class KdTableDAO extends HibernateDaoSupport {
 	}
 
 	public List findAll() {
-		log.debug("finding all KdTable instances");
+		log.debug("finding all KdActivity instances");
 		try {
-			String queryString = "from KdTable";
+			String queryString = "from KdActivity";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
@@ -155,10 +130,10 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public KdTable merge(KdTable detachedInstance) {
-		log.debug("merging KdTable instance");
+	public KdActivity merge(KdActivity detachedInstance) {
+		log.debug("merging KdActivity instance");
 		try {
-			KdTable result = (KdTable) getHibernateTemplate().merge(
+			KdActivity result = (KdActivity) getHibernateTemplate().merge(
 					detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -168,8 +143,8 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(KdTable instance) {
-		log.debug("attaching dirty KdTable instance");
+	public void attachDirty(KdActivity instance) {
+		log.debug("attaching dirty KdActivity instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -179,8 +154,8 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(KdTable instance) {
-		log.debug("attaching clean KdTable instance");
+	public void attachClean(KdActivity instance) {
+		log.debug("attaching clean KdActivity instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -190,7 +165,7 @@ public class KdTableDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public static KdTableDAO getFromApplicationContext(ApplicationContext ctx) {
-		return (KdTableDAO) ctx.getBean("KdTableDAO");
+	public static KdActivityDAO getFromApplicationContext(ApplicationContext ctx) {
+		return (KdActivityDAO) ctx.getBean("KdActivityDAO");
 	}
 }
