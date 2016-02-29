@@ -1,6 +1,6 @@
 package com.deepblue.kuaiding.entity;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * KdRestaurant entity. @author MyEclipse Persistence Tools
@@ -22,10 +22,11 @@ public class KdRestaurant implements java.io.Serializable {
 	private String description;
 	private Integer orderno;
 	private String creator;
-	private Timestamp createtime;
-	private Timestamp date;
+	private Date createtime;
+	private Date date;
 	private String pic2;
 	private String remarks;
+	private String time;
 
 	// Constructors
 
@@ -35,26 +36,25 @@ public class KdRestaurant implements java.io.Serializable {
 
 	/** minimal constructor */
 	public KdRestaurant(String objectid, String name, String address,
-			String pic, String phone, Double distance, String region,
-			Integer avgprice, String type, String creator) {
+			String phone, Double distance, String region, Integer avgprice,
+			String type, String creator) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
-		this.pic = pic;
 		this.phone = phone;
 		this.distance = distance;
 		this.region = region;
 		this.avgprice = avgprice;
 		this.type = type;
-		this.creator = creator;		
+		this.creator = creator;
 	}
 
 	/** full constructor */
 	public KdRestaurant(String objectid, String name, String address,
 			String pic, String phone, Double distance, String region,
 			Integer avgprice, String type, String description, Integer orderno,
-			String creator, Timestamp createtime,Timestamp date,
-			String pic2, String remarks) {
+			String creator, Date createtime, Date date, String pic2,
+			String remarks, String time) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
@@ -71,6 +71,7 @@ public class KdRestaurant implements java.io.Serializable {
 		this.date = date;
 		this.pic2 = pic2;
 		this.remarks = remarks;
+		this.time = time;
 	}
 
 	// Property accessors
@@ -171,22 +172,22 @@ public class KdRestaurant implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public Timestamp getCreatetime() {
+	public Date getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(Timestamp createtime) {
+	public void setCreatetime(Date createtime) {
 		this.createtime = createtime;
 	}
-	
-	public Timestamp getDate() {
+
+	public Date getDate() {
 		return this.date;
 	}
 
-	public void setDate(Timestamp date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
-	
+
 	public String getPic2() {
 		return this.pic2;
 	}
@@ -194,13 +195,21 @@ public class KdRestaurant implements java.io.Serializable {
 	public void setPic2(String pic2) {
 		this.pic2 = pic2;
 	}
-	
+
 	public String getRemarks() {
 		return this.remarks;
 	}
 
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
+	}
+
+	public String getTime() {
+		return this.time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 }

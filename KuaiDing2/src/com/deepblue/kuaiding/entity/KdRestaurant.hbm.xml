@@ -17,7 +17,7 @@
             <column name="address" length="36" not-null="true" />
         </property>
         <property name="pic" type="java.lang.String">
-            <column name="pic" length="36" not-null="true" />
+            <column name="pic" length="500" />
         </property>
         <property name="phone" type="java.lang.String">
             <column name="phone" length="36" not-null="true" />
@@ -43,8 +43,20 @@
         <property name="creator" type="java.lang.String">
             <column name="creator" length="36" not-null="true" />
         </property>
-        <property name="createtime" type="java.sql.Timestamp">
-            <column name="createtime" length="27" />
+        <property name="createtime" type="java.util.Date">
+            <column name="createtime" length="10" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="date" length="10" />
+        </property>
+        <property name="pic2" type="java.lang.String">
+            <column name="pic2" length="500" />
+        </property>
+        <property name="remarks" type="java.lang.String">
+            <column name="remarks" length="100" />
+        </property>
+        <property name="time" type="java.lang.String">
+            <column name="time" length="36" />
         </property>
     </class>
 </hibernate-mapping>
