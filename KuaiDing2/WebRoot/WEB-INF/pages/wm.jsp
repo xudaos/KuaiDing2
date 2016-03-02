@@ -637,74 +637,11 @@ function setPlace(){
 	function myFun(){
 		var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
 		addMarker(pp);//添加标注
-		
-		dataStoreByPoint(pp);//加载店铺信息
 	}
 	var local = new BMap.LocalSearch(map, { //智能搜索
 	  onSearchComplete: myFun
 	});
 	local.search(myValue);
-}
-
-//加载店铺信息
-function dataStoreByPoint(p){
-	var loc = p.lng+","+p.lat;
-	//$("#wm_list").attr("href",path+"/wm/list/"+loc+"/");
-	$.ajax({
-       type: 'POST',
-       url: path+'/Operate/DataCompanyByPoint.do',
-       data: 'lng='+p.lng+'&lat='+p.lat,
-       dataType: 'json',
-       success: function(data) {
-		  if(data.rows.length>0){
-		  	var result_content = "<div style='width:200px;height:10px;'>附近共搜索出 "+data.rows.length+" 家餐厅<br/><br/><a href='"+path+"/wm/list/"+loc+"/'>查看列表</a></div>";
-			var search_infoWindow = new BMap.InfoWindow(result_content,{enableMessage:false});  // 创建信息窗口对象
-			map.openInfoWindow(search_infoWindow,p); //开启信息窗口
-			loc_marker.addEventListener("click", function(){          
-				this.openInfoWindow(search_infoWindow);
-			});
-		  	var con = '';
-		  	$.each(data.rows,function(i,n) {
-				con += call_back(data.rows[i],(i+1));
-			});
-			
-		  }else{
-		  	//con = '&nbsp;&nbsp;&nbsp;周围没有太多门店，请从新定位您的位置';
-		  }
-       },
-       error: function(data) {alert('加载门店失败！');}
-	});
-}
-//回调函数 && 铺点门店 
-function call_back(data,n){
-	var point = new BMap.Point(data.longitude, data.latitude);
-	//var label = new BMap.Label(n+":<a target=_blank' href='"+path+"/Store/info/2/"+data.companyNo+"/'>"+data.companyName+"</a>",{offset:new BMap.Size(20,-10)});
-	var label = new BMap.Label(n+":"+data.companyName,{offset:new BMap.Size(20,-10)});
-	label.setStyle({borderColor:"#89c935"});
-	
-	var sContent = '<div style="width:400px; height:100px; ">'+
-	'<div style="float:left;width:280px; font-size:12px;"><div style="padding:5px;">店铺名称:<a style="color:blue;font-size:15px;" target="_blank" href="'+path+'/Store/info/2/'+data.companyNo+'/">'+data.companyName+'</a></div>'+
-	'<div style="padding:5px;">店铺地址:'+data.companyAddress+'</div><div style="padding:5px;">口味:'+data.tasteType+'&nbsp;/&nbsp;人均消费:￥'+data.perCapita+'元</div>'+
-	'<div style="padding:5px 10px; border-top:1px dashed #ccc;">'+
-	'<a style="color:blue;" target="_blank" href="'+path+'/Store/info/2/'+data.companyNo+'/">进入店铺</a>&nbsp;&nbsp;<a style="color:blue;" onclick="collectp('+data.comapanyNo+',1)" href="javascript:void(0);">收藏店铺</a>'+
-	'</div></div><div style="float:right;margin:10px 5px; width:100px;">'+
-	'<img src="'+data.companyPhoto+'" id="imgDemo" width="100" height="90" /></div>'+
-	'<div style="clear:both;"></div></div>';
-	var infoWindow = new BMap.InfoWindow(sContent,{enableMessage:false});  // 创建信息窗口对象 
-	
-	var myIcon = new BMap.Icon("../images/ct_dw.png", new BMap.Size(20,30));
-	marker1 = new BMap.Marker(point,{icon:myIcon,title:data.companyName});
-	marker1.setLabel(label);
-	marker1.disableDragging();
-	map.addOverlay(marker1);
-	marker1.addEventListener("click", function(){          
-		this.openInfoWindow(infoWindow);
-	   	//图片加载完毕重绘infowindow
-	   	$('#imgDemo').onload = function (){
-		   infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
-	   	};
-	});
-	
 }
 
 function addMarker(loc){

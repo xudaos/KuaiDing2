@@ -6,6 +6,7 @@ import org.apache.commons.lang.StringUtils;
 
 import com.deepblue.kuaiding.biz.KdRestaurantBiz;
 import com.deepblue.kuaiding.entity.KdRestaurant;
+import com.deepblue.kuaiding.json.converter.RestaurantConverter;
 import com.opensymphony.xwork2.ActionSupport;
 import com.utility.json.AJsonConverter;
 import com.utility.json.JsonFeedback;
@@ -44,7 +45,7 @@ public class HomeAction extends ActionSupport implements iJsonable{
 	public String getRst(){
 		System.out.println("type: "+type);
 		List<KdRestaurant> kdRestaurants = kdRestaurantBiz.getRestaurantByType(type);
-		feedback.setDataList(kdRestaurants, new AJsonConverter<KdRestaurant>());
+		feedback.setDataList(kdRestaurants, RestaurantConverter.Singleton);
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
 	}
