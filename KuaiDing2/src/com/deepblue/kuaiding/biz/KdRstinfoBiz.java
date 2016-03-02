@@ -16,14 +16,14 @@ public class KdRstinfoBiz {
 	private Log logger = LogFactory.getLog(getClass());
 	private KdRstinfoDAO kdRstinfoDAO;
 	
-	public List<KdRstinfo> getRstinfoByType(String type){
+	public List<KdRstinfo> getRstinfo(){
 		List<KdRstinfo> kdRstinfos = new ArrayList<KdRstinfo>();
 		Session session = kdRstinfoDAO.getSessionFactory().openSession();
 		try{
 			Criteria cr = session.createCriteria(KdRstinfo.class);
 			kdRstinfos = cr.list();
 		}catch(Exception ex){
-			ex.printStackTrace();
+			logger.error(ex);
 		}finally{
 			session.close();
 		}

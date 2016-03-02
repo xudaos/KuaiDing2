@@ -19,8 +19,8 @@
         <property name="picstar" type="java.lang.String">
             <column name="picstar" length="500" not-null="true" />
         </property>
-        <property name="time" type="java.sql.Timestamp">
-            <column name="time" length="23" not-null="true" />
+        <property name="time" type="java.lang.String">
+            <column name="time" length="36" />
         </property>
         <property name="sales" type="java.lang.Integer">
             <column name="sales" not-null="true" />

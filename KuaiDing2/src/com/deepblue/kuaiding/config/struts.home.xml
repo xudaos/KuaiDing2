@@ -22,8 +22,6 @@
 				/WEB-INF/pages/yd.jsp
 			</result>
 		</action>
-		<action name="getRest" class="YdAction" method="getRest">
-		</action>
 		<action name="wm" class="WmAction" method="wm">
 			<result name="success" type="dispatcher">
 				/WEB-INF/pages/wm.jsp

@@ -570,7 +570,7 @@ function collectp(n,t){
 // 百度地图API功能
 var marker1;//循环餐厅 标注
 var loc_marker;//定位标注
-var map = new BMap.Map("load_map");    // 创建Map实例
+var map = new BMap.Map("load_map", {enableMapClick: false});    // 创建Map实例
 map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
 //map.addControl(new BMap.MapTypeControl());	//添加地图类型控件
 map.enableScrollWheelZoom(true);	//缩放地图

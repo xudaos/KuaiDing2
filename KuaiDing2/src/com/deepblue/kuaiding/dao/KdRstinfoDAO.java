@@ -27,6 +27,7 @@ public class KdRstinfoDAO extends HibernateDaoSupport {
 	public static final String NAME = "name";
 	public static final String PIC = "pic";
 	public static final String PICSTAR = "picstar";
+	public static final String TIME = "time";
 	public static final String SALES = "sales";
 	public static final String SENDPRICE = "sendprice";
 	public static final String DELIVERYPRICE = "deliveryprice";
@@ -111,6 +112,10 @@ public class KdRstinfoDAO extends HibernateDaoSupport {
 
 	public List findByPicstar(Object picstar) {
 		return findByProperty(PICSTAR, picstar);
+	}
+
+	public List findByTime(Object time) {
+		return findByProperty(TIME, time);
 	}
 
 	public List findBySales(Object sales) {

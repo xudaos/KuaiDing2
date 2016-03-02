@@ -1,6 +1,5 @@
 package com.deepblue.kuaiding.entity;
 
-import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -15,7 +14,7 @@ public class KdRstinfo implements java.io.Serializable {
 	private String name;
 	private String pic;
 	private String picstar;
-	private Timestamp time;
+	private String time;
 	private Integer sales;
 	private Integer sendprice;
 	private Integer deliveryprice;
@@ -35,13 +34,12 @@ public class KdRstinfo implements java.io.Serializable {
 
 	/** minimal constructor */
 	public KdRstinfo(String objectid, String name, String pic, String picstar,
-			Timestamp time, Integer sales, Integer sendprice,
-			Integer deliveryprice, String yes, String creator, Date createtime) {
+			Integer sales, Integer sendprice, Integer deliveryprice,
+			String yes, String creator, Date createtime) {
 		this.objectid = objectid;
 		this.name = name;
 		this.pic = pic;
 		this.picstar = picstar;
-		this.time = time;
 		this.sales = sales;
 		this.sendprice = sendprice;
 		this.deliveryprice = deliveryprice;
@@ -52,7 +50,7 @@ public class KdRstinfo implements java.io.Serializable {
 
 	/** full constructor */
 	public KdRstinfo(String objectid, String name, String pic, String picstar,
-			Timestamp time, Integer sales, Integer sendprice,
+			String time, Integer sales, Integer sendprice,
 			Integer deliveryprice, String notice, String activity, String yes,
 			String description, Integer orderno, String creator, Date createtime) {
 		this.objectid = objectid;
@@ -106,11 +104,11 @@ public class KdRstinfo implements java.io.Serializable {
 		this.picstar = picstar;
 	}
 
-	public Timestamp getTime() {
+	public String getTime() {
 		return this.time;
 	}
 
-	public void setTime(Timestamp time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 

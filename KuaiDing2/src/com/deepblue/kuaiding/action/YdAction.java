@@ -2,12 +2,12 @@ package com.deepblue.kuaiding.action;
 
 import java.util.List;
 
+import com.deepblue.kuaiding.biz.KdRstinfoBiz;
+import com.deepblue.kuaiding.entity.KdRstinfo;
 import com.opensymphony.xwork2.ActionSupport;
 import com.utility.json.AJsonConverter;
 import com.utility.json.JsonFeedback;
 import com.utility.json.iJsonable;
-import com.deepblue.kuaiding.biz.KdRstinfoBiz;
-import com.deepblue.kuaiding.entity.KdRestaurant;
 
 public class YdAction extends ActionSupport implements iJsonable{
 	private static final long serialVersionUID = 1L;
@@ -22,9 +22,8 @@ public class YdAction extends ActionSupport implements iJsonable{
 		return SUCCESS;
 	}
 	
-	public String getRest(){
-		System.out.println("type: "+type);
-		List<KdRstinfo> kdRstinfos = kdRstinfoBiz.getRestaurantByType(type);
+	public String getRestInfo(){
+		List<KdRstinfo> kdRstinfos = kdRstinfoBiz.getRstinfo();
 		feedback.setDataList(kdRstinfos, new AJsonConverter<KdRstinfo>());
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
