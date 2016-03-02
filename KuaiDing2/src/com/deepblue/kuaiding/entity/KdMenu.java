@@ -1,6 +1,6 @@
 package com.deepblue.kuaiding.entity;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * KdMenu entity. @author MyEclipse Persistence Tools
@@ -12,17 +12,18 @@ public class KdMenu implements java.io.Serializable {
 
 	private String objectid;
 	private String name;
-	private String address;
+	private String rst;
 	private String pic;
-	private String phone;
-	private Double distance;
-	private String region;
-	private Integer avgprice;
+	private String taste;
+	private Integer price;
+	private Integer quantity;
+	private String evaluation;
 	private String type;
 	private String description;
 	private Integer orderno;
 	private String creator;
-	private Timestamp createtime;
+	private Date createtime;
+	private String yes;
 
 	// Constructors
 
@@ -31,39 +32,42 @@ public class KdMenu implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public KdMenu(String objectid, String name, String address, String pic,
-			String phone, Double distance, String region, Integer avgprice,
-			String type, String creator) {
+	public KdMenu(String objectid, String name, String rst, String pic,
+			String taste, Integer price, Integer quantity, String evaluation,
+			String type, String creator, Date createtime, String yes) {
 		this.objectid = objectid;
 		this.name = name;
-		this.address = address;
+		this.rst = rst;
 		this.pic = pic;
-		this.phone = phone;
-		this.distance = distance;
-		this.region = region;
-		this.avgprice = avgprice;
+		this.taste = taste;
+		this.price = price;
+		this.quantity = quantity;
+		this.evaluation = evaluation;
 		this.type = type;
 		this.creator = creator;
+		this.createtime = createtime;
+		this.yes = yes;
 	}
 
 	/** full constructor */
-	public KdMenu(String objectid, String name, String address, String pic,
-			String phone, Double distance, String region, Integer avgprice,
+	public KdMenu(String objectid, String name, String rst, String pic,
+			String taste, Integer price, Integer quantity, String evaluation,
 			String type, String description, Integer orderno, String creator,
-			Timestamp createtime) {
+			Date createtime, String yes) {
 		this.objectid = objectid;
 		this.name = name;
-		this.address = address;
+		this.rst = rst;
 		this.pic = pic;
-		this.phone = phone;
-		this.distance = distance;
-		this.region = region;
-		this.avgprice = avgprice;
+		this.taste = taste;
+		this.price = price;
+		this.quantity = quantity;
+		this.evaluation = evaluation;
 		this.type = type;
 		this.description = description;
 		this.orderno = orderno;
 		this.creator = creator;
 		this.createtime = createtime;
+		this.yes = yes;
 	}
 
 	// Property accessors
@@ -84,12 +88,12 @@ public class KdMenu implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public String getAddress() {
-		return this.address;
+	public String getRst() {
+		return this.rst;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setRst(String rst) {
+		this.rst = rst;
 	}
 
 	public String getPic() {
@@ -100,36 +104,36 @@ public class KdMenu implements java.io.Serializable {
 		this.pic = pic;
 	}
 
-	public String getPhone() {
-		return this.phone;
+	public String getTaste() {
+		return this.taste;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setTaste(String taste) {
+		this.taste = taste;
 	}
 
-	public Double getDistance() {
-		return this.distance;
+	public Integer getPrice() {
+		return this.price;
 	}
 
-	public void setDistance(Double distance) {
-		this.distance = distance;
+	public void setPrice(Integer price) {
+		this.price = price;
 	}
 
-	public String getRegion() {
-		return this.region;
+	public Integer getQuantity() {
+		return this.quantity;
 	}
 
-	public void setRegion(String region) {
-		this.region = region;
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
-	public Integer getAvgprice() {
-		return this.avgprice;
+	public String getEvaluation() {
+		return this.evaluation;
 	}
 
-	public void setAvgprice(Integer avgprice) {
-		this.avgprice = avgprice;
+	public void setEvaluation(String evaluation) {
+		this.evaluation = evaluation;
 	}
 
 	public String getType() {
@@ -164,12 +168,20 @@ public class KdMenu implements java.io.Serializable {
 		this.creator = creator;
 	}
 
-	public Timestamp getCreatetime() {
+	public Date getCreatetime() {
 		return this.createtime;
 	}
 
-	public void setCreatetime(Timestamp createtime) {
+	public void setCreatetime(Date createtime) {
 		this.createtime = createtime;
+	}
+
+	public String getYes() {
+		return this.yes;
+	}
+
+	public void setYes(String yes) {
+		this.yes = yes;
 	}
 
 }

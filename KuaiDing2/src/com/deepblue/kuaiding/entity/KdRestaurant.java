@@ -26,7 +26,6 @@ public class KdRestaurant implements java.io.Serializable {
 	private Date date;
 	private String pic2;
 	private String remarks;
-	private String time;
 
 	// Constructors
 
@@ -54,7 +53,7 @@ public class KdRestaurant implements java.io.Serializable {
 			String pic, String phone, Double distance, String region,
 			Integer avgprice, String type, String description, Integer orderno,
 			String creator, Date createtime, Date date, String pic2,
-			String remarks, String time) {
+			String remarks) {
 		this.objectid = objectid;
 		this.name = name;
 		this.address = address;
@@ -71,7 +70,6 @@ public class KdRestaurant implements java.io.Serializable {
 		this.date = date;
 		this.pic2 = pic2;
 		this.remarks = remarks;
-		this.time = time;
 	}
 
 	// Property accessors
@@ -202,14 +200,6 @@ public class KdRestaurant implements java.io.Serializable {
 
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
-	}
-
-	public String getTime() {
-		return this.time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
 	}
 
 }
