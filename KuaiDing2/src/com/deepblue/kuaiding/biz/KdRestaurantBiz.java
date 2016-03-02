@@ -3,6 +3,7 @@ package com.deepblue.kuaiding.biz;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
@@ -22,7 +23,9 @@ public class KdRestaurantBiz {
 		Session session = kdRestaurantDAO.getSessionFactory().openSession();
 		try{
 			Criteria cr = session.createCriteria(KdRestaurant.class);
-			cr.add(Restrictions.eq("type", type));
+			if(StringUtils.isNotBlank(type)){
+				cr.add(Restrictions.eq("type", type));
+			}
 			cr.addOrder(Order.asc("orderno"));
 			kdRestaurants = cr.list();
 		}catch(Exception ex){
