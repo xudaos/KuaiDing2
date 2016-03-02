@@ -11,8 +11,8 @@
 	</bean>
 	
 	<bean id="YdAction" class="com.deepblue.kuaiding.action.YdAction" scope="prototype">
-		<property name="kdRestaurantBiz">
-			<ref bean="KdRestaurantBiz" />
+		<property name="kdRstinfoBiz">
+			<ref bean="KdRstinfoBiz" />
 		</property>
 	</bean>
 	<bean id="WmAction" class="com.deepblue.kuaiding.action.WmAction" scope="prototype">

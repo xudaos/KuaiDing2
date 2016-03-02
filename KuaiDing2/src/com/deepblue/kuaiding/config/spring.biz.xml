@@ -10,4 +10,10 @@
 		</property>
 	</bean>
 	
+	<bean id="KdRstinfoBiz" class="com.deepblue.kuaiding.biz.KdRstinfoBiz">
+		<property name="kdRstinfoDAO">
+			<ref bean="KdRstinfoDAO" />
+		</property>
+	</bean>
+	
 </beans>

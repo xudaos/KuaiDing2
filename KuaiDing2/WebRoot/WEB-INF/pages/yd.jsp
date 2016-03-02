@@ -495,7 +495,8 @@ var path = '';
        		<p><img src="<%=path%>/pages/KD/images/nothing.png" />抱歉，找不到该信息</p>
     	</div>
         
-        <ul id="page-content" class="booking-main">	
+        <ul id="page-content" class="booking-main">
+            
         </ul>
         
         <div class="booking-bottom">
@@ -595,9 +596,31 @@ var path = '';
 <script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jBootstrapPage.js"></script> 
+
 
 <script type="text/javascript">
+
+$(function(){
+	getPagecontent();
+});
+
+//加载精品推荐
+function getPagecontent(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getRest.do',
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><a><span class="main-left"><img src="'+data[i].pic+'"/><h5 href="javascript:void(0);">'+data[i].time+'分钟</h5></span><span class="main-right"><h3 href="javascript:void(0);">'+data[i].name+'</h3><h5 href="javascript:void(0);">月销售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'元配送</h5><p></p></span></li>';				
+			}
+			$('#page-content').html(htmlStr);
+		}
+	});
+}
+
 var collectCompany = '';
 //收藏方法
 function collectp(n,t){
@@ -622,138 +645,7 @@ function collectp(n,t){
 }
 </script>
 
-<script type="text/javascript">
-$(function(){
-	var count = 2156;
-	if(count == 0){
-		$(".nothing").show();
-		$(".booking-nav").hide();
-	}else{
-		$(".nothing").hide();
-		$(".booking-nav").show();
-		createPage(20, 5, 2156,"/Function/DataStore.do");
-	}
-	
-	//口味
-	$("#kw a").click(function(){
-		var id = $(this).attr("data-id");
-		$('#kw a').removeClass();
-		$(this).addClass('ahover');
-	  	$('#tasteType').val(id);
-	  	paramMap.Set("tasteType", id);
-	  	$.post("/Function/GetCountByConditions.do", paramMap, function(data) {
-	  		if(data==0){
-	  			$(".nothing").show();
-	  			createPage(20, 5, data,"/Function/DataStore.do");
-	  		}else{
-	  			$(".nothing").hide();
-	  			createPage(20, 5, data,"/Function/DataStore.do");
-	  		}
-     	},"json");
-	});
-	
-	//区域
-	$("#qy a").click(function(){
-		var id = $(this).attr("data-id");
-		$('#qy a').removeClass();
-		$(this).addClass('ahover');
-	  	$('#area').val(id);
-	  	paramMap.Set("area", id);
-	  	$.post("/Function/GetCountByConditions.do", paramMap, function(data) {
-	  		if(data==0){
-	  			$(".nothing").show();
-	  			createPage(20, 5, data,"/Function/DataStore.do");
-	  		}else{
-	  			$(".nothing").hide();
-	  			createPage(20, 5, data,"/Function/DataStore.do");
-	  		}
-     	},"json");
-	});
-	
-	//排序
-	$("#px a").click(function(){
-		var id = $(this).attr("data-id");
-		$('#px a').removeClass();
-		$(this).addClass('ahover');
-	  	$('#sortOrder').val(id);
-	  	$.post("/Function/GetCountByConditions.do", paramMap, function(data) {
-	  		if(data==0){
-	  			$(".nothing").show();
-	  			createPage(20, 5, data,"/Function/DataStore.do");
-	  		}else{
-	  			$(".nothing").hide();
-	  			createPage(20, 5, data,"/Function/DataStore.do");
-	  		}
-     	},"json");
-	});
-	
-});	
-function createPage(pageSize, buttons, total ,url) {
-	paramMap.Set("typeId", 1);
-	paramMap.Set("sortOrder", $('#sortOrder').val());
-	paramMap.Set("qsf", '0');
-	paramMap.Set("area", $('#area').val());
-	paramMap.Set("tasteType", $('#tasteType').val());
-	paramMap.Set("pageSize", '20');
-	paramMap.Set("totalCount", 2156);
-	/* paramMap.Set("style_button",); */
-    $(".pagination").jBootstrapPage({
-        pageSize : pageSize,
-        total : total,
-        maxPageButton:buttons,
-        initMethod:initPage(url),
-        onPageClicked: function(obj, pageIndex) {
-        	paramMap.Set("page",pageIndex+1);
-        	//$('#page-content').html('<div id="loading" class="loading">Loading pages...</div>');
-	    	$.post(url, paramMap, function(data) {
-	        	$('#page-content').html(data);
-	     	},"text");
-          
-        }
-        
-    });
-}
-function initPage(url){
-	paramMap.Set("page",1);
-	//$('#page-content').html('<div id="loading" class="loading">Loading pages...</div>');
-	$.post(url, paramMap, function(data) {
-      	$('#page-content').html(data);
-   	},"text");
-}
 
-function page_jump(){
-	
-	var pageIndex = $("#page_jump_num").val();
-	var totalNum = $("#page_jump_num").attr("data-max");
-	//var lis = $(".page");
-	 //填入数据小于1时，显示第1页
-	 if(pageIndex < 1){
-		paramMap.Set("page",1);
-		$.post("/Function/DataStore.do", paramMap, function(data) {
-        	$('#page-content').html(data);
-     	},"text");
-       	
-	}
-	 //填入数据大于1小于页面总数时，显示第填入值页面
-	if(pageIndex >=1 && pageIndex <= totalNum){
-		
-		paramMap.Set("page",pageIndex);
-		$.post("/Function/DataStore.do", paramMap, function(data) {
-	       	$('#page-content').html(data);
-	    },"text");   
-	}
-	//填入数据大于页面总数值时，显示末页
-	else if(pageIndex > totalNum){
-		paramMap.Set("page",totalNum);
-		$.post("/Function/DataStore.do", paramMap, function(data) {
-	    	$('#page-content').html(data);
-	  	},"text");
-	} 
-
-}
-
-
-</script>
 
 </body>
 </html>
