@@ -688,7 +688,7 @@ var path = '';
                    </ul>
                    <ul class="pics-lists">
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish1.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish1.png" />
                          <h6>菜品一</h6>
                          <button class="button4">65</button>
                          <span>
@@ -698,7 +698,7 @@ var path = '';
                           </span>
                       </li>
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish2.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish2.png" />
                          <h6>菜品二</h6>
                          <button class="button4">65</button>
                          <span>
@@ -708,7 +708,7 @@ var path = '';
                           </span>
                       </li>
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish3.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish3.png" />
                          <h6>菜品三</h6>
                          <button class="button4">65</button>
                          <span>
@@ -718,7 +718,7 @@ var path = '';
                           </span>
                       </li>
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish4.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish4.png" />
                          <h6>菜品四</h6>
                          <button class="button4">65</button>
                          <span>
@@ -728,7 +728,7 @@ var path = '';
                           </span>
                       </li>
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish5.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish5.png" />
                          <h6>菜品五</h6>
                          <button class="button4">65</button>
                          <span>
@@ -738,7 +738,7 @@ var path = '';
                           </span>
                       </li>
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish6.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish6.png" />
                          <h6>菜品六</h6>
                          <button class="button4">65</button>
                          <span>
@@ -748,7 +748,7 @@ var path = '';
                           </span>
                       </li>
                       <li>
-                         <img src="<%=path%>/pages/Restaurant/img_rst/dish7.png" />
+                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish7.png" />
                          <h6>菜品七</h6>
                          <button class="button4">65</button>
                          <span>
