@@ -348,9 +348,7 @@ var path = '';
         	
 				<span>您好，欢迎来到快订！</span>
 	            <a target="_blank" href="../Login/login.html">[登录]</a>
-	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|
-			
-			
+	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|			
         </p>
         <br class="clear" />
     </div>
@@ -597,7 +595,6 @@ var path = '';
 <script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
 
-
 <script type="text/javascript">
 
 $(function(){
@@ -608,14 +605,14 @@ $(function(){
 function getPagecontent(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/getRest.do',
+		url: '<%=path%>/yd/getRestInfo.do',
 		dataType: 'json',
 		success: function(result){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><a><span class="main-left"><img src="'+data[i].pic+'"/><h5 href="javascript:void(0);">'+data[i].time+'分钟</h5></span><span class="main-right"><h3 href="javascript:void(0);">'+data[i].name+'</h3><h5 href="javascript:void(0);">月销售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'元配送</h5><p></p></span></li>';				
-			}
+				htmlStr += '<li><span class="main_left"><img class="rstpic" src="<%=path%>/pages/KD/img_rest/rst/rst1.png" /><h5 href="javascript:void(0);">'+data[i].time+'分钟</h5></span><span class="main_right"><a target="_blank" href="restaurant.do"><h3 href="javascript:void(0);">'+data[i].name+'</h3></a><h5 href="javascript:void(0);"><img src="<%=path%>/pages/KD/img_rest/star4.png" />月售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'费配送</h5><p><img src="<%=path%>/pages/KD/img_rest/zhuan.png" /><img src="<%=path%>/pages/KD/img_rest/jian.png" /><img src="<%=path%>/pages/KD/img_rest/fu.png" /></p></span></li>';				
+			}						
 			$('#page-content').html(htmlStr);
 		}
 	});
@@ -644,8 +641,6 @@ function collectp(n,t){
 	}
 }
 </script>
-
-
 
 </body>
 </html>

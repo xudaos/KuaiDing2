@@ -4,36 +4,6 @@
 .logo, .search, .nav-ul, .shangquan, .nav li, .shangquan ul, .shangquan p, .booking-nav li, .booking-main li, .booking-bottom li { float:left; display:inline;}
 .order, .shangquan input, .booking-main h3 a, .booking-bottom ul { float:right; display:inline;}
 
-/*.header { padding-top:32px; _padding-top:0;}
-.logo { overflow:hidden; width:320px; margin-top:15px;}
-.logo p { float:right; font-size:18px; line-height:75px;}
-
-.search { margin:35px 0 0 40px;}
-.search form { background:#c1c1c1; width:535px; border-radius:3px;}
-.search input { border:0;}
-.search .input1 { background:#fff; font-size:12px; color:#c1c1c1; padding:6px 0 8px 7px; margin:3px; +margin:2px 3px; width:450px;}
-.search .input2 { font-size:16px; background:url(../images/search.png) no-repeat; padding-left:20px; line-height:30px; background-position:left center; vertical-align:middle; color:#fff; font-weight:600;}
-.search a { color:#bababa; padding-left:10px; line-height:22px;}
-.search a:hover { color:#89c935;}
-
-.order { margin-top:35px;}
-.order input { border:1px solid #e6e6e6; padding:9px 6px 10px 30px; font-size:12px; color:#636363; line-height:12px;}
-.order .input1 { background:#f5f5f5 url(../images/gwc.png) no-repeat 8px 8px;}
-.order .input2 { margin-left:10px; background:#f5f5f5 url(../images/dingdan.png) no-repeat 11px 8px;}
-.order input:hover { background-color:#89c935; color:#fff;}
-
-.nav { background:url(../images/nav-bg.png); margin-top:17px; color:#fff;}
-.nav a { color:#fff;}
-.nav-ul a { border-left:1px solid #fff; border-top:4px solid #fff; border-bottom:4px solid #fff; display:block; width:96px; text-align:center; line-height:59px; font-size:16px; font-weight:600;}
-.nav-ul a:hover, .nav-ul .ahover { border-top:4px solid #d0df00; border-bottom:4px solid #d0df00; background:#f5f5f5 url(../images/nav-hover.png) no-repeat 45px 0px; color:#303030;}
-.nav-ul .a1 { border-right:1px solid #fff;}
-.shangquan { padding-top:12px; width:600px;}
-.shangquan p { margin:3px 0 0 45px; line-height:16px; font-size:14px; font-weight:600;}
-.shangquan ul { width:380px;}
-.shangquan a { display:block; margin:3px 10px 0 10px; line-height:16px; font-size:12px;}
-.shangquan a:hover { color:#d0df00;}
-.shangquan input { background:#d0df00; color:#fff; padding:9px; font-size:16px; line-height:16px; border:0; border-radius:3px; margin:3px 0 0 10px;}
-*/
 .booking { margin-top:16px;}
 .booking-nav { color:#636363; line-height:25px; padding:12px; background:#f5f5f5;}
 .booking-nav li { margin:3px;}
@@ -43,14 +13,9 @@
 .booking-nav a:hover, .booking-nav .ahover { background:#89c935; color:#fff;}
 .booking-main { margin-top:20px; width:1200px; min-height: 600px;}
 .booking-main li { border:1px solid #dbdbdb; width:298px;}
-.booking-main h3 { font-size:18px;/* padding:20px 12px;padding:20px 12px 15px;*/padding:14px 12px;/*2015-3-24修改*/ line-height:26px;}
-.booking-main h3 a { font-size:14px; color:#fff; background:#f7ab00; line-height:16px; padding:5px 10px;}
-.booking-main li>p { padding:9px 12px; background:#f5f5f5;/* margin-top:25px;margin-top:15px;*//*2015-3-24修改*/ line-height:21px;}
-.booking-main li>p a { color:#fff; background:#90d101;/*2015-3-24修改*/ padding:3px 10px;/*2015-3-24修改*/}
-.booking-main li>p span { padding:0 3px;}
-.booking-bottom { margin-top:20px;}
-.booking-main .star-img { padding:0 10px; display:inline-block; vertical-align:top; width:92px; height:16px;}
-.booking-main .yishou { font-size:14px; color:#666; padding-left:20px; line-height:16px;}
+.booking-main li:hover h3{color:#89c935;}
+.booking-main li:hover{cursor:pointer;}
+.booking-main h3 { width:100px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; font-size:18px;/* padding:20px 12px;padding:20px 12px 15px;*/padding:14px 0 14px 8px;/*2015-3-24修改*/ line-height:26px;}
 .rstpic { width:70px; height:70px;padding:25px;}
 .main_left h5{padding:0 0 20px 30px;}
 .main_right { float:right; margin:-150px 40px 0 0;}
@@ -69,12 +34,8 @@
 .table-search .input3 { width:320px; background:#fff url(../images/rd.png) no-repeat 300px;}
 .table-search .input4 { width:50px; color:#fff; background:#9ede4c; margin-left:5px;}
 
-
 .nothing { text-align:center; font-size:22px; font-weight:600; margin-top:100px;display: none;}
 .nothing img { display:inline; vertical-align:middle; margin-right:15px;}
-/*.booking-bottom li { width:50px; line-height:30px; text-align:center;}
-.booking-bottom li:hover, .booking-bottom .li1 { background:#89c935; color:#fff;}*/
-
 
 /*2015-3-24修改*/
 .booking-main li:hover { border-color:#89c935; position:relative; box-shadow:-1px 2px 2px #ccc;}
