@@ -21,4 +21,7 @@
 	<bean id="CouponsAction" class="com.deepblue.kuaiding.action.CouponsAction" scope="prototype">
 
 	</bean>
+	<bean id="Rest1Action" class="com.deepblue.kuaiding.action.Rest1Action" scope="prototype">
+
+	</bean>
 </beans>

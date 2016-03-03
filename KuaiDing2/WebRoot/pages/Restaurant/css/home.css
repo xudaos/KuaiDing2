@@ -23,7 +23,7 @@
 /* 菜单（rst-menu） */
 .menu-top{ cursor:pointer; margin-top:30px;}
 .rst-menu .bg1 {background:#636363; height:50px; padding-top:15px;}
-.rst-menu{background:#CCC; padding-bottom:10px;}
+.rst-menu{background:#9f9f9f; padding-bottom:10px;}
 .menu-kinds{ background:#fff; margin:10px; padding-bottom:10px;}
 .menu-lists{margin-bottom:10px;}
 .menu-meals,.menu-drinks,.menu-snacks{ background:#fff; margin:0px 10px; padding-bottom:10px;}
@@ -42,7 +42,7 @@ h3{font-size:20px; margin-left:30px; margin-top:5px;}
 
 
 /* 商家信息（rst-sjxx） */
-.rst-sjxx{background:#FC9; padding-bottom:3px;}
+.rst-sjxx{background:#fbd661; padding-bottom:3px;}
 .sjxx-top{cursor:pointer; margin-top:30px;}
 .sjxx-top .bg2 {background:#facb33; height:50px; padding-top:15px;}
 .sjxx-info{ background:#fff; margin:10px; padding-bottom:10px;}
@@ -50,7 +50,7 @@ h3{font-size:20px; margin-left:30px; margin-top:5px;}
 h5{font-size:16px; margin:15px 0px 10px 120px;}
 
 /* 美食墙（rst-pics） */
-.rst-pics{background:#a3c499; padding-bottom:3px;}
+.rst-pics{background:#b7d27c; padding-bottom:3px;}
 .pics-top{cursor:pointer; margin-top:30px;}
 .pics-top .bg3 {background:#a3c450; height:50px; padding-top:15px;}
 .pics-info .title{background:#fff; margin:10px;}
@@ -63,7 +63,7 @@ h6{font-size:16px; margin:10px;}
 
 
 /* 评价（rst-evaluate） */
-.rst-evaluate{background:#399; padding-bottom:3px;}
+.rst-evaluate{background:#71cbf3; padding-bottom:3px;}
 .evaluate-top{cursor:pointer; margin-top:30px;}
 .evaluate-top .bg4 {background:#32b3ed; height:50px; padding-top:15px;}
 .evaluate-rst {background:#fff; margin:10px; padding:10px;}
@@ -86,7 +86,7 @@ h6{font-size:16px; margin:10px;}
 .evaluate-lists .pj2{float:right;}
 
 /* 留言（rst-comments） */
-.rst-comments{background:#C93; padding-bottom:10px;}
+.rst-comments{background:#ffb061; padding-bottom:10px;}
 .comments-top{cursor:pointer; margin-top:30px;}
 .comments-top .bg5{background:#f93; height:50px; padding-top:15px;}
 .comments-info .title{background:#fff; margin:10px;}

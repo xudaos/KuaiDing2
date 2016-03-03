@@ -32,5 +32,10 @@
 				/WEB-INF/pages/coupons.jsp
 			</result>
 		</action>
+		<action name="rest1" class="Rest1Action" method="rest1">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/rst/rest1.jsp
+			</result>
+		</action>
 	</package>
 </struts>
