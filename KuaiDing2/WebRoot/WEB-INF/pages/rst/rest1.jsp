@@ -662,10 +662,11 @@ var path = '';
                    <ul class="sjxx-lists">
                       <li><h5>商家简介:</h5></li>
                       <li><h5>商家地址:</h5></li>
-                      <li><h5>营业时间:</h5></li>
-                      <li><h5>距离:</h5></li>
+                      <li><h5>营业时间:</h5></li>                      
                       <li><h5>电话:</h5></li>
                       <li><h5>起送价:</h5></li>
+                      <li><h5>活动:</h5></li>
+                      <li><h5>公告:</h5></li>
                    </ul>
                 </div>
              </div>
@@ -999,27 +1000,6 @@ var path = '';
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
 
 <script type="text/javascript">
-
-$(function(){
-	getPagecontent();
-});
-
-//加载精品推荐
-function getPagecontent(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/yd/getRestInfo.do',
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><span class="main_left"><img class="rstpic" src="<%=path%>/pages/KD/img_rest/rst/rst1.png" /><h5 href="javascript:void(0);">'+data[i].time+'分钟</h5></span><span class="main_right"><a target="_blank" href="restaurant.do"><h3 href="javascript:void(0);">'+data[i].name+'</h3></a><h5 href="javascript:void(0);"><img src="<%=path%>/pages/KD/img_rest/star4.png" />月售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'费配送</h5><p><img src="<%=path%>/pages/KD/img_rest/zhuan.png" /><img src="<%=path%>/pages/KD/img_rest/jian.png" /><img src="<%=path%>/pages/KD/img_rest/fu.png" /></p></span></li>';				
-			}						
-			$('#page-content').html(htmlStr);
-		}
-	});
-}
 
 var collectCompany = '';
 //收藏方法

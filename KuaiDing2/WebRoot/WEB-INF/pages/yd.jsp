@@ -601,7 +601,7 @@ $(function(){
 	getPagecontent();
 });
 
-//加载精品推荐
+//加载餐厅
 function getPagecontent(){
 	$.ajax({
 		type: 'post',

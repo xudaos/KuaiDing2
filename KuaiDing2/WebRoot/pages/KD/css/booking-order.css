@@ -15,7 +15,7 @@
 .booking-main li { border:1px solid #dbdbdb; width:298px;}
 .booking-main li:hover h3{color:#89c935;}
 .booking-main li:hover{cursor:pointer;}
-.booking-main h3 { width:100px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; font-size:18px;/* padding:20px 12px;padding:20px 12px 15px;*/padding:14px 0 14px 8px;/*2015-3-24修改*/ line-height:26px;}
+.booking-main h3 { width:100px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; font-size:16px;/* padding:20px 12px;padding:20px 12px 15px;*/padding:14px 0px;/*2015-3-24修改*/ line-height:26px;}
 .rstpic { width:70px; height:70px;padding:25px;}
 .main_left h5{padding:0 0 20px 30px;}
 .main_right { float:right; margin:-150px 40px 0 0;}

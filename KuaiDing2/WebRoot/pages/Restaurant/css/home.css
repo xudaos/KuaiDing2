@@ -23,7 +23,7 @@
 /* 菜单（rst-menu） */
 .menu-top{ cursor:pointer; margin-top:30px;}
 .rst-menu .bg1 {background:#636363; height:50px; padding-top:15px;}
-.rst-menu{background:#9f9f9f; padding-bottom:10px;}
+.rst-menu{background:#ccc; padding-bottom:10px;}
 .menu-kinds{ background:#fff; margin:10px; padding-bottom:10px;}
 .menu-lists{margin-bottom:10px;}
 .menu-meals,.menu-drinks,.menu-snacks{ background:#fff; margin:0px 10px; padding-bottom:10px;}
@@ -57,8 +57,8 @@ h5{font-size:16px; margin:15px 0px 10px 120px;}
 .pics-info .title li{float:left; margin-left:20px;}
 .button3{font-size:18px; float:left; background:#fff; padding:5px 15px; margin:15px 10px;}
 .button4{margin-top:5px; float:right; padding:5px 25px 5px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 6px;}
-.pics-lists li{float:left; padding:26px; margin:10px 20px 20px 0px; background:#fff;}
-.pics-lists{margin-left:10px;}
+.pics-lists li{float:left; padding:26px; margin:10px 10px 10px 0px; background:#fff;}
+.pics-lists{margin-left:30px;}
 h6{font-size:16px; margin:10px;}
 
 
