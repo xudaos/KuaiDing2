@@ -32,7 +32,7 @@
 
 <div class="clear w100 js">
     <div class="clear w1000 ma js">
-        <div class="zfd"><img src="images/login1.png" width="550" height="450">
+        <div class="zfd"><img src="<%=path%>/pages/Restaurant/images/login1.png" width="550" height="450">
         </div>
         <div class="yfd w380 p bai mt40"> 
            <form id="loginForm" method="post" action="/Identity/LoginNew.do" name="form1">
@@ -43,7 +43,7 @@
                     <div class="yfd f12"><a href="/Identity/MainPage1.do?init=init">使用其他方式登录</a></div>
                 </div>
                <div class="clear w100">
-                    <div class="zfd"><img src="images/sjh.png" width="50" height="32"></div>
+                    <div class="zfd"><img src="<%=path%>/pages/Restaurant/images/sjh.png" width="50" height="32"></div>
                     <div class="zfd"><input class="wb1 pl10" id="companyName" name="companyName" onBlur="getUser()" type="text" placeholder="请输入手机号码"></div>
                </div>
                <div class="clear w100 mt10">
@@ -52,7 +52,7 @@
                     <div class="yfd f12r"><span id="czy"></span></div>
                </div>
                <div class="clear w100">
-                    <div class="zfd"><img src="images/yhm.png" width="50" height="32"></div>
+                    <div class="zfd"><img src="<%=path%>/pages/Restaurant/images/yhm.png" width="50" height="32"></div>
                        <div class="zfd"><!-- <input class="wb1 pl10" name="" type="text" placeholder="请输用户名"> -->
   	                     <select name="loginName" id="loginName"  onchange="getvalue(this)" style="width: 287px;height:33px; border: 1px solid #ddd;font-family: '微软雅黑',Tahoma,Geneva,sans-serif;">
                      	   <option value="">--</option>
@@ -64,7 +64,7 @@
                          <div class="zfd f14r">*</div>
                     </div>
                     <div class="clear w100">
-                         <div class="zfd"><img src="images/mm.png" width="50" height="32"></div>
+                         <div class="zfd"><img src="<%=path%>/pages/Restaurant/images/mm.png" width="50" height="32"></div>
                          <div class="zfd"><input class="wb1 pl10" id="password" name="password" type="password" placeholder="请输入密码"></div>  </div>
                          <div class="" id="yanzhengma" style="display:none;">
                              <div class="clear w100 mt10">
@@ -107,14 +107,14 @@
     </div>
 </div>
 
-<script type="text/javascript" src="js/merchant/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/merchant/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="js/merchant/easyui-lang-zh_CN.js"></script>
-<script type="text/javascript" src="js/merchant/common.js"></script>
-<script type="text/javascript" src="js/merchant/jquery_form.js"></script>
-<script type="text/javascript" src="js/merchant/jquery.blockUI.js"></script>
-<script type="text/javascript" src="js/merchant/package.js"></script>
-<script src="js/merchant/messagecenter.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/common.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/jquery_form.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/jquery.blockUI.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Restaurant/js/merchant/package.js"></script>
+<script src="<%=path%>/pages/Restaurant/js/merchant/messagecenter.js"></script>
 <script type="text/javascript">
 	
     $package('Ucb.login');

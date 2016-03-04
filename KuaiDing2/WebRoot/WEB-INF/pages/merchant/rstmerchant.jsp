@@ -418,7 +418,7 @@ var path = '';
 	<div class="container">
        <div class="rst-left">
           <ul class="rst-nav1">
-             <img src="images/rst1.png" width="160" height="60" />
+             <img src="<%=path%>/pages/Restaurant/images/rst1.png" width="160" height="60" />
              <h4 style="margin-left:8px">中国全聚德大连烤鸭店</h4>
           </ul>
        </div>
