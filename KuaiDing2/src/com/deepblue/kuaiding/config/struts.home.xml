@@ -37,5 +37,20 @@
 				/WEB-INF/pages/rst/rest1.jsp
 			</result>
 		</action>
+		<action name="gwc" class="GwcAction" method="gwc">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/gwc.jsp
+			</result>
+		</action>
+		<action name="order" class="OrderAction" method="order">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/order.jsp
+			</result>
+		</action>
+		<action name="orderlist" class="OrderListAction" method="orderlist">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/orderlist.jsp
+			</result>
+		</action>
 	</package>
 </struts>

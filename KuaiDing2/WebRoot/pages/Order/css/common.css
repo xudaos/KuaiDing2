@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { padding:0; margin:0;}
+body { font-size:12px; font-family:'微软雅黑', Tahoma, Geneva, sans-serif; text-align:center; background:#fff; color:#666;}
+a { text-decoration:none; outline:none; color:#666;}
+a:hover { color:#89c935;}
+img { display:inline-block; border:none;}
+a img { display:block;}
+ul { list-style:none;}
+input {font-family:'微软雅黑', Tahoma, Geneva, sans-serif; outline:0; cursor:pointer; vertical-align:middle; overflow:visible;/*解决ie6、7的换行和padding增加问题*/ vertical-align:middle; _vertical-align:bottom;/*ie6*/}
+input[type=text], input[type=button] { -webkit-appearance: none;/*safari浏览器重置*/ border:0;}
+h3 { font-size:22px; line-height:41px; color:#666; font-weight:600;}
+h4 { font-size:24px; line-height:30px; color:#fff; font-weight:600;}
+.container { margin:0 auto; width:1200px; text-align:left;}
+.clear { clear:both; width:100%; height:0; display:block;}
+/*整体定义*/
+
+.footer-about, .top-right-ewm li, .top-left ul { overflow:hidden; zoom:1;/*ie6*/}
+.top-left, .top-left div, .top-right .li1,.footer-about div, .top-right-ewm img, .top-right-ewm div,.top-left ul li { float:left; display:inline;}
+.top-right { float:right; display:inline;}
+
+.top { width:100%; background:#f5f5f5; border-bottom:1px solid #dbdbdb; line-height:31px; position:fixed; z-index:99; +margin-left:-50%;/*ie6、ie7*/ _margin-left:0;/*ie6*/}
+.top-right .li1 { position:relative;}
+.top-right a { padding:0 5px; display:inline-block; line-height:25px; border:1px solid #f5f5f5; border-bottom:0;}
+.top .a1, .top .a2 { padding-left:25px;}
+.top .a1 { background:url(../images/star.png) no-repeat 5px 0;}
+.top .a2 { background:url(../images/rd.png) no-repeat 10px 0;}
+.top .a3 { padding-right:20px; background:url(../images/xia.png) no-repeat 56px 13px;}
+.top .a4 { display:inline-block; padding-right:20px; background:url(../images/xia.png) no-repeat 106px 14px;}
+.top .a4:hover, .top .a3:hover, .top .ahover { background-color:#fff; border-color:#dbdbdb;}
+.top .a4 span { width:20px; display:inline-block; height:28px; vertical-align:middle;}
+.top .span1 { background:url(../images/sj.png) no-repeat 3px;}
+.top .span2 { background:url(../images/ewm.png) no-repeat 5px;}
+.top-left .dz { padding-right:10px; margin-left:10px; position:relative; border:1px solid #f5f5f5; border-bottom:0;}
+.top-left .dz:hover { background:#fff; border-color:#dbdbdb;}
+.top-left ul { position:absolute; left:-1px; top:31px; background:#fff; border:1px solid #dbdbdb; border-top:0; width:600px; z-index:99; display:none;}
+.top-left ul li { padding-left:10px; white-space:nowrap;}
+
+.top li .a4:hover, .top li .a3:hover { color:#666; cursor:default;}
+
+
+.top-right .li1 ul { background:#fff; border:1px solid #dbdbdb; border-top:0; position:absolute; top:28px; display:none; left:0;}
+.top-right .li1 ul a { padding-right:20px; border:0;}
+.top-right .li1 ul li { line-height:0;}
+.top-right .li1 .top-right-ewm { right:0; left:auto;}
+.top-right .li1 .top-right-ewm li { width:210px; line-height:30px;}
+.top-right .li1 .top-right-ewm p { color:#636363; font-size:14px; line-height:30px; font-weight:600;}
+.top-right .li1 .top-right-ewm img { padding:10px;}
+.top-right .li1 .top-right-ewm a { background:#d0df00 url(../images/down.png) no-repeat 7px; border:0; padding:6px 8px 6px 25px; font-size:12px; line-height:12px; color:#fff;}
+
+/*脚注*/
+.footer { padding-bottom:50px;}
+.footer-about { padding:60px 0 0 110px;}
+.footer-about div { width:105px; margin-right:25px;}
+.footer .div1, .blogroll { text-align:center;}
+.footer-about p { font-weight:600; border-bottom:1px dotted #6c6c6c; line-height:30px; padding-left:25px; margin-bottom:11px;}
+.footer-about .div1 p { padding:0;}
+.footer-about img { display:inline; padding-bottom:10px; width:75px; height:75px;}
+.footer-about .img1 { margin-top:42px;}
+.footer-about .p1 { background:url(../images/footer-1.png) no-repeat 0;}
+.footer-about .p2 { background:url(../images/footer-2.png) no-repeat 0;}
+.footer-about .p3 { background:url(../images/footer-3.png) no-repeat 0;}
+.footer-about .p4 { background:url(../images/footer-4.png) no-repeat 0;}
+.footer-about .p5 { background:url(../images/footer-5.png) no-repeat 0;}
+.footer-about li { padding-left:7px; background:url(../images/footer-li.png) no-repeat 0;}
+.footer-about a { display:block; line-height:20px;}
+.footer a:hover { text-decoration:underline; color:#999;}
+.blogroll { margin:30px 0 17px 0; padding-bottom:10px; font-weight:600; border-bottom:1px solid #dbdbdb; clear:both;}
+.blogroll a { padding:0 5px;}
+
+/*这是IE下placeholder的字体颜色*/
+input-placeholder, textarea-placeholder {
+        color: #bfbfbf;
+}
+/*这是firefox下placeholder的字体颜色*/
+:-moz-placeholder {
+        color: #bfbfbf;
+}
+/*这是webkit下placeholder的字体颜色*/
+::-webkit-input-placeholder {
+        color: #bfbfbf;
+}
+/*这是webkit下在文本框获取焦点后不显示placeholder以便使其与其他浏览器表现一致*/
+
+input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder{color:transparent;}
+
+/**回到顶部**/
+#go_top{width:56px;height:154px;position:fixed; line-height:20px;display:none;}
+#go_top a{display:block; line-height:999px; overflow:hidden; width:56px; height:56px;background:url(../images/to-top.png) no-repeat 0px 0px;}
+
+.nothing { text-align:center; font-size:22px; font-weight:600; margin-top:100px;display: none;}
+.nothing img { display:inline; vertical-align:middle; margin-right:15px;}
+
+
+/**************************************清除浮动*************************************************/
+.clearfix:after { content:' '; display:block; height:0; overflow:hidden; clear:both;}
+.clearfix { zoom:1;}
+
+.fl { float:left; display:inline;}
+.fr { float:right; display:inline;}

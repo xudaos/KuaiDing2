@@ -372,11 +372,11 @@ var path = '';
             </p>
         </div>
         <div class="order">
-        	<a class="a1" href="/Order/submit/">查看购物车
+        	<a class="a1" href="gwc.do">查看购物车
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="/Center/order/">我的订单</a>
+            <a class="a2" href="orderlist.do">我的订单</a>
         </div>
     </div>
 </div>

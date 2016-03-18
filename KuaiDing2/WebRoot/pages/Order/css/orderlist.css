@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+.rst .container,.order .container,.rst-left, .rst-right, .rst-right ul, .rst-lists ul{ overflow:hidden; zoom:1;/*ie6*/}
+.rst-left,.rst-left li{ float:left; display:inline;}
+.rst-right,.rst-right li{float:right; display:inline;}
+input {font-family:'微软雅黑', Tahoma, Geneva, sans-serif; outline:0; cursor:pointer; vertical-align:middle; overflow:visible;/*解决ie6、7的换行和padding增加问题*/ vertical-align:middle; _vertical-align:bottom;/*ie6*/}
+input[type=text], input[type=button] { -webkit-appearance: none;/*safari浏览器重置*/ border:0;}
+
+/* 餐厅信息 */
+.rst-left { width:200px; _width:auto;}/*防止页面缩放布局乱*/
+.rst-left{margin-top:80px; margin-left:10px;}
+.rst-left h4{ color:#000; font-size:14px;}
+.rst-right li {border:1px solid #dbdbdb;/* overflow:hidden;*/}
+.rst-right { margin-top:80px;}
+.rst-right li { width:900px; height:80px; cursor:pointer;}
+.rst-right .bg3 { background:#a1c450;}
+.rst-right h4 { margin-top:25px;margin-left:100px}
+.rst-right .bg3 img{float:right; margin-top:-45px; margin-right:80px;}
+
+/* 订单列表信息 */
+.order .container {width:1200px; margin-top:35px;}
+.order-list { float:left; margin-left:70px; width:1050px; border:1px solid #a1c450;}
+.order-list table td{text-align:center; font-size:18px; font-family:"宋体"; padding:15px;}
+.order-list ul h3{margin:10px 0 10px 25px; font-size:26px; font-family:"宋体";}
+.order-list .order-info{text-align:left; margin-left:20px;}

@@ -9,23 +9,20 @@
 <html lang="zh-cn">
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>快订-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
 
 <meta name="baidu-site-verification" content="zcXqQTs5gr" />
-<link rel="shortcut icon" href="<%=path%>/pages/KD/images/200.png" />
+<link rel="shortcut icon" href="<%=path%>/pages/Order/images/200.png" />
 
-<link href="<%=path%>/pages/KD/css/common.css" rel="stylesheet" type="text/css" />
-<link href="<%=path%>/pages/KD/css/msgbox.css" rel="stylesheet" type="text/css" />
-<link href="<%=path%>/pages/KD/css/bootstrap_modal.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/pages/Order/css/common.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/pages/Order/css/msgbox.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 var path = '';
 </style>
 
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/common.css" type="text/css"/>
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/booking-order.css" type="text/css"/>
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/jBootstrapPage.css" type="text/css"/>
+<link rel="stylesheet" href="<%=path%>/pages/Order/css/order.css" type="text/css"/>
 
 </head>
 
@@ -318,7 +315,9 @@ var path = '';
                     <li><a href="home.do">首页</a></li>
                     <li><a href="wm.do">外卖送餐</a></li>
                     <li><a href="yd.do">预订点餐</a></li>
+                    <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
+                    <li><a target="_blank" href="group.html">团购优惠</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
@@ -327,14 +326,14 @@ var path = '';
             	<a class="a4" href="javascript:;"><span class="span1"></span>手机客户端<span class="span2"></span></a>
             	<ul class="top-right-ewm">
                     <li>
-                    	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                    	<img src="<%=path%>/pages/Order/images/yms-ewm.png" />
                     	<div>
                             <p>手机客户端</p>
                             <a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载 </a>
                         </div>
                     </li>
                     <li>
-                    	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                    	<img src="<%=path%>/pages/Order/images/yms-ewm.png" />
                     	<div>
                             <p>二维码</p>
                             <a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
@@ -344,163 +343,147 @@ var path = '';
             </li>
             <br class="clear" />
         </ul>
-<p class="top-right">
+            <p class="top-right">
         	
 				<span>您好，欢迎来到快订！</span>
-	            <a target="_blank" href="../Login/login.html">[登录]</a>
-	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|			
-        </p>
+	        </p>
         <br class="clear" />
     </div>
 </div>
-<div class="header">
-	<div class="container">
-    	<div class="logo">
-        	<p>一网扫尽天下美食</p>
-        	<a href="home.do"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
-        </div>
-        <div class="search">
-        	<div id="top_search_form">
-                <input class="input1" type="text" id="top_search_text" placeholder="请输入美食分类、区域位置、商圈等关键字" value="" name="keywords"/>
-                <input class="input2" type="button" value="搜索" id="top_search_btn"/>
-            </div>
-            <p id="top_search_link">
-            	<a target="_blank" title="湘间小灶" href="javascript:;">湘间小灶</a>
-                <a target="_blank" title="北京土著部落" href="javascript:;">北京土著部落</a>
-                <a target="_blank" title="波斯波利斯餐厅" href="javascript:;">波斯波利斯餐厅</a>
-                <a target="_blank" title="佐译茶餐厅" href="javascript:;">佐译茶餐厅</a>
-            </p>
-        </div>
-        <div class="order">
-        	<a class="a1" href="gwc.do">查看购物车
-        		<span>0</span>
-                
-            </a>
-            <a class="a2" href="orderlist.do">我的订单</a>
-        </div>
-    </div>
-</div>
 
-<div class="nav">
-	<div class="container clearfix">
-    	<ul class="nav-ul clearfix">
-        	<li><a  href="home.do">首页</a></li>
-            <li><a  href="wm.do">外卖送餐</a></li>
-            <li><a class="ahover" href="yd.do">预订点餐</a></li>
-            <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
-            <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
-        </ul>
-        <div class="shangquan">
-        	<p>热门商圈：</p>
-            <ul>
-            	
-            		<li><a href="/BusinessCircle/1/">五道口</a></li>
-            	
-            		<li><a href="/BusinessCircle/2/">中关村</a></li>
-            	
-            		<li><a href="/BusinessCircle/11/">西直门</a></li>
-            	     
-            		<li><a href="/BusinessCircle/4/">马家堡</a></li>       	
-            		<li><a href="/BusinessCircle/3/">工体</a></li>
-                    
-            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>
-            	
-            		<li><a href="/BusinessCircle/5/">广安门</a></li>
-            	
-            		<li><a href="/BusinessCircle/13/">魏公村</a></li>
-            	
-            </ul>
-            <a class="qbsq" href="/businesscircle/">全部商圈</a>
-        </div>
-    </div>
-</div>
-
-<div class="booking">
+<div class="rst">
 	<div class="container">
-    	<div class="booking-nav">
-          <ul id="kw">
-            <li class="li1"><span>口味类别:</span></li>
-                <li><a class="ahover" data-id="" href="javascript:;">不限</a></li>
-                <li><a href='javascript:void(0)' data-id="西餐" >西餐</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="快餐" >快餐</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="火锅" >火锅</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="日式料理" >日式料理</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="烧烤" >烧烤</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="老北京家常菜" >老北京家常菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="港式茶点" >港式茶点</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="湘菜" >湘菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="川菜" >川菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="餐厅酒吧" >餐厅酒吧</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="粤菜" >粤菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="咖啡" >咖啡</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="西北菜" >西北菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="东北菜" >东北菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="贵州菜" >贵州菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="甜品" >甜品</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="新疆菜" >新疆菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="江西菜" >江西菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="韩式料理" >韩式料理</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="中餐" >中餐</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="烤鱼" >烤鱼</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="家常菜" >家常菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="饮品" >饮品</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="" ></a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="徽菜" >徽菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="浙菜" >浙菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="台湾美食" >台湾美食</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="豫菜" >豫菜</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="香港美食" >香港美食</a></li>
-    	 	 	<li><a href='javascript:void(0)' data-id="鲁菜" >鲁菜</a></li>
+       <div class="rst-left">
+          <ul class="rst-nav1">
+             <img src="<%=path%>/pages/Order/images/rst1.png" width="160" height="60" />
+             <h4 style="margin-left:8px">中国全聚德大连烤鸭店</h4>
           </ul>
-          
-          <ul id="qy">
-            	<li class="li1"><span>区域位置:</span></li>
-                <li><a data-id="" class="ahover" href="javascript:;">不限</a></li>
-                <li><a data-id="东城区" href="javascript:;">东城区</a></li>
-                <li><a data-id="西城区" href="javascript:;">西城区</a></li>
-                <li><a data-id="崇文区" href="javascript:;">崇文区</a></li>
-                <li><a data-id="宣武区" href="javascript:;">宣武区</a></li>
-                <li><a data-id="朝阳区" href="javascript:;">朝阳区</a></li>
-                <li><a data-id="丰台区" href="javascript:;">丰台区</a></li>
-                <li><a data-id="石景山区" href="javascript:;">石景山区</a></li>
-                <li><a data-id="海淀区" href="javascript:;">海淀区</a></li>
-                <li><a data-id="门头沟区" href="javascript:;">门头沟区</a></li>
-                <li><a data-id="房山区" href="javascript:;">房山区</a></li>
-                <li><a data-id="通州区" href="javascript:;">通州区</a></li>
-                <li><a data-id="顺义区" href="javascript:;">顺义区</a></li>
-                <li><a data-id="昌平区" href="javascript:;">昌平区</a></li>
-                <li><a data-id="大兴区" href="javascript:;">大兴区</a></li>
-                <li><a data-id="怀柔区" href="javascript:;">怀柔区</a></li>
-                <li><a data-id="平谷区" href="javascript:;">平谷区</a></li>
-                <li><a data-id="密云县" href="javascript:;">密云县</a></li>   
+       </div>
+      
+       <div class="rst-right">
+          <ul class="rst-nav2">
+                <li class="bg3">
+                	<h4>订餐详情</h4>
+                    <img src="<%=path%>/pages/Order/images/ddlc.png" />
+                </li>
             </ul>
-            
-            <ul id="px">
-            	<li><a class="ahover" href="javascript:;" data-id="0">默认排序</a></li>
-                <li><a href="javascript:;" data-id="1">销量&darr;</a></li>
-                <li><a href="javascript:;" data-id="3">评级&darr;</a></li>
-                <li><a href="javascript:;" data-id="2">人均消费&uarr;</a></li>
-            </ul>
-            
-            <input type="hidden" id="sortOrder" value="0" />
-        	<input type="hidden" id="tasteType" value="" />
-       	 	<input type="hidden" id="qsf" value="0" />
-       	 	<input type="hidden" id="area" value="" />
-            
+       </div>
+    </div>
+</div>
+
+<div class="order">
+    <div class="container">
+        <div class="order-left">
+            <table width="100%" border="0" cellspacing="1" cellpadding="0"> 
+                <tr class="title">
+                    <td >
+                        <h2>订单详情</h2>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h5>订单号：</h5>
+                    </td>
+                </tr>
+                <tr class="column">
+                    <td>
+                        <h5>商品</h5>               
+                    </td>
+                    <td>
+                        <h5>份数</h5>
+                    </td>
+                    <td>
+                        <h5>小计（元）</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>冬瓜排骨</h5>
+                    </td>
+                    <td>
+                        <h5>
+                           1
+                        </h5>
+                    </td>
+                    <td>
+                        <h5>￥18.00</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>重庆酸辣粉</h5>                
+                    </td>
+                    <td>
+                        <h5>
+                           1
+                        </h5>                  
+                    </td>
+                    <td>
+                        <h5>￥8.00</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>土豆肉丝饭</h5>                 
+                    </td>
+                    <td>
+                        <h5>
+                           1
+                        </h5>                   
+                    </td>
+                    <td>
+                        <h5>￥15.00</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <h5>实际支付：</h5>
+                    </td>
+                    <td>
+                        <h2>￥41.00</h2>
+                    </td>                    
+                </tr>
+            </table>
         </div>
         
-        <div class="nothing">
-       		<p><img src="<%=path%>/pages/KD/images/nothing.png" />抱歉，找不到该信息</p>
-    	</div>
-        
-        <ul id="page-content" class="booking-main">
-            
-        </ul>
-        
-        <div class="booking-bottom">
-        	<ul class="pagination"></ul>
+        <div class="order-right">
+            <div class="info">
+                <ul>
+                    <span class="span1">
+                        <h2>订单信息</h2>
+                    </span>
+                    <li>
+                        <h5>
+                            <label class="lable1">订&nbsp;单&nbsp;号：</label>
+                        </h5>
+                        <h5>
+                            <label class="lable1">配送方式：中国全聚德大连烤鸭店提供配送服务</label>
+                        </h5>
+                        <h5>
+                            <label class="lable1">送达时间：尽快送出</label>
+                        </h5>
+                    </li>
+                    <li>
+                        <h5>
+                            <label class="lable1">联&nbsp;系&nbsp;人：吴婷</label>
+                        </h5>
+                        <h5>
+                            <label class="lable1">联系电话：18252357156</label>
+                        </h5>
+                        <h5>
+                            <label class="lable1">收货地址：江苏省淮安软件园2号楼101室</label>
+                        </h5>
+                    </li>
+                    <li>
+                        <h5>
+                            <label class="lable1">备&nbsp;&nbsp;&nbsp;&nbsp;注：少点辣</label>
+                        </h5>
+                    </li>
+                </ul>
+            </div>
         </div>
-        
     </div>
 </div>
 
@@ -550,18 +533,18 @@ var path = '';
             </div>
             <div class="div1">
             	<p>快订微信</p>
-                <img src="<%=path%>/pages/KD/images/footer-ewm.png" />
+                <img src="<%=path%>/pages/Order/images/footer-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
                 <a href="javascript:;">关注快订微信</a>
             </div>
             <div class="div1">
             	<p>快订APP</p>
-                <img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                <img src="<%=path%>/pages/Order/images/yms-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
                 <a href="javascript:;">下载快订APP</a>
             </div>
             <div class="div1">
-            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/KD/images/footer-sj.png" /></a>
+            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/Order/images/footer-sj.png" /></a>
             </div>
         </div>
         <div class="blogroll">
@@ -587,37 +570,7 @@ var path = '';
     <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
     <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>
 </div>
-
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
-<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
-
 <script type="text/javascript">
-
-$(function(){
-	getPagecontent();
-});
-
-//加载餐厅
-function getPagecontent(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/yd/getRestInfo.do',
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><span class="main_left"><img class="rstpic" src="<%=path%>/pages/KD/img_rest/rst/rst1.png" /><h5 href="javascript:void(0);">'+data[i].time+'分钟</h5></span><span class="main_right"><a target="_blank" href="rest1.do"><h3 href="javascript:void(0);">'+data[i].name+'</h3></a><h5 href="javascript:void(0);"><img src="<%=path%>/pages/KD/img_rest/star4.png" />月售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'费配送</h5><p><img src="<%=path%>/pages/KD/img_rest/zhuan.png" /><img src="<%=path%>/pages/KD/img_rest/jian.png" /><img src="<%=path%>/pages/KD/img_rest/fu.png" /></p></span></li>';				
-			}						
-			$('#page-content').html(htmlStr);
-		}
-	});
-}
-
 var collectCompany = '';
 //收藏方法
 function collectp(n,t){
@@ -629,7 +582,7 @@ function collectp(n,t){
         		var call = function(){
         			if(t=='1'){$("#c_"+n).text("已收藏");}
         			$.fn.closePublicBox(0);
-        		};
+        		}
         		$(this).alertMsg({msg:"收藏成功！",callback:call});
 				
 			}else if(data=='2'){
@@ -641,6 +594,12 @@ function collectp(n,t){
 	}
 }
 </script>
+
+<script type="text/javascript" src="<%=path%>/pages/Order/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/common.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/msgbox.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/move-top.js"></script>
 
 </body>
 </html>
