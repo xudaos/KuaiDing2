@@ -16,4 +16,10 @@
 		</property>
 	</bean>
 	
+	<bean id="KdMenuBiz" class="com.deepblue.kuaiding.biz.KdMenuBiz">
+		<property name="kdMenuDAO">
+			<ref bean="KdMenuDAO" />
+		</property>
+	</bean>
+	
 </beans>

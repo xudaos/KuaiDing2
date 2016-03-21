@@ -383,7 +383,7 @@ var path = '';
                     <td>
                     </td>
                     <td>
-                        <a>< 返回商家修改</a>
+                        <a href="rest1.do">< 返回商家修改</a>
                     </td>
                 </tr>
                 <tr class="column">

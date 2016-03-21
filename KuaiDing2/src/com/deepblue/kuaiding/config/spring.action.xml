@@ -22,7 +22,9 @@
 
 	</bean>
 	<bean id="Rest1Action" class="com.deepblue.kuaiding.action.Rest1Action" scope="prototype">
-
+		<property name="kdMenuBiz">
+			<ref bean="KdMenuBiz" />
+		</property>
 	</bean>
 	<bean id="GwcAction" class="com.deepblue.kuaiding.action.GwcAction" scope="prototype">
 
