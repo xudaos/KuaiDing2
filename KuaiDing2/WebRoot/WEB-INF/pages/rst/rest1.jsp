@@ -315,8 +315,8 @@ var path = '';
             	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
             	<ul>
                     <li><a href="home.do">首页</a></li>
-                    <li><a href="wm.do">外卖送餐</a></li>
                     <li><a href="yd.do">预订点餐</a></li>
+                    <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
@@ -346,7 +346,7 @@ var path = '';
 <p class="top-right">
         	
 				<span>您好，欢迎来到快订！</span>
-	            <a target="_blank" href="../Login/login.html">[登录]</a>
+	            <a target="_blank" href="login.do">[登录]</a>
 	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|			
         </p>
         <br class="clear" />
@@ -384,8 +384,8 @@ var path = '';
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
         	<li><a  href="home.do">首页</a></li>
-            <li><a  href="wm.do">外卖送餐</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
+            <li><a  href="dz.do">预订桌位</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
             <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
         </ul>
@@ -471,10 +471,8 @@ var path = '';
                          <h1>美食分类</h1>
                       </li>
                    </ul>
-                   <ul class="menu-lists">
-                      <a><h2>套餐</h2></a>
-                      <a><h2>饮料</h2></a>
-                      <a><h2>小吃</h2></a>
+                   <ul id="menuLists" class="menu-lists">
+                   
                    </ul>
                 </div>
                 <div class="menu-meals">
@@ -486,49 +484,8 @@ var path = '';
                       <button class="button1">默认排序</button>
                    </ul>
                    <div class="list-meals">
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
+                      <ul class="price" id="fenlei1">
+                                               
                       </ul>
                    </div>
                 </div>
@@ -541,49 +498,8 @@ var path = '';
                       <button class="button1">默认排序</button>
                    </ul>
                    <div class="list-meals">
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
+                      <ul class="price" id="fenlei2">
+                                              
                       </ul>
                    </div>
                 </div>
@@ -596,49 +512,8 @@ var path = '';
                       <button class="button1">默认排序</button>
                    </ul>
                    <div class="list-meals">
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
-                      </ul>
-                      <ul class="price">
-                         <li><h2>马蹄莲</h2></li>
-                         <li><button class="button2">65</button></li>  
-                         <li>
-                            <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h5>月售3份</h5>
-                            </span>
-                         </li>                      
+                      <ul class="price" id="fenlei3">
+                                           
                       </ul>
                    </div>
                 </div>
@@ -1002,22 +877,58 @@ var path = '';
 <script type="text/javascript">
 
 $(function(){
-	getPagecontent();
+	getFenlei();
+	getFenlei1();
 });
 
-//加载餐厅
-function getPagecontent(){
+//加载美食分类
+function getFenlei(){
 	$.ajax({
 		type: 'post',
-		url: '<%=path%>/menu/getMenuList.do',
+		url: '<%=path%>/rest1/getMenuList.do',
+		data: {
+			rst: '1'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			var typeArr = [];
+			for(var i=0;i<data.length;i++){
+				var res = true;
+				for(var j=0;j<typeArr.length;j++){
+					if(data[i].type === typeArr[j]){
+						res = false;
+					}
+				}
+				if(res){
+					typeArr.push(data[i].type);
+				}
+			}
+			for(var i=0;i<typeArr.length;i++){
+				htmlStr += '<li><a><h2 href="javascript:void(0);">'+typeArr[i]+'</h2></a></li>';				
+			}
+			$('#menuLists').html(htmlStr);
+		}
+	});
+}
+
+//加载分类1
+function getFenlei1(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/rest1/getMenuList.do',
+		data: {
+			type: '烧菜类'
+		},
 		dataType: 'json',
 		success: function(result){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><span class="main_left"><img class="rstpic" src="<%=path%>/pages/KD/img_rest/rst/rst1.png" /><h5 href="javascript:void(0);">'+data[i].time+'分钟</h5></span><span class="main_right"><a target="_blank" href="rest1.do"><h3 href="javascript:void(0);">'+data[i].name+'</h3></a><h5 href="javascript:void(0);"><img src="<%=path%>/pages/KD/img_rest/star4.png" />月售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'费配送</h5><p><img src="<%=path%>/pages/KD/img_rest/zhuan.png" /><img src="<%=path%>/pages/KD/img_rest/jian.png" /><img src="<%=path%>/pages/KD/img_rest/fu.png" /></p></span></li>';				
-			}						
-			$('#page-content').html(htmlStr);
+				htmlStr += '<li><h2 href="javascript:void(0);">'+data[i].name+'</h2><button class="button2" href="javascript:void(0);">'+data[i].price+'</button><span><img src="images/stars.png"/><br /><h5 href="javascript:void(0);">月售'+data[i].quantity+'份</h5></span></li>';				
+			}
+			$('#forestall-qiangxian').html(htmlStr);
 		}
 	});
 }

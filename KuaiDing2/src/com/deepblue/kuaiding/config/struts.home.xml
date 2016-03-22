@@ -22,9 +22,9 @@
 				/WEB-INF/pages/yd.jsp
 			</result>
 		</action>
-		<action name="wm" class="WmAction" method="wm">
+		<action name="dz" class="DzAction" method="dz">
 			<result name="success" type="dispatcher">
-				/WEB-INF/pages/wm.jsp
+				/WEB-INF/pages/dz.jsp
 			</result>
 		</action>
 		<action name="coupons" class="CouponsAction" method="coupons">

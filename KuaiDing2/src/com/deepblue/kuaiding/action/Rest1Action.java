@@ -18,15 +18,17 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	
 	private KdMenuBiz kdMenuBiz;
 	
-	private String rstId;
+	private String rst;
+	private String type;
 	
 	public String rest1 () {
 		return SUCCESS;
 	}
 	
 	public String getMenuList(){
-		System.out.println("rstId: "+rstId);
-		List<KdMenu> menus = kdMenuBiz.getMenuListByRst(rstId);
+		System.out.println("rst: "+rst);
+		System.out.println("type: "+type);
+		List<KdMenu> menus = kdMenuBiz.getMenuListByRst(rst);
 		feedback.setDataList(menus, new AJsonConverter<KdMenu>());
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
@@ -34,12 +36,20 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	/* get set
 	 * ----------------------------------------------------------
 	 * */
-	public String getRstId() {
-		return rstId;
+	public String getRst() {
+		return rst;
 	}
 
-	public void setRstId(String rstId) {
-		this.rstId = rstId;
+	public void setRst(String rst) {
+		this.rst = rst;
+	}
+	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 	public KdMenuBiz getKdMenuBiz() {

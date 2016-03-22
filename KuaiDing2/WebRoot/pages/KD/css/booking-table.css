@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+.booking-table .container, .booking-table .left, .booking-table .right .div1 { overflow:hidden; zoom:1;/*ie6*/}
+.booking-table .left, .booking-table .left img, .booking-table .right .div1 img, .booking-table .right .div1 div, .booking-table form p { float:left; display:inline;}
+.booking-table .right, .booking-table .main, .booking-table form .div1 .div1-right { float:right; display:inline;}
+.booking-table .left, .booking-table .right .div1 { border:1px solid #dbdbdb;}
+/*booking-table*/
+.booking-table { margin-top:16px;}
+.booking-table .left { width:957px;}
+.booking-table .left img { width:207px; height:619px; border-right:1px solid #dbdbdb;}
+.booking-table .main { margin:12px; width:721px; height:592px; background: url(../images/booking-table-bg.png) no-repeat;}
+.booking-table .main form { margin:190px 0 0 170px; width:400px;}
+.booking-table form .div1 { padding-bottom:20px;}
+.booking-table form .div1-right { width:265px; height:24px; border:1px solid #f7ab00; background:#fff; position:relative; cursor:pointer;}
+.booking-table form p { font-size:18px; font-weight:600; line-height:25px; color:#6c6858;}
+.booking-table form .div1-right p { color:#636363; font-size:14px; line-height:24px; padding-left:10px; font-weight:normal;}
+.booking-table form .div1-right .xia { width:27px; height:24px; border-left:1px solid #f7ab00; position:absolute; right:0; background:#fff url(../images/xia1.png) no-repeat center;}
+.booking-table form .div1-right ul { font-size:14px; line-height:24px; position:absolute; left:-1px; top:24px; width:265px; background:#fff; border:1px solid #f7ab00; display:none;}
+.booking-table form .div1-right ul li { padding-left:10px;}
+.booking-table form .div1-right ul li:hover { background:#fff3c3;}
+/*.booking-table form select { width:265px; height:24px; border:0; filter:alpha(opacity=0); opacity:0; color:#636363; font-size:14px; line-height:14px; padding-left:8px; position:relative;}*/
+.booking-table form .div2 { width:398px; border:1px solid #f7ab00; height:24px; background:#fff url(../images/didian.png) no-repeat 380px 3px;}
+.booking-table form input { width:200px; line-height:15px; color:#636363; background:#fff; font-size:14px; padding:3px 0 0 30px; border:0;}
+.booking-table form .input1 { background:#fff url(../images/time.png) no-repeat 6px 3px;}
+#rsfw p{width: 230px;}
+.booking-table form .div2 input { width:350px; padding:3px 0 0 10px;}
+.booking-table form .input3 { font-size:18px; font-weight:600; line-height:20px; color:#fff; background:#f7ab00; border-radius:3px; padding:10px 16px; display:inline-block; margin-top:26px;}
+.booking-table form .div3 { text-align:center;}
+.booking-table .right .div1 { margin-bottom:10px; width:227px;}
+.booking-table .right img { width:227px; height:408px;}
+.booking-table .right .div1 img { padding:16px; width:60px; height:60px;}
+.booking-table .right .div1 div { padding-top:15px;}
+.booking-table .right p { color:#636363; font-size:14px; line-height:30px; font-weight:600;}
+.booking-table .right .p1 { color:#959595; font-size:12px; line-height:15px; font-weight:300;}
+.booking-table .right .down { display:inline-block; background:#d0df00 url(../images/down.png) no-repeat 7px; border:0; padding:0 10px 0 28px; font-size:12px; line-height:26px; color:#fff;}

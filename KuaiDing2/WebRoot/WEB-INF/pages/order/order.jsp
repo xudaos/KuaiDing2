@@ -313,11 +313,9 @@ var path = '';
             	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
             	<ul>
                     <li><a href="home.do">首页</a></li>
-                    <li><a href="wm.do">外卖送餐</a></li>
                     <li><a href="yd.do">预订点餐</a></li>
                     <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
-                    <li><a target="_blank" href="group.html">团购优惠</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>

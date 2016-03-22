@@ -4,13 +4,13 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-  
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh-cn">
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>快订-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
+<title>有美食-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
 
 <meta name="baidu-site-verification" content="zcXqQTs5gr" />
 <link rel="shortcut icon" href="<%=path%>/pages/KD/images/200.png" />
@@ -23,8 +23,7 @@
 var path = '';
 </style>
 
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/home.css" type="text/css"/>
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/jBootstrapPage.css" type="text/css"/>
+<link rel="stylesheet" href="<%=path%>/pages/KD/css/booking-table.css" type="text/css"/>
 
 </head>
 
@@ -318,6 +317,7 @@ var path = '';
                     <li><a href="yd.do">预订点餐</a></li>
                     <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
+                    <li><a target="_blank" href="group.html">团购优惠</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                     <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
@@ -345,7 +345,7 @@ var path = '';
         </ul>
 <p class="top-right">
         	
-				<span>您好，欢迎来到快订！</span>
+				<span>您好，欢迎来到有美食！</span>
 	            <a target="_blank" href="login.do">[登录]</a>
 	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|
 			
@@ -358,7 +358,7 @@ var path = '';
 	<div class="container">
     	<div class="logo">
         	<p>一网扫尽天下美食</p>
-        	<a href="home.do"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
+        	<a href="index.html"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
         </div>
         <div class="search">
         	<div id="top_search_form">
@@ -377,7 +377,7 @@ var path = '';
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="orderlist.do">我的订单</a>
+            <a class="a2" href="order.do">我的订单</a>
         </div>
     </div>
 </div>
@@ -385,24 +385,30 @@ var path = '';
 <div class="nav">
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
-        	<li><a class="ahover" href="home.do">首页</a></li>
+        	<li><a  href="home.do">首页</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
+            <li><a class="ahover" href="dz.do">预订桌位</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
-            <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
+            <li><a class="a1" target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>
             <ul>
             	
-            	<li><a href="/BusinessCircle/1/">五道口</a></li>
-            	<li><a href="/BusinessCircle/2/">中关村</a></li>
-            	<li><a href="/BusinessCircle/11/">西直门</a></li>
-            	<li><a href="/BusinessCircle/4/">马家堡</a></li>
-                <li><a href="/BusinessCircle/3/">工体</a></li>
-            	<li><a href="/BusinessCircle/7/">白纸坊</a></li>
-            	<li><a href="/BusinessCircle/5/">广安门</a></li>
-            	<li><a href="/BusinessCircle/13/">魏公村</a></li>
+            		<li><a href="/BusinessCircle/1/">五道口</a></li>
+            	
+            		<li><a href="/BusinessCircle/2/">中关村</a></li>
+            	
+            		<li><a href="/BusinessCircle/11/">西直门</a></li>
+            	     
+            		<li><a href="/BusinessCircle/4/">马家堡</a></li>       	
+            		<li><a href="/BusinessCircle/3/">工体</a></li>
+                    
+            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>
+            	
+            		<li><a href="/BusinessCircle/5/">广安门</a></li>
+            	
+            		<li><a href="/BusinessCircle/13/">魏公村</a></li>
             	
             </ul>
             <a class="qbsq" href="/businesscircle/">全部商圈</a>
@@ -410,168 +416,60 @@ var path = '';
     </div>
 </div>
 
-<div class="banner">
-  <div class="container">
-    	<div class="banner-left">
-        	<div class="banner-div">
-              
-                <ul id="banner-img">
-                </ul>
-            </div>
-                <ul id="banner-ico" class="banner-ico">               
-                </ul>
-                
-                <ul class="banner-nav">
-                <li class="bg1">
-                	<a href="wm.do">
-                		<h4>外卖送餐</h4>
-                    	<p>送餐到家服务</p>
-                	</a>
-                </li>
-                <li class="bg2">
-                	<a href="yd.do">
-                		<h4>预订点餐</h4>
-                    	<p>提前点餐不排队</p>
-                    </a>
-                </li>
-                <li class="bg3">
-                	<a href="coupons.do">
-                		<h4>优惠折扣</h4>
-                    	<p>先到先得实惠多多</p>
-                    </a>
-                </li>
-                <li class="bg4">
-                	<a href="../Community/index.html">
-                		<h4>互动社区</h4>
-                    	<p>记录美食享受生活</p>
-                    </a>
-                </li>
-            </ul>
+<div class="booking-table">
+	<div class="container">
+    	<div class="left">
+        	<img src="<%=path%>/pages/KD/images/booking-table-left.png" />
+            <div class="main">
+        		<form action="/Function/SelectTable.do" method="get" id="tableForm">
+                	<div class="div1">
+                    	<p>就餐时间：</p>
+                        <div class="div1-right">
+                        	<input class="input1" type="text" placeholder="点击选择时间、日期" name="presetTime" id="presetTime"/>
+                        	<input type="hidden" name="peopleNumber" value="1" id="searchType"/>
+                        </div>
+                        <br class="clear" />
+                    </div>
+                    <div class="div1">
+                    	<p>人数范围：</p>
+                        <div id="rsfw" class="div1-right">
+                        	<p onclick="showUl()" id="rsfwp">1-4</p>
+                        	<div class="xia" onclick="showUl()"></div>
+                            <ul id="rsfwul">
+                            	<li data-value="1">1-4</li>
+                                <li data-value="2">5-8</li>
+                                <li data-value="3">9-12</li>
+                                <li data-value="4">12人以上</li>
+                            </ul>
+                        </div>
+                        <br class="clear" />
+                    </div>
+                    <div  class="div2">
+                    	<input class="input2" type="text" placeholder="请输入要预定的餐厅名或地点" name="keywords" id="keywords"/>
+                    </div>
+                    <div class="div3">
+                    	<input class="input3" type="button" value="现在找桌位" id="searchTable" onclick="search()"/>
+                    </div>
+                </form>
+        	</div>
         </div>
-        <div class="banner-right">
+        <div class="right">
         	<div class="div1">
             	<img src="<%=path%>/pages/KD/images/banner-app.png" />
                 <div>
-                    <p>快订手机客户端</p>
-                    <a class="xiazai" target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载 </a>
+                    <p>有美食手机客户端</p>
+                     <a class="down" target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
                 </div>
-            </div>            
+            </div>
             <div class="div1">
             	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
                 <div>
-                    <p>快订微信点餐</p>
+                    <p>有美食微信点餐</p>
                     <p class="p1">随时掌握美食新动态</p>
                 </div>
             </div>
-            <div class="div1">
-            	<h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->热门推荐</h3>
-                <ul id="banner-rmtj">       	
-                </ul>
-            </div>
+            <img class="div1" src="<%=path%>/pages/KD/images/booking-table-right.png" />
         </div>
-  </div>
-</div>
-
-<div class="forestall">
-	<div class="container">   
-      <div class="forestall-left">
-      
-         <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->抢先上市</h3>
-         <ul id="forestall-qiangxian">
-            
-         </ul>     
-      </div>
-      
-   <div class="forestall-right">
-       <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->最新活动</h3>
-        <a href="http://www.youmeishi.com.cn/cloud/"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/8/bce7d6d3b63378e42e6df3009710d214.jpg" /></a>
-		<p><a href="http://www.youmeishi.com.cn/cloud/">紫光餐饮系统 开启真免费时代</a></p>
-				
-		<a href="http://www.youmeishi.com.cn/Site/channelAgent.do"><img src="http://picture.youmeishi.cn/uploadService/upload/unis/2015/7/8/65ff3e3219a8e34de4dbe1f595d03d88.jpg" /></a>
-		<p><a href="http://www.youmeishi.com.cn/Site/channelAgent.do">全国合作伙伴 火热招募中</a></p>
-	</div>
-  </div>
-</div>
-
-<div class="recommend">
-	<div class="container">
-    	<div class="recommend-left">        
-        <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->精品推荐</h3>
-            <ul id="recommend-jptj">
-            	           	
-            </ul>       
-        </div>
-                
-        <div class="recommend-right"> 
-        <h3><!--  <a class="more" href="javascript:;">查看更多&gt;</a>-->美食优惠</h3>
-            <ul id="recommend-msyh">
-                                
-            </ul> 
-        </div>   
-    </div>
-</div>
-
-<div class="hot">
-	<div class="container">
-    
-    <h3><a class="more" href="../Community/index.html">查看更多&gt;</a>社区热门</h3>
-    	<ul>
-    		<li>
-	           <a title="美食每刻" href="../Community/board_65.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1422258028771.jpg" /></a>
-	            <a class="a1" href="../Community/board_65.html">美食每刻</a>
-	            <a class="a2" href="javascript:;">拍什么，你做主！</a>
-	            <a class="a3" href="javascript:;">32个主题</a>
-	         </li>
-            
-             <li>
-	            <a title="美食诱惑" href="../Community/board_66.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1419231900277.jpg" /></a>
-	            <a class="a1" href="../Community/board_66.html">美食诱惑</a>
-	            <a class="a2" href="javascript:;">心目中的美食在哪里？</a>
-	            <a class="a3" href="javascript:;">326个主题</a>
-	         </li>
-            
-             <li>
-	            <a title="美食记忆" href="../Community/board_67.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1422258143519.jpg" /></a>
-	            <a class="a1" href="../Community/board_67.html">美食记忆</a>
-	            <a class="a2" href="javascript:;">说说记忆中的味道！</a>
-	            <a class="a3" href="javascript:;">64个主题</a>
-	         </li>
-            
-             <li>
-	            <a title="食材档案" href="../Community/board_68.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1422257938870.jpg" /></a>
-	            <a class="a1" href="../Community/board_68.html">食材档案</a>
-	            <a class="a2" href="javascript:;">发掘身边的好食材！</a>
-	            <a class="a3" href="javascript:;">63个主题</a>
-	         </li>
-            
-             <li>
-	            <a title="美食排行榜" href="../Community/board_69.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1419232111457.jpg" /></a>
-	            <a class="a1" href="../Community/board_69.html">美食排行榜</a>
-	            <a class="a2" href="javascript:;">大家说了算！</a>
-	            <a class="a3" href="javascript:;">70个主题</a>
-	          </li>
-            
-            <li>
-	            <a title="吃货集结号" href="../Community/board_70.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1422258296499.jpg" /></a>
-	            <a class="a1" href="../Community/board_70.html">吃货集结号</a>
-	            <a class="a2" href="javascript:;">你所不知道的优惠！</a>
-	            <a class="a3" href="javascript:;">25个主题</a>
-	        </li>
-            
-            <li>
-	            <a title="美食探店" href="../Community/board_71.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1422258494680.jpg" /></a>
-	            <a class="a1" href="../Community/board_71.html">美食探店</a>
-	            <a class="a2" href="javascript:;">走街串巷，寻找美食。</a>
-	            <a class="a3" href="javascript:;">25个主题</a>
-	        </li>
-            
-            <li>
-	            <a title="美食攻略" href="../Community/board_72.html"><img src="http://www.youmeishi.cn/UnisPlatform/uploadfiles/bbs/1422258420420.jpg" /></a>
-	            <a class="a1" href="../Community/board_72.html">美食攻略</a>
-	            <a class="a2" href="javascript:;">吃嘛嘛香！</a>
-	            <a class="a3" href="javascript:;">30个主题</a>
-	         </li>          
-        </ul> 
     </div>
 </div>
 
@@ -581,7 +479,7 @@ var path = '';
         	<div>
             	<p class="p1">关于我们</p>
                 <ul>
-                	<li><a target="_blank" href="/introduction/">快订简介</a></li>
+                	<li><a target="_blank" href="/introduction/">有美食简介</a></li>
                     <li><a target="_blank" href="/contact/">联系我们</a></li>
                     <li><a target="_blank" href="/partners/">合作伙伴</a></li>
                     <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/RecType/ConListPre.do">诚聘英才</a></li>
@@ -620,19 +518,19 @@ var path = '';
                 </ul>
             </div>
             <div class="div1">
-            	<p>快订微信</p>
+            	<p>有美食微信</p>
                 <img src="<%=path%>/pages/KD/images/footer-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
-                <a href="javascript:;">关注快订微信</a>
+                <a href="javascript:;">关注有美食微信</a>
             </div>
             <div class="div1">
-            	<p>快订APP</p>
+            	<p>有美食APP</p>
                 <img src="<%=path%>/pages/KD/images/yms-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
-                <a href="javascript:;">下载快订APP</a>
+                <a href="javascript:;">下载有美食APP</a>
             </div>
             <div class="div1">
-            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/KD/images/footer-sj.png" /></a>
+            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="images/footer-sj.png" /></a>
             </div>
         </div>
         <div class="blogroll">
@@ -653,131 +551,12 @@ var path = '';
 <!-- 弹框提示 -->
 <div id="bj_div" style="top:0;left:0;position:absolute;z-index:10000;background:#666;filter:alpha(opacity=50);opacity:0.5; display:none;"></div>
 <div id="msg_box" class="msg-box">
-	<div class="p1"><a id="close_msg" href="javascript:;">&times;</a>快订提醒您！</div>
+	<div class="p1"><a id="close_msg" href="javascript:;">&times;</a>有美食提醒您！</div>
 	<p class="p2" id="msg_info"></p>
     <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
     <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>
 </div>
-<!-- jQuery -->
-<script src="<%=path%>/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
-
-$(function(){
-	getLunbo();
-	getRemen();
-	getQiangxian();
-	getJingpin();
-	getYouhui();
-});
-
-//加载轮播数据
-function getLunbo(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/getRst.do',
-		data: {
-			type: '1'
-		},
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr1 = '';
-			var htmlStr2 = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr1 += '<li><a href="javascript:void(0);" target="_blank"><img src="'+data[i].pic+'"/></a></li>';
-				if(i===0)
-					htmlStr2 += '<li class="ico"></li>';
-				else
-					htmlStr2 += '<li></li>';
-			}
-			$('#banner-img').html(htmlStr1);
-			$('#banner-ico').html(htmlStr2);
-			banner();
-		}
-	});
-}
-
-
-//加载热门推荐
-function getRemen(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/getRst.do',
-		data: {
-			type: '2'
-		},
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><span>'+data[i].orderno+'</span><a href="javascript:void(0);">'+data[i].name+'</a></li>';				
-			}
-			$('#banner-rmtj').html(htmlStr);
-		}
-	});
-}
-
-//加载抢先上市
-function getQiangxian(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/getRst.do',
-		data: {
-			type: '3'
-		},
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><img src="'+data[i].pic+'"/><a class="a1" href="javascript:void(0);">'+data[i].name+'</a><a class="a3" href="javascript:void(0);">'+data[i].date+'</a></li>';				
-			}
-			$('#forestall-qiangxian').html(htmlStr);
-		}
-	});
-}
-
-//加载精品推荐
-function getJingpin(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/getRst.do',
-		data: {
-			type: '4'
-		},
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><a><img src="'+data[i].pic+'"/></a><div class="recommend-user"><div class="user"><a class="a1"><img src="'+data[i].pic2+'"/></a><a class="a2" href="javascript:void(0);">'+data[i].name+'</a></div><p class="p1" href="javascript:void(0);">'+data[i].description+'</p></div><p class="p2" href="javascript:void(0);">'+data[i].remarks+'<span class="span1" href="javascript:void(0);">'+data[i].date+'</span></p></li>';				
-			}
-			$('#recommend-jptj').html(htmlStr);
-		}
-	});
-}
-
-//加载美食优惠
-function getYouhui(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/getRst.do',
-		data: {
-			type: '5'
-		},
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><a><img src="'+data[i].pic+'"/></a></li>';				
-			}
-			$('#recommend-msyh').html(htmlStr);
-		}
-	});
-}
-
 var collectCompany = '';
 //收藏方法
 function collectp(n,t){
@@ -789,7 +568,7 @@ function collectp(n,t){
         		var call = function(){
         			if(t=='1'){$("#c_"+n).text("已收藏");}
         			$.fn.closePublicBox(0);
-        		};
+        		}
         		$(this).alertMsg({msg:"收藏成功！",callback:call});
 				
 			}else if(data=='2'){
@@ -801,15 +580,22 @@ function collectp(n,t){
 	}
 }
 </script>
-
 <script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
 <script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/home.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/table.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#rsfwul li").live("click",function(){
+		$("#rsfwp").html($(this).html());
+		$("#rsfwul").hide();
+		$("#searchType").val($(this).attr("data-value"));
+	});
+});
+</script>
 
 </body>
-
 </html>
