@@ -319,7 +319,6 @@ var path = '';
                     <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
-                    <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -346,7 +345,7 @@ var path = '';
 <p class="top-right">
         	
 				<span>您好，欢迎来到快订！</span>
-	            <a target="_blank" href="../Login/login.html">[登录]</a>
+	            <a target="_blank" href="login.do">[登录]</a>
 	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|
 			
 			
@@ -389,7 +388,6 @@ var path = '';
             <li><a  href="yd.do">预订点餐</a></li>
             <li><a  href="dz.do">预订桌位</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
-            <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>

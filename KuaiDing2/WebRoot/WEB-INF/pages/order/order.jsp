@@ -317,7 +317,6 @@ var path = '';
                     <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
-                    <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
             </li>
             <li class="li1">

@@ -317,9 +317,7 @@ var path = '';
                     <li><a href="yd.do">预订点餐</a></li>
                     <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
-                    <li><a target="_blank" href="group.html">团购优惠</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
-                    <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -377,7 +375,7 @@ var path = '';
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="order.do">我的订单</a>
+            <a class="a2" href="orderlist.do">我的订单</a>
         </div>
     </div>
 </div>
@@ -389,7 +387,6 @@ var path = '';
             <li><a  href="yd.do">预订点餐</a></li>
             <li><a class="ahover" href="dz.do">预订桌位</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
-            <li><a class="a1" target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>

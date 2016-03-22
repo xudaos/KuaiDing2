@@ -315,11 +315,10 @@ var path = '';
             	<a class="a3" href="javascript:;">网站导航</a>&nbsp;|
             	<ul>
                     <li><a href="home.do">首页</a></li>
-                    <li><a href="wm.do">外卖送餐</a></li>
                     <li><a href="yd.do">预订点餐</a></li>
+                    <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
                     <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
-                    <li><a target="_blank" href="../Bcommunity/youmeishi.html">商户社区</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -346,7 +345,7 @@ var path = '';
 <p class="top-right">
         	
 				<span>您好，欢迎来到快订！</span>
-	            <a target="_blank" href="../Login/login.html">[登录]</a>
+	            <a target="_blank" href="login.do">[登录]</a>
 	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|			
         </p>
         <br class="clear" />
@@ -371,11 +370,11 @@ var path = '';
             </p>
         </div>
         <div class="order">
-        	<a class="a1" href="/Order/submit/">查看购物车
+        	<a class="a1" href="gwc.do">查看购物车
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="/Center/order/">我的订单</a>
+            <a class="a2" href="orderlist.do">我的订单</a>
         </div>
     </div>
 </div>
@@ -384,10 +383,9 @@ var path = '';
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
         	<li><a  href="home.do">首页</a></li>
-            <li><a  href="wm.do">外卖送餐</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
+            <li><a  href="dz.do">预订桌位</a></li>
             <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
-            <li><a class="a1" target="_blank" href="../Bcommunity/kuaiding.html">商户社区</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>
