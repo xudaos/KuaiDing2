@@ -319,7 +319,6 @@ var path = '';
                     <li><a href="yd.do">预订点餐</a></li>
                     <li><a href="dz.do">预订点餐</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
-                    <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -386,7 +385,6 @@ var path = '';
         	<li><a  href="home.do">首页</a></li>
             <li><a  class="ahover" href="yd.do">预订点餐</a></li>
             <li><a  href="dz.do">预订桌位</a></li>
-            <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>

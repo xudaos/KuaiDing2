@@ -318,7 +318,6 @@ var path = '';
                     <li><a href="yd.do">预订点餐</a></li>
                     <li><a href="dz.do">预订桌位</a></li>
                     <li><a href="coupons.do">优惠折扣</a></li>
-                    <li><a target="_blank" href="../Community/index.html">互动社区</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -385,7 +384,6 @@ var path = '';
         	<li><a  href="home.do">首页</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
             <li><a  href="dz.do">预订桌位</a></li>
-            <li><a class="a1" target="_blank" href="../Community/index.html">互动社区</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>
@@ -917,16 +915,16 @@ function getFenlei1(){
 		type: 'post',
 		url: '<%=path%>/rest1/getMenuList.do',
 		data: {
-			type: '烧菜类'
+			rst: '1'
 		},
 		dataType: 'json',
 		success: function(result){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><h2 href="javascript:void(0);">'+data[i].name+'</h2><button class="button2" href="javascript:void(0);">'+data[i].price+'</button><span><img src="images/stars.png"/><br /><h5 href="javascript:void(0);">月售'+data[i].quantity+'份</h5></span></li>';				
+				htmlStr += '<li><h2 href="javascript:void(0);">'+data[i].name+'</h2><button class="button2" href="javascript:void(0);">'+data[i].price+'</button><span><img src="<%=path%>/pages/Restaurant/images/stars.png"/><h5 href="javascript:void(0);">月售'+data[i].quantity+'份</h5></span></li>';				
 			}
-			$('#forestall-qiangxian').html(htmlStr);
+			$('#fenlei1').html(htmlStr);
 		}
 	});
 }
