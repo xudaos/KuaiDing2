@@ -461,57 +461,14 @@ var path = '';
              </div>
              
              <div class="menu">
-                <div class="menu-kinds">                  
+                <div id="menuKinds" class="menu-kinds">                  
                    <ul class="title">
                       <li>
                          <h1>美食分类</h1>
                       </li>
                    </ul>
                    <ul id="menuLists" class="menu-lists">
-                   
                    </ul>
-                </div>
-                <div class="menu-meals">
-                   <ul class="list-title">
-                      <li><h3>套餐</h3></li>
-                      <button class="button1">价格</button>
-                      <button class="button1">销量</button>
-                      <button class="button1">评分</button>
-                      <button class="button1">默认排序</button>
-                   </ul>
-                   <div class="list-meals">
-                      <ul class="price" id="fenlei1">
-                                               
-                      </ul>
-                   </div>
-                </div>
-                <div class="menu-drinks">
-                   <ul class="list-title">
-                      <li><h3>饮料</h3></li>
-                      <button class="button1">价格</button>
-                      <button class="button1">销量</button>
-                      <button class="button1">评分</button>
-                      <button class="button1">默认排序</button>
-                   </ul>
-                   <div class="list-meals">
-                      <ul class="price" id="fenlei2">
-                                              
-                      </ul>
-                   </div>
-                </div>
-                <div class="menu-snacks">
-                   <ul class="list-title">
-                      <li><h3>小吃</h3></li>
-                      <button class="button1">价格</button>
-                      <button class="button1">销量</button>
-                      <button class="button1">评分</button>
-                      <button class="button1">默认排序</button>
-                   </ul>
-                   <div class="list-meals">
-                      <ul class="price" id="fenlei3">
-                                           
-                      </ul>
-                   </div>
                 </div>
              </div>
           </div>         
@@ -558,77 +515,8 @@ var path = '';
                       <li><button class="button3">评价最好</button></li>
                       <li><button class="button3">价格最低</button></li>
                    </ul>
-                   <ul class="pics-lists">
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish1.png" />
-                         <h6>菜品一</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish2.png" />
-                         <h6>菜品二</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish3.png" />
-                         <h6>菜品三</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish4.png" />
-                         <h6>菜品四</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish5.png" />
-                         <h6>菜品五</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish6.png" />
-                         <h6>菜品六</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
-                      <li>
-                         <img src="<%=path%>/pages/Restaurant/images/rst1/dish7.png" />
-                         <h6>菜品七</h6>
-                         <button class="button4">65</button>
-                         <span>
-                               <img  src="<%=path%>/pages/Restaurant/images/stars.png" />
-                               <br />
-                               <h7>月售3份</h7>
-                          </span>
-                      </li>
+                   <ul class="pics-lists" id="pics">
+                      
                    </ul>
                 </div>
              </div>
@@ -650,7 +538,7 @@ var path = '';
                          <span>
                                <img  src="<%=path%>/pages/Restaurant/images/star5.png" />
                                <br />
-                               <h7 style="margin-left:20px">320人评价</h>
+                               <h7 style="margin-left:20px">320人评价</h7>
                           </span> 
                       </li>
                       <li class="pingjia1">
@@ -871,13 +759,33 @@ var path = '';
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
 
 <script type="text/javascript">
+//获取type并缓存
+var typeArr = [];
+function getType(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/rest1/getType.do',
+		dataType: 'json',
+		success: function(result){
+			if(result.success){
+				var types = result.dataList;
+				for(var i = 0;i < types.length;i++){
+					typeArr[types[i].objectid] = types[i].name;
+				}
+			}
+		}
+	});
+}
 
 $(function(){
+	getType();
 	getFenlei();
-	getFenlei1();
+	getPics();
 });
 
 //加载美食分类
+var data;
+var types = [];
 function getFenlei(){
 	$.ajax({
 		type: 'post',
@@ -887,30 +795,60 @@ function getFenlei(){
 		},
 		dataType: 'json',
 		success: function(result){
-			var data = result.dataList;
+			data = result.dataList;
 			var htmlStr = '';
-			var typeArr = [];
 			for(var i=0;i<data.length;i++){
 				var res = true;
-				for(var j=0;j<typeArr.length;j++){
-					if(data[i].type === typeArr[j]){
+				for(var j=0;j<types.length;j++){
+					if(data[i].type === types[j]){
 						res = false;
 					}
 				}
 				if(res){
-					typeArr.push(data[i].type);
+					types.push(data[i].type);
 				}
 			}
-			for(var i=0;i<typeArr.length;i++){
-				htmlStr += '<li><a><h2 href="javascript:void(0);">'+typeArr[i]+'</h2></a></li>';				
+			for(var i=0;i<types.length;i++){
+				htmlStr += '<li><a><h2 href="javascript:void(0);">'+typeArr[types[i]]+'</h2></a></li>';				
 			}
 			$('#menuLists').html(htmlStr);
+			getMenuList();
 		}
 	});
 }
 
-//加载分类1
-function getFenlei1(){
+//加载菜单
+function getMenuList(){
+	var htmlStr = '';
+	for(var i=0;i<types.length;i++){
+		htmlStr += '<div class="menu-meals">';
+		htmlStr += '<ul class="list-title">';
+		htmlStr += '<li><h3>'+typeArr[types[i]]+'</h3></li>';
+		htmlStr += '<button class="button1">价格</button>';
+		htmlStr += '<button class="button1">销量</button>';
+		htmlStr += '<button class="button1">评分</button>';
+		htmlStr += '<button class="button1">默认排序</button>';
+		htmlStr += '</ul>';
+		htmlStr += '<div class="list-meals">';
+		htmlStr += '<ul class="price">';
+		for(var j=0;j<data.length;j++){
+			if(types[i] === data[j].type){
+				htmlStr += '<li>';
+				htmlStr += '<h2>'+data[j].name+'</h2>';
+				htmlStr += '<button class="button2">'+data[j].price+'</button>';
+				htmlStr += '<span>';
+				htmlStr += '<img src="<%=path%>/pages/Restaurant/images/stars.png"/>';
+				htmlStr += '<h5>月售'+data[j].quantity+'份</h5>';
+				htmlStr += '</span>';
+				htmlStr += '</li>';
+			}
+		}
+	}
+	$('#menuKinds').after(htmlStr);
+}
+
+//加载美食墙
+function getPics(){
 	$.ajax({
 		type: 'post',
 		url: '<%=path%>/rest1/getMenuList.do',
@@ -922,9 +860,9 @@ function getFenlei1(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><h2 href="javascript:void(0);">'+data[i].name+'</h2><button class="button2" href="javascript:void(0);">'+data[i].price+'</button><span><img src="<%=path%>/pages/Restaurant/images/stars.png"/><h5 href="javascript:void(0);">月售'+data[i].quantity+'份</h5></span></li>';				
+				htmlStr += '<li><img src="<%=path%>/pages/Restaurant/images/rst1/dish1.png" /><h6 href="javascript:void(0);">'+data[i].name+'</h6><button class="btn4" href="javascript:void(0);">'+data[i].price+'</button><span><img  src="<%=path%>/pages/Restaurant/images/stars.png" /><br /><h7 href="javascript:void(0);">月售'+data[i].quantity+'份</h7></span></li>';				
 			}
-			$('#fenlei1').html(htmlStr);
+			$('#pics').html(htmlStr);
 		}
 	});
 }

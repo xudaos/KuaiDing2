@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="com.deepblue.kuaiding.home" namespace="/" extends="struts-base">
+		<action name="login" class="HomeAction" method="login">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/home.jsp
+			</result>
+			<result name="input" type="dispatcher">
+				/WEB-INF/pages/login.jsp
+			</result>
+		</action>
+		<action name="home" class="HomeAction" method="home">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/home.jsp
+			</result>
+		</action>
+		<action name="getRst" class="HomeAction" method="getRst">
+		</action>
+		<action name="yd" class="YdAction" method="yd">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/yd.jsp
+			</result>
+		</action>
+		<action name="dz" class="DzAction" method="dz">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/dz.jsp
+			</result>
+		</action>
+		<action name="coupons" class="CouponsAction" method="coupons">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/coupons.jsp
+			</result>
+		</action>
+		<action name="rest1" class="Rest1Action" method="rest1">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/rst/rest1.jsp
+			</result>
+		</action>
+		<action name="gwc" class="GwcAction" method="gwc">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/gwc.jsp
+			</result>
+		</action>
+		<action name="order" class="OrderAction" method="order">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/order.jsp
+			</result>
+		</action>
+		<action name="orderlist" class="OrderListAction" method="orderlist">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/orderlist.jsp
+			</result>
+		</action>
+	</package>
+</struts>

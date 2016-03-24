@@ -33,16 +33,14 @@ public class KdMenu implements java.io.Serializable {
 
 	/** minimal constructor */
 	public KdMenu(String objectid, String name, String rst, String pic,
-			String taste, Integer price, Integer quantity, String evaluation,
-			String type, String creator, Date createtime, String yes) {
+			Integer price, Integer quantity, String type, String creator,
+			Date createtime, String yes) {
 		this.objectid = objectid;
 		this.name = name;
 		this.rst = rst;
 		this.pic = pic;
-		this.taste = taste;
 		this.price = price;
 		this.quantity = quantity;
-		this.evaluation = evaluation;
 		this.type = type;
 		this.creator = creator;
 		this.createtime = createtime;

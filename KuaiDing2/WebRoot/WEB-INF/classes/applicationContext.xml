@@ -62,6 +62,12 @@
 				</value>
 				<value>
 					com/deepblue/kuaiding/entity/KdRstinfo.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdGwc.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdType.hbm.xml
 				</value></list>
 		</property></bean>
 	<bean id="KdRestaurantDAO"
@@ -119,6 +125,16 @@
 	</bean>
 	<bean id="KdRstinfoDAO"
 		class="com.deepblue.kuaiding.dao.KdRstinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdTypeDAO" class="com.deepblue.kuaiding.dao.KdTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdGwcDAO" class="com.deepblue.kuaiding.dao.KdGwcDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

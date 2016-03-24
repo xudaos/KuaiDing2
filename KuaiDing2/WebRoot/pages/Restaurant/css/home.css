@@ -23,22 +23,20 @@
 /* 菜单（rst-menu） */
 .menu-top{ cursor:pointer; margin-top:30px;}
 .rst-menu .bg1 {background:#636363; height:50px; padding-top:15px;}
-.rst-menu{background:#ccc; padding-bottom:10px;}
+.rst-menu{background:#9f9f9f; padding-bottom:10px;}
 .menu-kinds{ background:#fff; margin:10px; padding-bottom:10px;}
 .menu-lists{margin-bottom:10px;}
-.menu-meals,.menu-drinks,.menu-snacks{ background:#fff; margin:0px 10px; padding-bottom:10px;}
+.menu-meals{ background:#fff; margin:0px 10px; padding-bottom:10px;}
 .list-title{background:#eee;}
 h1{margin:30px;}
-h2{ font-size:18px; margin-left:100px; float:left;}
-h3{font-size:20px; margin-left:30px; margin-top:5px;}
-.menu-meals li,.menu-drinks li,.menu-snacks li{float:left; display:inline;}
+h2{ font-size:18px; margin-left:120px; float:left;}
+.menu-meals h3{ float:left; font-size:20px; margin-left:30px; margin-top:5px;}
 .button1{float:right; font-size:18px;background: #ccc; margin:10px; padding:3px 15px;}
-.button2{margin-left:400px; margin-top:5px; padding:3px 25px 3px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 6px;}
-.list-meals{margin-top:30px; cursor:pointer;}
-.list-meals h2{margin-top:5px;}
-.list-meals span{margin-left:150px; margin-top:5px;}
-.list-meals span h5{font-size:12px; margin-left:170px;}
-.price{padding:15px; background:#ccc:}
+.button2{width:70px; margin-left:200px; margin-top:5px; padding:5px 25px 5px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 5px;}
+.list-meals h2{margin-top:5px; width:220px;}
+.list-meals span{margin-right:120px; float:right;}
+.list-meals span h5{font-size:12px; margin:auto;}
+.price li{padding:25px; cursor:pointer;}
 
 
 /* 商家信息（rst-sjxx） */
@@ -56,11 +54,12 @@ h5{font-size:16px; margin:15px 0px 10px 120px;}
 .pics-info .title{background:#fff; margin:10px;}
 .pics-info .title li{float:left; margin-left:20px;}
 .button3{font-size:18px; float:left; background:#fff; padding:5px 15px; margin:15px 10px;}
-.button4{margin-top:5px; float:right; padding:5px 25px 5px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 6px;}
-.pics-lists li{float:left; padding:26px; margin:10px 10px 10px 0px; background:#fff;}
-.pics-lists{margin-left:30px;}
-h6{font-size:16px; margin:10px;}
-
+.btn4{width:70px; margin-top:5px; float:right; padding:5px 25px 5px 30px; background:#CCC url(../images/qian.png) no-repeat 15px 6px;}
+.pics-lists li{float:left; padding:26px; margin:10px 20px 10px 0px; background:#fff;}
+.pics-lists{margin-left:10px;}
+.pics-lists span{margin-left:10px;}
+h6{font-size:18px; margin:15px;}
+h7{margin-left:10px}
 
 /* 评价（rst-evaluate） */
 .rst-evaluate{background:#71cbf3; padding-bottom:3px;}
@@ -69,6 +68,7 @@ h6{font-size:16px; margin:10px;}
 .evaluate-rst {background:#fff; margin:10px; padding:10px;}
 .evaluate-rst li{float:left; margin-left:20px;}
 .p0 span{margin-left:20px;}
+.p0 h3{margin-left:20px;}
 .pingjia1{margin-top:80px; padding-left:100px;}
 .pingjia2,.pingjia3{margin-top:80px;}
 .pingjia2 p{margin-top:7px;}
