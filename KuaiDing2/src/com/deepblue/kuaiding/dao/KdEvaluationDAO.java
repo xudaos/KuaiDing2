@@ -8,25 +8,27 @@ import org.hibernate.LockMode;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.deepblue.kuaiding.entity.ComNews;
+import com.deepblue.kuaiding.entity.KdEvaluation;
 
 /**
  * A data access object (DAO) providing persistence and search support for
- * ComNews entities. Transaction control of the save(), update() and delete()
- * operations can directly support Spring container-managed transactions or they
- * can be augmented to handle user-managed Spring transactions. Each of these
- * methods provides additional information for how to configure it for the
- * desired type of transaction control.
+ * KdEvaluation entities. Transaction control of the save(), update() and
+ * delete() operations can directly support Spring container-managed
+ * transactions or they can be augmented to handle user-managed Spring
+ * transactions. Each of these methods provides additional information for how
+ * to configure it for the desired type of transaction control.
  * 
- * @see com.deepblue.kuaiding.dao.ComNews
+ * @see com.deepblue.kuaiding.dao.KdEvaluation
  * @author MyEclipse Persistence Tools
  */
-public class ComNewsDAO extends HibernateDaoSupport {
-	private static final Log log = LogFactory.getLog(ComNewsDAO.class);
+public class KdEvaluationDAO extends HibernateDaoSupport {
+	private static final Log log = LogFactory.getLog(KdEvaluationDAO.class);
 	// property constants
-	public static final String TITLE = "title";
-	public static final String PIC = "pic";
-	public static final String CONTENT = "content";
+	public static final String NAME = "name";
+	public static final String RST = "rst";
+	public static final String CUSTOMER = "customer";
+	public static final String ORDERID = "orderid";
+	public static final String YES = "yes";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
@@ -35,8 +37,8 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(ComNews transientInstance) {
-		log.debug("saving ComNews instance");
+	public void save(KdEvaluation transientInstance) {
+		log.debug("saving KdEvaluation instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
@@ -46,8 +48,8 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(ComNews persistentInstance) {
-		log.debug("deleting ComNews instance");
+	public void delete(KdEvaluation persistentInstance) {
+		log.debug("deleting KdEvaluation instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
 			log.debug("delete successful");
@@ -57,11 +59,11 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public ComNews findById(java.lang.String id) {
-		log.debug("getting ComNews instance with id: " + id);
+	public KdEvaluation findById(java.lang.String id) {
+		log.debug("getting KdEvaluation instance with id: " + id);
 		try {
-			ComNews instance = (ComNews) getHibernateTemplate().get(
-					"com.deepblue.kuaiding.dao.ComNews", id);
+			KdEvaluation instance = (KdEvaluation) getHibernateTemplate().get(
+					"com.deepblue.kuaiding.dao.KdEvaluation", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -69,8 +71,8 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(ComNews instance) {
-		log.debug("finding ComNews instance by example");
+	public List findByExample(KdEvaluation instance) {
+		log.debug("finding KdEvaluation instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
 			log.debug("find by example successful, result size: "
@@ -83,10 +85,10 @@ public class ComNewsDAO extends HibernateDaoSupport {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding ComNews instance with property: " + propertyName
-				+ ", value: " + value);
+		log.debug("finding KdEvaluation instance with property: "
+				+ propertyName + ", value: " + value);
 		try {
-			String queryString = "from ComNews as model where model."
+			String queryString = "from KdEvaluation as model where model."
 					+ propertyName + "= ?";
 			return getHibernateTemplate().find(queryString, value);
 		} catch (RuntimeException re) {
@@ -95,16 +97,24 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByTitle(Object title) {
-		return findByProperty(TITLE, title);
+	public List findByName(Object name) {
+		return findByProperty(NAME, name);
 	}
 
-	public List findByPic(Object pic) {
-		return findByProperty(PIC, pic);
+	public List findByRst(Object rst) {
+		return findByProperty(RST, rst);
 	}
 
-	public List findByContent(Object content) {
-		return findByProperty(CONTENT, content);
+	public List findByCustomer(Object customer) {
+		return findByProperty(CUSTOMER, customer);
+	}
+
+	public List findByOrderid(Object orderid) {
+		return findByProperty(ORDERID, orderid);
+	}
+
+	public List findByYes(Object yes) {
+		return findByProperty(YES, yes);
 	}
 
 	public List findByDescription(Object description) {
@@ -120,9 +130,9 @@ public class ComNewsDAO extends HibernateDaoSupport {
 	}
 
 	public List findAll() {
-		log.debug("finding all ComNews instances");
+		log.debug("finding all KdEvaluation instances");
 		try {
-			String queryString = "from ComNews";
+			String queryString = "from KdEvaluation";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
@@ -130,10 +140,10 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public ComNews merge(ComNews detachedInstance) {
-		log.debug("merging ComNews instance");
+	public KdEvaluation merge(KdEvaluation detachedInstance) {
+		log.debug("merging KdEvaluation instance");
 		try {
-			ComNews result = (ComNews) getHibernateTemplate().merge(
+			KdEvaluation result = (KdEvaluation) getHibernateTemplate().merge(
 					detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -143,8 +153,8 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(ComNews instance) {
-		log.debug("attaching dirty ComNews instance");
+	public void attachDirty(KdEvaluation instance) {
+		log.debug("attaching dirty KdEvaluation instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -154,8 +164,8 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(ComNews instance) {
-		log.debug("attaching clean ComNews instance");
+	public void attachClean(KdEvaluation instance) {
+		log.debug("attaching clean KdEvaluation instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -165,7 +175,8 @@ public class ComNewsDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public static ComNewsDAO getFromApplicationContext(ApplicationContext ctx) {
-		return (ComNewsDAO) ctx.getBean("ComNewsDAO");
+	public static KdEvaluationDAO getFromApplicationContext(
+			ApplicationContext ctx) {
+		return (KdEvaluationDAO) ctx.getBean("KdEvaluationDAO");
 	}
 }

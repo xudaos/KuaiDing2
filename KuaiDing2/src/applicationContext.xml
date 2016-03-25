@@ -40,16 +40,7 @@
 					com/deepblue/kuaiding/entity/KdRestaurant.hbm.xml
 				</value>
 				<value>
-					com/deepblue/kuaiding/entity/ComNews.hbm.xml
-				</value>
-				<value>
-					com/deepblue/kuaiding/entity/BcomPost.hbm.xml
-				</value>
-				<value>
 					com/deepblue/kuaiding/entity/KdCustomers.hbm.xml
-				</value>
-				<value>
-					com/deepblue/kuaiding/entity/ComActivities.hbm.xml
 				</value>
 				<value>
 					com/deepblue/kuaiding/entity/KdMenu.hbm.xml
@@ -68,22 +59,16 @@
 				</value>
 				<value>
 					com/deepblue/kuaiding/entity/KdType.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdEvaluation.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdMessage.hbm.xml
 				</value></list>
 		</property></bean>
 	<bean id="KdRestaurantDAO"
 		class="com.deepblue.kuaiding.dao.KdRestaurantDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-	<bean id="BcomPostDAO"
-		class="com.deepblue.kuaiding.dao.BcomPostDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-	<bean id="ComNewsDAO"
-		class="com.deepblue.kuaiding.dao.ComNewsDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
@@ -95,12 +80,6 @@
 	</bean>
 	<bean id="KdCustomersDAO"
 		class="com.deepblue.kuaiding.dao.KdCustomersDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-	<bean id="ComActivitiesDAO"
-		class="com.deepblue.kuaiding.dao.ComActivitiesDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
@@ -135,6 +114,18 @@
 		</property>
 	</bean>
 	<bean id="KdGwcDAO" class="com.deepblue.kuaiding.dao.KdGwcDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdEvaluationDAO"
+		class="com.deepblue.kuaiding.dao.KdEvaluationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdMessageDAO"
+		class="com.deepblue.kuaiding.dao.KdMessageDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

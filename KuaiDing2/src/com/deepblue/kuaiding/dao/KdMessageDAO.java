@@ -8,26 +8,25 @@ import org.hibernate.LockMode;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.deepblue.kuaiding.entity.BcomPost;
+import com.deepblue.kuaiding.entity.KdMessage;
 
 /**
  * A data access object (DAO) providing persistence and search support for
- * BcomPost entities. Transaction control of the save(), update() and delete()
+ * KdMessage entities. Transaction control of the save(), update() and delete()
  * operations can directly support Spring container-managed transactions or they
  * can be augmented to handle user-managed Spring transactions. Each of these
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see com.deepblue.kuaiding.dao.BcomPost
+ * @see com.deepblue.kuaiding.dao.KdMessage
  * @author MyEclipse Persistence Tools
  */
-public class BcomPostDAO extends HibernateDaoSupport {
-	private static final Log log = LogFactory.getLog(BcomPostDAO.class);
+public class KdMessageDAO extends HibernateDaoSupport {
+	private static final Log log = LogFactory.getLog(KdMessageDAO.class);
 	// property constants
-	public static final String NAME = "name";
-	public static final String TITLE = "title";
-	public static final String PIC = "pic";
-	public static final String CONTENT = "content";
+	public static final String RST = "rst";
+	public static final String CUSTOMER = "customer";
+	public static final String YES = "yes";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
@@ -36,8 +35,8 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(BcomPost transientInstance) {
-		log.debug("saving BcomPost instance");
+	public void save(KdMessage transientInstance) {
+		log.debug("saving KdMessage instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
@@ -47,8 +46,8 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(BcomPost persistentInstance) {
-		log.debug("deleting BcomPost instance");
+	public void delete(KdMessage persistentInstance) {
+		log.debug("deleting KdMessage instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
 			log.debug("delete successful");
@@ -58,11 +57,11 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public BcomPost findById(java.lang.String id) {
-		log.debug("getting BcomPost instance with id: " + id);
+	public KdMessage findById(java.lang.String id) {
+		log.debug("getting KdMessage instance with id: " + id);
 		try {
-			BcomPost instance = (BcomPost) getHibernateTemplate().get(
-					"com.deepblue.kuaiding.dao.BcomPost", id);
+			KdMessage instance = (KdMessage) getHibernateTemplate().get(
+					"com.deepblue.kuaiding.dao.KdMessage", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -70,8 +69,8 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(BcomPost instance) {
-		log.debug("finding BcomPost instance by example");
+	public List findByExample(KdMessage instance) {
+		log.debug("finding KdMessage instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
 			log.debug("find by example successful, result size: "
@@ -84,10 +83,10 @@ public class BcomPostDAO extends HibernateDaoSupport {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding BcomPost instance with property: " + propertyName
+		log.debug("finding KdMessage instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from BcomPost as model where model."
+			String queryString = "from KdMessage as model where model."
 					+ propertyName + "= ?";
 			return getHibernateTemplate().find(queryString, value);
 		} catch (RuntimeException re) {
@@ -96,20 +95,16 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByName(Object name) {
-		return findByProperty(NAME, name);
+	public List findByRst(Object rst) {
+		return findByProperty(RST, rst);
 	}
 
-	public List findByTitle(Object title) {
-		return findByProperty(TITLE, title);
+	public List findByCustomer(Object customer) {
+		return findByProperty(CUSTOMER, customer);
 	}
 
-	public List findByPic(Object pic) {
-		return findByProperty(PIC, pic);
-	}
-
-	public List findByContent(Object content) {
-		return findByProperty(CONTENT, content);
+	public List findByYes(Object yes) {
+		return findByProperty(YES, yes);
 	}
 
 	public List findByDescription(Object description) {
@@ -125,9 +120,9 @@ public class BcomPostDAO extends HibernateDaoSupport {
 	}
 
 	public List findAll() {
-		log.debug("finding all BcomPost instances");
+		log.debug("finding all KdMessage instances");
 		try {
-			String queryString = "from BcomPost";
+			String queryString = "from KdMessage";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
@@ -135,10 +130,10 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public BcomPost merge(BcomPost detachedInstance) {
-		log.debug("merging BcomPost instance");
+	public KdMessage merge(KdMessage detachedInstance) {
+		log.debug("merging KdMessage instance");
 		try {
-			BcomPost result = (BcomPost) getHibernateTemplate().merge(
+			KdMessage result = (KdMessage) getHibernateTemplate().merge(
 					detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -148,8 +143,8 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(BcomPost instance) {
-		log.debug("attaching dirty BcomPost instance");
+	public void attachDirty(KdMessage instance) {
+		log.debug("attaching dirty KdMessage instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -159,8 +154,8 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(BcomPost instance) {
-		log.debug("attaching clean BcomPost instance");
+	public void attachClean(KdMessage instance) {
+		log.debug("attaching clean KdMessage instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -170,7 +165,7 @@ public class BcomPostDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public static BcomPostDAO getFromApplicationContext(ApplicationContext ctx) {
-		return (BcomPostDAO) ctx.getBean("BcomPostDAO");
+	public static KdMessageDAO getFromApplicationContext(ApplicationContext ctx) {
+		return (KdMessageDAO) ctx.getBean("KdMessageDAO");
 	}
 }
