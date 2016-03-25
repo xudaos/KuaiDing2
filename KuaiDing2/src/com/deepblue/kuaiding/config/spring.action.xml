@@ -28,6 +28,12 @@
 		<property name="kdTypeBiz">
 			<ref bean="KdTypeBiz" />
 		</property>
+		<property name="kdEvaluationBiz">
+			<ref bean="KdEvaluationBiz" />
+		</property>
+		<property name="kdMessageBiz">
+			<ref bean="KdMessageBiz" />
+		</property>
 	</bean>
 	<bean id="GwcAction" class="com.deepblue.kuaiding.action.GwcAction" scope="prototype">
 

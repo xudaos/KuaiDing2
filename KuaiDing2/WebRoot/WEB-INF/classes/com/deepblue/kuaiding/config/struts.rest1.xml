@@ -6,5 +6,9 @@
 		</action>
 		<action name="getType" class="Rest1Action" method="getType">
 		</action>
+		<action name="getEvaluationList" class="Rest1Action" method="getEvaluationList">
+		</action>
+		<action name="getMessageList" class="Rest1Action" method="getMessageList">
+		</action>
 	</package>
 </struts>

@@ -28,4 +28,16 @@
 		</property>
 	</bean>
 	
+	<bean id="KdEvaluationBiz" class="com.deepblue.kuaiding.biz.KdEvaluationBiz">
+		<property name="kdEvaluationDAO">
+			<ref bean="KdEvaluationDAO" />
+		</property>
+	</bean>
+	
+	<bean id="KdMessageBiz" class="com.deepblue.kuaiding.biz.KdMessageBiz">
+		<property name="kdMessageDAO">
+			<ref bean="KdMessageDAO" />
+		</property>
+	</bean>
+	
 </beans>

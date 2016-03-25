@@ -10,36 +10,39 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
-import com.deepblue.kuaiding.dao.KdMenuDAO;
-import com.deepblue.kuaiding.entity.KdMenu;
+import com.deepblue.kuaiding.dao.KdMessageDAO;
+import com.deepblue.kuaiding.entity.KdMessage;
 
-public class KdMenuBiz {
+public class KdMessageBiz {
 	private Log logger = LogFactory.getLog(getClass());
-	private KdMenuDAO kdMenuDAO;
+	private KdMessageDAO kdMessageDAO;
 	
-	public List<KdMenu> getMenuListByRst(String rst){
-		List<KdMenu> menus = new ArrayList<KdMenu>();
-		Session session = kdMenuDAO.getSessionFactory().openSession();
+	public List<KdMessage> getMessageListByRst(String rst){
+		List<KdMessage> messages = new ArrayList<KdMessage>();
+		Session session = kdMessageDAO.getSessionFactory().openSession();
 		try{
-			Criteria cr = session.createCriteria(KdMenu.class);
+			Criteria cr = session.createCriteria(KdMessage.class);
 			if(StringUtils.isNotBlank(rst)){
 				cr.add(Restrictions.eq("rst", rst));
 			}
-			menus = cr.list();
+			messages = cr.list();
 		}catch(Exception ex){
 			ex.printStackTrace();
 			logger.error(ex);
 		}finally{
 			session.close();
 		}
-		return menus;
+		return messages;
 	}
 	
 	/*--------------------------------------------*/
-	public KdMenuDAO getKdMenuDAO() {
-		return kdMenuDAO;
+
+	public KdMessageDAO getKdMessageDAO() {
+		return kdMessageDAO;
 	}
-	public void setKdMenuDAO(KdMenuDAO kdMenuDAO) {
-		this.kdMenuDAO = kdMenuDAO;
+
+	public void setKdMessageDAO(KdMessageDAO kdMessageDAO) {
+		this.kdMessageDAO = kdMessageDAO;
 	}
+	
 }

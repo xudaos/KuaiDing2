@@ -3,16 +3,12 @@ package com.deepblue.kuaiding.biz;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
 
-import com.deepblue.kuaiding.dao.KdMenuDAO;
 import com.deepblue.kuaiding.dao.KdTypeDAO;
-import com.deepblue.kuaiding.entity.KdMenu;
 import com.deepblue.kuaiding.entity.KdType;
 
 public class KdTypeBiz {

@@ -452,7 +452,7 @@ var path = '';
                     </span>
                     <li>
                         <h5>
-                            <label class="lable1">订&nbsp;单&nbsp;号：</label>
+                            <label class="lable1">订&nbsp;单&nbsp;号：201603230001</label>
                         </h5>
                         <h5>
                             <label class="lable1">配送方式：中国全聚德大连烤鸭店提供配送服务</label>

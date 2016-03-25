@@ -2,10 +2,14 @@ package com.deepblue.kuaiding.action;
 
 import java.util.List;
 
+import com.deepblue.kuaiding.biz.KdEvaluationBiz;
 import com.deepblue.kuaiding.biz.KdMenuBiz;
+import com.deepblue.kuaiding.biz.KdMessageBiz;
 import com.deepblue.kuaiding.biz.KdTypeBiz;
 import com.deepblue.kuaiding.entity.KdMenu;
 import com.deepblue.kuaiding.entity.KdType;
+import com.deepblue.kuaiding.entity.KdMessage;
+import com.deepblue.kuaiding.entity.KdEvaluation;
 import com.opensymphony.xwork2.ActionSupport;
 import com.utility.json.AJsonConverter;
 import com.utility.json.JsonFeedback;
@@ -20,6 +24,8 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	
 	private KdMenuBiz kdMenuBiz;
 	private KdTypeBiz kdTypeBiz;
+	private KdEvaluationBiz kdEvaluationBiz;
+	private KdMessageBiz kdMessageBiz;
 	
 	private String rst;
 	
@@ -41,6 +47,22 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 			feedback.setDataList(types, new AJsonConverter<KdType>());
 			feedback.setSuccess(true);
 		}
+		return JsonFeedback.STRUTS_RESULT;
+	}
+	
+	public String getEvaluationList(){
+		System.out.println("rst: "+rst);
+		List<KdEvaluation> evaluations = kdEvaluationBiz.getEvaluationListByRst(rst);
+		feedback.setDataList(evaluations, new AJsonConverter<KdEvaluation>());
+		feedback.setSuccess(true);
+		return JsonFeedback.STRUTS_RESULT;
+	}
+	
+	public String getMessageList(){
+		System.out.println("rst: "+rst);
+		List<KdMessage> messages = kdMessageBiz.getMessageListByRst(rst);
+		feedback.setDataList(messages, new AJsonConverter<KdMessage>());
+		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
 	}
 	/* get set
@@ -69,4 +91,21 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	public void setKdTypeBiz(KdTypeBiz kdTypeBiz) {
 		this.kdTypeBiz = kdTypeBiz;
 	}
+
+	public KdEvaluationBiz getKdEvaluationBiz() {
+		return kdEvaluationBiz;
+	}
+
+	public void setKdEvaluationBiz(KdEvaluationBiz kdEvaluationBiz) {
+		this.kdEvaluationBiz = kdEvaluationBiz;
+	}
+
+	public KdMessageBiz getKdMessageBiz() {
+		return kdMessageBiz;
+	}
+
+	public void setKdMessageBiz(KdMessageBiz kdMessageBiz) {
+		this.kdMessageBiz = kdMessageBiz;
+	}
+	
 }

@@ -7,7 +7,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
 
 import com.deepblue.kuaiding.dao.KdRstinfoDAO;
 import com.deepblue.kuaiding.entity.KdRstinfo;

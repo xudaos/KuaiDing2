@@ -566,67 +566,8 @@ var path = '';
                    <ul class="title">
                       <li><button class="button3">全部评价</button></li>
                    </ul>
-                   <ul class="evaluate-lists">
-                      <li class="pj1">
-                         <p class="evaluate-dish">
-                          <a class="link" href=# title="鸡翅">鸡翅
-                             <span class="price symbol-rmb">5</span>
-                          </a>
-                         </p>
-                         <p class="evaluate-text">我的最爱</p>
-                         <p class="evaluate-info">
-                            <span class="username">1***5</span>
-                            2015-11-08
-                         </p>
-                      </li>
-                      <li class="pj2">
-                         <p class="evaluate-dish">
-                          <a class="link" href=# title="鸡翅">鸡翅
-                             <span class="price symbol-rmb">5</span>
-                          </a>
-                         </p>
-                         <p class="evaluate-text">我的最爱</p>
-                         <p class="evaluate-info">
-                            <span class="username">1***5</span>
-                            2015-11-08
-                         </p>
-                      </li>
-                      <li class="pj1">
-                         <p class="evaluate-dish">
-                          <a class="link" href=# title="鸡翅">鸡翅
-                             <span class="price symbol-rmb">5</span>
-                          </a>
-                         </p>
-                         <p class="evaluate-text">我的最爱</p>
-                         <p class="evaluate-info">
-                            <span class="username">1***5</span>
-                            2015-11-08
-                         </p>
-                      </li>
-                      <li class="pj2">
-                         <p class="evaluate-dish">
-                          <a class="link" href=# title="鸡翅">鸡翅
-                             <span class="price symbol-rmb">5</span>
-                          </a>
-                         </p>
-                         <p class="evaluate-text">我的最爱</p>
-                         <p class="evaluate-info">
-                            <span class="username">1***5</span>
-                            2015-11-08
-                         </p>
-                      </li>
-                      <li class="pj1">
-                         <p class="evaluate-dish">
-                          <a class="link" href=# title="鸡翅">鸡翅
-                             <span class="price symbol-rmb">5</span>
-                          </a>
-                         </p>
-                         <p class="evaluate-text">我的最爱</p>
-                         <p class="evaluate-info">
-                            <span class="username">1***5</span>
-                            2015-11-08
-                         </p>
-                      </li>
+                   <ul class="evaluate-lists" id="evaluations">
+                      
                    </ul>
                 </div>
              </div>
@@ -642,24 +583,10 @@ var path = '';
              <div class="comments">
                 <div class="comments-info">                  
                    <ul class="title">
-                      <li><button class="button3">全部评价</button></li>
+                      <li><button class="button3">全部留言</button></li>
                    </ul>
-                   <ul class="comments-lists">
-                      <li class="pj1">
-                         <p class="comments-dish"><span class="username">1***5</span></p>
-                         <p class="comments-text">哈喽，我刚才点错了，是一份炒饭，不是两份</p>
-                         <p class="comments-info"><span class="time">2015-11-08</span></p>
-                      </li>
-                      <li class="pj1">
-                         <p class="comments-dish"><span class="username">1***5</span></p>
-                         <p class="comments-text">哈喽，我刚才点错了，是一份炒饭，不是两份</p>
-                         <p class="comments-info"><span class="time">2015-11-08</span></p>
-                      </li>
-                      <li class="pj1">
-                         <p class="comments-dish"><span class="username">1***5</span></p>
-                         <p class="comments-text">哈喽，我刚才点错了，是一份炒饭，不是两份</p>
-                         <p class="comments-info"><span class="time">2015-11-08</span></p>
-                      </li>
+                   <ul class="comments-lists" id="comments">
+                      
                    </ul>
                 </div>
              </div>
@@ -759,6 +686,7 @@ var path = '';
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
 
 <script type="text/javascript">
+
 //获取type并缓存
 var typeArr = [];
 function getType(){
@@ -781,6 +709,8 @@ $(function(){
 	getType();
 	getFenlei();
 	getPics();
+	getEvaluations();
+	getComments();
 });
 
 //加载美食分类
@@ -864,6 +794,46 @@ function getPics(){
 				htmlStr += '<li><img src="<%=path%>'+data[i].pic+'" /><h6 href="javascript:void(0);">'+data[i].name+'</h6><button class="btn4" href="javascript:void(0);">'+data[i].price+'</button><span><img src="<%=path%>'+data[i].evaluation+'" /><br /><h7 href="javascript:void(0);">月售'+data[i].quantity+'份</h7></span></li>';				
 			}
 			$('#pics').html(htmlStr);
+		}
+	});
+}
+
+//加载评价
+function getEvaluations(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/rest1/getEvaluationList.do',
+		data: {
+			rst: '1'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><p><a href="javascript:void(0);">'+data[i].name+'</a></p><p class="evaluate-text" href="javascript:void(0);">'+data[i].description+'</p><p class="evaluate-info" href="javascript:void(0);">'+data[i].customer+''+data[i].time+'</p></li>';				
+			}
+			$('#evaluations').html(htmlStr);
+		}
+	});
+}
+
+//加载留言
+function getComments(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/rest1/getMessageList.do',
+		data: {
+			rst: '1'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><p href="javascript:void(0);">'+data[i].customer+'</p><p class="comments-text" href="javascript:void(0);">'+data[i].description+'</p><p class="comments-info" href="javascript:void(0);">'+data[i].time+'</p></li>';				
+			}
+			$('#comments').html(htmlStr);
 		}
 	});
 }
