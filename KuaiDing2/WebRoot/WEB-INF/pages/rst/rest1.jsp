@@ -843,6 +843,7 @@ function getMenuList(){
 				htmlStr += '</li>';
 			}
 		}
+		htmlStr += '</ul></div></div>';
 	}
 	$('#menuKinds').after(htmlStr);
 }
@@ -860,7 +861,7 @@ function getPics(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><img src="<%=path%>/pages/Restaurant/images/rst1/dish1.png" /><h6 href="javascript:void(0);">'+data[i].name+'</h6><button class="btn4" href="javascript:void(0);">'+data[i].price+'</button><span><img  src="<%=path%>/pages/Restaurant/images/stars.png" /><br /><h7 href="javascript:void(0);">月售'+data[i].quantity+'份</h7></span></li>';				
+				htmlStr += '<li><img src="<%=path%>'+data[i].pic+'" /><h6 href="javascript:void(0);">'+data[i].name+'</h6><button class="btn4" href="javascript:void(0);">'+data[i].price+'</button><span><img src="<%=path%>'+data[i].evaluation+'" /><br /><h7 href="javascript:void(0);">月售'+data[i].quantity+'份</h7></span></li>';				
 			}
 			$('#pics').html(htmlStr);
 		}
