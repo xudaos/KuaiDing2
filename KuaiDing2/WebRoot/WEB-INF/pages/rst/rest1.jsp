@@ -487,14 +487,8 @@ var path = '';
                          <h1>商家基本资料</h1>
                       </li>
                    </ul>
-                   <ul class="sjxx-lists">
-                      <li><h5>商家简介:</h5></li>
-                      <li><h5>商家地址:</h5></li>               
-                      <li><h5>电话:</h5></li>
-                      <li><h5>起送价:</h5></li>
-                      <li><h5>配送价:</h5></li> 
-                      <li><h5>活动:</h5></li>
-                      <li><h5>公告:</h5></li>
+                   <ul class="sjxx-lists" id="sjxx_lists">
+                      
                    </ul>
                 </div>
              </div>
@@ -709,6 +703,7 @@ $(function(){
 	getType();
 	getFenlei();
 	getPics();
+	getXinxi();
 	getEvaluations();
 	getComments();
 });
@@ -798,6 +793,26 @@ function getPics(){
 	});
 }
 
+//加载餐厅信息
+function getXinxi(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/getRstinfo.do',
+		data: {
+			objectid: '1'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+			for(var i=0;i<data.length;i++){
+				htmlStr += '<li><h5 href="javascript:void(0);">商家信息：'+data[i].description+'</h5><h5 href="javascript:void(0);">商家地址：'+data[i].address+'</h5><h5 href="javascript:void(0);">电话：'+data[i].phone+'</h5><h5 href="javascript:void(0);">起送价：'+data[i].sendprice+'</h5><h5 href="javascript:void(0);">配送价：'+data[i].deliveryprice+'</h5></li>';				
+			}
+			$('#sjxx_lists').html(htmlStr);
+		}
+	});
+}
+
 //加载评价
 function getEvaluations(){
 	$.ajax({
@@ -811,7 +826,7 @@ function getEvaluations(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><p><a href="javascript:void(0);">'+data[i].name+'</a></p><p class="evaluate-text" href="javascript:void(0);">'+data[i].description+'</p><p class="evaluate-info" href="javascript:void(0);">'+data[i].customer+''+data[i].time+'</p></li>';				
+				htmlStr += '<li><p><a href="javascript:void(0);">'+data[i].name+'</a></p><p class="evaluate-text" href="javascript:void(0);">'+data[i].description+'</p><p class="evaluate-info"><span href="javascript:void(0);">'+data[i].customer+''+data[i].time+'</span></p></li>';				
 			}
 			$('#evaluations').html(htmlStr);
 		}

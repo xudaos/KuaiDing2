@@ -6,10 +6,14 @@ import com.deepblue.kuaiding.biz.KdEvaluationBiz;
 import com.deepblue.kuaiding.biz.KdMenuBiz;
 import com.deepblue.kuaiding.biz.KdMessageBiz;
 import com.deepblue.kuaiding.biz.KdTypeBiz;
+import com.deepblue.kuaiding.biz.KdRstinfoBiz;
 import com.deepblue.kuaiding.entity.KdMenu;
+import com.deepblue.kuaiding.entity.KdRstinfo;
 import com.deepblue.kuaiding.entity.KdType;
 import com.deepblue.kuaiding.entity.KdMessage;
 import com.deepblue.kuaiding.entity.KdEvaluation;
+import com.deepblue.kuaiding.json.converter.MessageConverter;
+import com.deepblue.kuaiding.json.converter.RestaurantConverter;
 import com.opensymphony.xwork2.ActionSupport;
 import com.utility.json.AJsonConverter;
 import com.utility.json.JsonFeedback;
@@ -24,10 +28,12 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	
 	private KdMenuBiz kdMenuBiz;
 	private KdTypeBiz kdTypeBiz;
+	private KdRstinfoBiz kdRstinfoBiz;
 	private KdEvaluationBiz kdEvaluationBiz;
 	private KdMessageBiz kdMessageBiz;
 	
 	private String rst;
+	private String objectid;
 	
 	public String rest1 () {
 		return SUCCESS;
@@ -50,6 +56,14 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 		return JsonFeedback.STRUTS_RESULT;
 	}
 	
+	public String getRstinfo(){
+		System.out.println("objectid: "+objectid);
+		List<KdRstinfo> kdRstinfos = kdRstinfoBiz.getRstinfoByType(objectid);
+		feedback.setDataList(kdRstinfos, RestaurantConverter.Singleton);
+		feedback.setSuccess(true);
+		return JsonFeedback.STRUTS_RESULT;
+	}
+	
 	public String getEvaluationList(){
 		System.out.println("rst: "+rst);
 		List<KdEvaluation> evaluations = kdEvaluationBiz.getEvaluationListByRst(rst);
@@ -61,7 +75,7 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	public String getMessageList(){
 		System.out.println("rst: "+rst);
 		List<KdMessage> messages = kdMessageBiz.getMessageListByRst(rst);
-		feedback.setDataList(messages, new AJsonConverter<KdMessage>());
+		feedback.setDataList(messages, MessageConverter.Singleton);
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
 	}
@@ -76,6 +90,15 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 		this.rst = rst;
 	}
 	
+	
+	public String getObjectid() {
+		return objectid;
+	}
+
+	public void setObjectid(String objectid) {
+		this.objectid = objectid;
+	}
+
 	public KdMenuBiz getKdMenuBiz() {
 		return kdMenuBiz;
 	}
@@ -90,6 +113,14 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 
 	public void setKdTypeBiz(KdTypeBiz kdTypeBiz) {
 		this.kdTypeBiz = kdTypeBiz;
+	}
+
+	public KdRstinfoBiz getKdRstinfoBiz() {
+		return kdRstinfoBiz;
+	}
+
+	public void setKdRstinfoBiz(KdRstinfoBiz kdRstinfoBiz) {
+		this.kdRstinfoBiz = kdRstinfoBiz;
 	}
 
 	public KdEvaluationBiz getKdEvaluationBiz() {

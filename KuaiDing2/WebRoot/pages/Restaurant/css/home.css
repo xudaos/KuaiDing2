@@ -79,11 +79,10 @@ h7{margin-left:10px}
 .rectangle2{width:30px; height:10px; background:#F60;}
 .rectangle1{width:10px; height:10px; background:#F60;}
 .evaluate-info .title{background:#fff; margin:10px;}
-.evaluate-info .title li{float:left; margin-left:20px;}
+.evaluate-info .title li{margin-left:20px;}
 .evaluate-lists li{float:left; width:485px; height:100px; padding:50px; margin:0px 10px 10px 0px; background:#fff;}
 .evaluate-lists{margin:20px 0px 0px 10px;}
 .evaluate-text{font-size:16px; margin:30px;}
-.evaluate-lists .pj2{float:right;}
 
 /* 留言（rst-comments） */
 .rst-comments{background:#ffb061; padding-bottom:10px;}
