@@ -4,11 +4,10 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.deepblue.kuaiding.biz.KdRestaurantBiz;
-import com.deepblue.kuaiding.entity.KdRestaurant;
+import com.deepblue.kuaiding.biz.KdRstinfoBiz;
+import com.deepblue.kuaiding.entity.KdRstinfo;
 import com.deepblue.kuaiding.json.converter.RestaurantConverter;
 import com.opensymphony.xwork2.ActionSupport;
-import com.utility.json.AJsonConverter;
 import com.utility.json.JsonFeedback;
 import com.utility.json.iJsonable;
 
@@ -19,7 +18,7 @@ public class HomeAction extends ActionSupport implements iJsonable{
 		return feedback;
 	}
 	
-	private KdRestaurantBiz kdRestaurantBiz;
+	private KdRstinfoBiz kdRstinfoBiz;
 	
 	private String type;
 	private String loginName;
@@ -44,8 +43,8 @@ public class HomeAction extends ActionSupport implements iJsonable{
 	
 	public String getRst(){
 		System.out.println("type: "+type);
-		List<KdRestaurant> kdRestaurants = kdRestaurantBiz.getRestaurantByType(type);
-		feedback.setDataList(kdRestaurants, RestaurantConverter.Singleton);
+		List<KdRstinfo> kdRstinfos = kdRstinfoBiz.getRstinfoByType(type);
+		feedback.setDataList(kdRstinfos, RestaurantConverter.Singleton);
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
 	}
@@ -53,10 +52,6 @@ public class HomeAction extends ActionSupport implements iJsonable{
 	
 	/* get set
 	 * -----------------------------------------------------------------*/
-
-	public KdRestaurantBiz getKdRestaurantBiz() {
-		return kdRestaurantBiz;
-	}
 
 	public String getLoginName() {
 		return loginName;
@@ -74,10 +69,6 @@ public class HomeAction extends ActionSupport implements iJsonable{
 		this.loginPass = loginPass;
 	}
 
-	public void setKdRestaurantBiz(KdRestaurantBiz kdRestaurantBiz) {
-		this.kdRestaurantBiz = kdRestaurantBiz;
-	}
-
 	public String getType() {
 		return type;
 	}
@@ -85,4 +76,14 @@ public class HomeAction extends ActionSupport implements iJsonable{
 	public void setType(String type) {
 		this.type = type;
 	}
+
+	public KdRstinfoBiz getKdRstinfoBiz() {
+		return kdRstinfoBiz;
+	}
+
+	public void setKdRstinfoBiz(KdRstinfoBiz kdRstinfoBiz) {
+		this.kdRstinfoBiz = kdRstinfoBiz;
+	}
+	
+	
 }

@@ -4,14 +4,14 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.deepblue.kuaiding.entity.KdRestaurant;
+import com.deepblue.kuaiding.entity.KdRstinfo;
 import com.utility.json.AJsonConverter;
 
-public class RestaurantConverter extends AJsonConverter<KdRestaurant> {
+public class RestaurantConverter extends AJsonConverter<KdRstinfo> {
 	public static final RestaurantConverter Singleton = new RestaurantConverter();
 	private RestaurantConverter () {}
 	
-	public Map<String, Object> Convert2Record (KdRestaurant t){
+	public Map<String, Object> Convert2Record (KdRstinfo t){
 		if (t == null)
             return null;
 		
@@ -21,7 +21,6 @@ public class RestaurantConverter extends AJsonConverter<KdRestaurant> {
 		record.put("address", t.getAddress());
 		record.put("pic", t.getPic());
 		record.put("phone", t.getPhone());
-		record.put("distance", t.getDistance());
 		record.put("region", t.getRegion());
 		record.put("avgprice", t.getAvgprice());
 		record.put("type", t.getType());
@@ -33,8 +32,8 @@ public class RestaurantConverter extends AJsonConverter<KdRestaurant> {
 			record.put("createtime", sdf.format(t.getCreatetime()));
 		else
 			record.put("createtime", "");
-		if(t.getDate() != null)
-			record.put("date", sdf.format(t.getDate()));
+		if(t.getCreatetime() != null)
+			record.put("date", sdf.format(t.getCreatetime()));
 		else
 			record.put("date", "");
 		record.put("pic2", t.getPic2());

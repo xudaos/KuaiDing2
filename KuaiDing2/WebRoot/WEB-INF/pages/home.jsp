@@ -680,7 +680,7 @@ function getLunbo(){
 			var htmlStr1 = '';
 			var htmlStr2 = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr1 += '<li><a href="javascript:void(0);" target="_blank"><img src="'+data[i].pic+'"/></a></li>';
+				htmlStr1 += '<li><a href="javascript:void(0);" target="_blank"><img src="<%=path%>'+data[i].pic+'"/></a></li>';
 				if(i===0)
 					htmlStr2 += '<li class="ico"></li>';
 				else
@@ -727,7 +727,7 @@ function getQiangxian(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><img src="'+data[i].pic+'"/><a class="a1" href="javascript:void(0);">'+data[i].name+'</a><a class="a3" href="javascript:void(0);">'+data[i].date+'</a></li>';				
+				htmlStr += '<li><img src="<%=path%>'+data[i].pic+'"/><a class="a1" href="javascript:void(0);">'+data[i].name+'</a><a class="a3" href="javascript:void(0);">'+data[i].date+'</a></li>';				
 			}
 			$('#forestall-qiangxian').html(htmlStr);
 		}
@@ -747,7 +747,7 @@ function getJingpin(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><a><img src="'+data[i].pic+'"/></a><div class="recommend-user"><div class="user"><a class="a1"><img src="'+data[i].pic2+'"/></a><a class="a2" href="javascript:void(0);">'+data[i].name+'</a></div><p class="p1" href="javascript:void(0);">'+data[i].description+'</p></div><p class="p2" href="javascript:void(0);">'+data[i].remarks+'<span class="span1" href="javascript:void(0);">'+data[i].date+'</span></p></li>';				
+				htmlStr += '<li><a><img src="<%=path%>'+data[i].pic+'"/></a><div class="recommend-user"><div class="user"><a class="a1"><img src="<%=path%>'+data[i].pic2+'"/></a><a class="a2" href="javascript:void(0);">'+data[i].name+'</a></div><p class="p1" href="javascript:void(0);">'+data[i].description+'</p></div><p class="p2" href="javascript:void(0);">'+data[i].remarks+'<span class="span1" href="javascript:void(0);">'+data[i].date+'</span></p></li>';				
 			}
 			$('#recommend-jptj').html(htmlStr);
 		}
@@ -767,7 +767,7 @@ function getYouhui(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><a><img src="'+data[i].pic+'"/></a></li>';				
+				htmlStr += '<li><a><img src="<%=path%>'+data[i].pic+'"/></a></li>';				
 			}
 			$('#recommend-msyh').html(htmlStr);
 		}

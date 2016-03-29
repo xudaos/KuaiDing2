@@ -1,7 +1,6 @@
 package com.deepblue.kuaiding.action;
 
 import java.util.List;
-
 import com.deepblue.kuaiding.biz.KdRstinfoBiz;
 import com.deepblue.kuaiding.entity.KdRstinfo;
 import com.opensymphony.xwork2.ActionSupport;
@@ -16,6 +15,8 @@ public class YdAction extends ActionSupport implements iJsonable{
 		return feedback;
 	}
 	
+	private String type;
+	
 	private KdRstinfoBiz kdRstinfoBiz;
 	
 	public String yd () {
@@ -23,7 +24,7 @@ public class YdAction extends ActionSupport implements iJsonable{
 	}
 	
 	public String getRestInfo(){
-		List<KdRstinfo> kdRstinfos = kdRstinfoBiz.getRstinfo();
+		List<KdRstinfo> kdRstinfos = kdRstinfoBiz.getRstinfoByType(type);
 		feedback.setDataList(kdRstinfos, new AJsonConverter<KdRstinfo>());
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
@@ -39,5 +40,13 @@ public class YdAction extends ActionSupport implements iJsonable{
 
 	public void setKdRstinfoBiz(KdRstinfoBiz kdRstinfoBiz) {
 		this.kdRstinfoBiz = kdRstinfoBiz;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 }

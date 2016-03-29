@@ -582,18 +582,6 @@ function collectp(n,t){
 <script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
 <script type="text/javascript" src="<%=path%>/pages/KD/js/coupons.js" ></script>
-<script>
-$(function(){
-	//加载精品推荐
-	$.post(path+"/Coupons/DataRecommended.do", {companyNos:''}, function(data) {
-  		$("#jptj_div").html(data);
-    },"text");
-    //加载猜你喜欢
-    $.post(path+"/Coupons/DataGussYouLike.do", {}, function(data) {
-  		$("#guss_u_like").html(data);
-    },"text");
-});
-</script>
 
 </body>
 </html>

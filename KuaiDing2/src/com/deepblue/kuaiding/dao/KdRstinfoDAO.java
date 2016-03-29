@@ -26,14 +26,21 @@ public class KdRstinfoDAO extends HibernateDaoSupport {
 	// property constants
 	public static final String NAME = "name";
 	public static final String PIC = "pic";
+	public static final String ADDRESS = "address";
+	public static final String PHONE = "phone";
+	public static final String REGION = "region";
 	public static final String PICSTAR = "picstar";
-	public static final String TIME = "time";
 	public static final String SALES = "sales";
 	public static final String SENDPRICE = "sendprice";
 	public static final String DELIVERYPRICE = "deliveryprice";
+	public static final String SENDTIME = "sendtime";
+	public static final String AVGPRICE = "avgprice";
 	public static final String NOTICE = "notice";
 	public static final String ACTIVITY = "activity";
+	public static final String REMARKS = "remarks";
+	public static final String PIC2 = "pic2";
 	public static final String YES = "yes";
+	public static final String TYPE = "type";
 	public static final String DESCRIPTION = "description";
 	public static final String ORDERNO = "orderno";
 	public static final String CREATOR = "creator";
@@ -110,12 +117,20 @@ public class KdRstinfoDAO extends HibernateDaoSupport {
 		return findByProperty(PIC, pic);
 	}
 
-	public List findByPicstar(Object picstar) {
-		return findByProperty(PICSTAR, picstar);
+	public List findByAddress(Object address) {
+		return findByProperty(ADDRESS, address);
 	}
 
-	public List findByTime(Object time) {
-		return findByProperty(TIME, time);
+	public List findByPhone(Object phone) {
+		return findByProperty(PHONE, phone);
+	}
+
+	public List findByRegion(Object region) {
+		return findByProperty(REGION, region);
+	}
+
+	public List findByPicstar(Object picstar) {
+		return findByProperty(PICSTAR, picstar);
 	}
 
 	public List findBySales(Object sales) {
@@ -130,6 +145,14 @@ public class KdRstinfoDAO extends HibernateDaoSupport {
 		return findByProperty(DELIVERYPRICE, deliveryprice);
 	}
 
+	public List findBySendtime(Object sendtime) {
+		return findByProperty(SENDTIME, sendtime);
+	}
+
+	public List findByAvgprice(Object avgprice) {
+		return findByProperty(AVGPRICE, avgprice);
+	}
+
 	public List findByNotice(Object notice) {
 		return findByProperty(NOTICE, notice);
 	}
@@ -138,8 +161,20 @@ public class KdRstinfoDAO extends HibernateDaoSupport {
 		return findByProperty(ACTIVITY, activity);
 	}
 
+	public List findByRemarks(Object remarks) {
+		return findByProperty(REMARKS, remarks);
+	}
+
+	public List findByPic2(Object pic2) {
+		return findByProperty(PIC2, pic2);
+	}
+
 	public List findByYes(Object yes) {
 		return findByProperty(YES, yes);
+	}
+
+	public List findByType(Object type) {
+		return findByProperty(TYPE, type);
 	}
 
 	public List findByDescription(Object description) {

@@ -489,10 +489,10 @@ var path = '';
                    </ul>
                    <ul class="sjxx-lists">
                       <li><h5>商家简介:</h5></li>
-                      <li><h5>商家地址:</h5></li>
-                      <li><h5>营业时间:</h5></li>                      
+                      <li><h5>商家地址:</h5></li>               
                       <li><h5>电话:</h5></li>
                       <li><h5>起送价:</h5></li>
+                      <li><h5>配送价:</h5></li> 
                       <li><h5>活动:</h5></li>
                       <li><h5>公告:</h5></li>
                    </ul>

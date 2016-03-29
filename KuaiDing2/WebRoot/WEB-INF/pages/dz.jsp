@@ -525,7 +525,7 @@ var path = '';
                 <a href="javascript:;">下载有美食APP</a>
             </div>
             <div class="div1">
-            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="images/footer-sj.png" /></a>
+            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/KD/images/footer-sj.png" /></a>
             </div>
         </div>
         <div class="blogroll">
@@ -563,7 +563,7 @@ function collectp(n,t){
         		var call = function(){
         			if(t=='1'){$("#c_"+n).text("已收藏");}
         			$.fn.closePublicBox(0);
-        		}
+        		};
         		$(this).alertMsg({msg:"收藏成功！",callback:call});
 				
 			}else if(data=='2'){
