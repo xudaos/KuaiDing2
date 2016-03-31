@@ -14,6 +14,7 @@ import com.deepblue.kuaiding.entity.KdMessage;
 import com.deepblue.kuaiding.entity.KdEvaluation;
 import com.deepblue.kuaiding.json.converter.MessageConverter;
 import com.deepblue.kuaiding.json.converter.RestaurantConverter;
+import com.deepblue.kuaiding.json.converter.EvaluationConverter;
 import com.opensymphony.xwork2.ActionSupport;
 import com.utility.json.AJsonConverter;
 import com.utility.json.JsonFeedback;
@@ -67,7 +68,7 @@ public class Rest1Action extends ActionSupport implements iJsonable{
 	public String getEvaluationList(){
 		System.out.println("rst: "+rst);
 		List<KdEvaluation> evaluations = kdEvaluationBiz.getEvaluationListByRst(rst);
-		feedback.setDataList(evaluations, new AJsonConverter<KdEvaluation>());
+		feedback.setDataList(evaluations, EvaluationConverter.Singleton);
 		feedback.setSuccess(true);
 		return JsonFeedback.STRUTS_RESULT;
 	}

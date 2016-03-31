@@ -1,6 +1,5 @@
 package com.deepblue.kuaiding.entity;
 
-import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -15,8 +14,8 @@ public class KdEvaluation implements java.io.Serializable {
 	private String name;
 	private String rst;
 	private String customer;
-	private Timestamp time;
-	private Integer orderid;
+	private Date time;
+	private String orderid;
 	private String yes;
 	private String description;
 	private Integer orderno;
@@ -31,14 +30,13 @@ public class KdEvaluation implements java.io.Serializable {
 
 	/** minimal constructor */
 	public KdEvaluation(String objectid, String name, String rst,
-			String customer, Timestamp time, Integer orderid, String yes,
-			String description, String creator, Date createtime) {
+			String customer, Date time, String yes, String description,
+			String creator, Date createtime) {
 		this.objectid = objectid;
 		this.name = name;
 		this.rst = rst;
 		this.customer = customer;
 		this.time = time;
-		this.orderid = orderid;
 		this.yes = yes;
 		this.description = description;
 		this.creator = creator;
@@ -47,7 +45,7 @@ public class KdEvaluation implements java.io.Serializable {
 
 	/** full constructor */
 	public KdEvaluation(String objectid, String name, String rst,
-			String customer, Timestamp time, Integer orderid, String yes,
+			String customer, Date time, String orderid, String yes,
 			String description, Integer orderno, String creator, Date createtime) {
 		this.objectid = objectid;
 		this.name = name;
@@ -96,19 +94,19 @@ public class KdEvaluation implements java.io.Serializable {
 		this.customer = customer;
 	}
 
-	public Timestamp getTime() {
+	public Date getTime() {
 		return this.time;
 	}
 
-	public void setTime(Timestamp time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 
-	public Integer getOrderid() {
+	public String getOrderid() {
 		return this.orderid;
 	}
 
-	public void setOrderid(Integer orderid) {
+	public void setOrderid(String orderid) {
 		this.orderid = orderid;
 	}
 

@@ -826,7 +826,7 @@ function getEvaluations(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><p><a href="javascript:void(0);">'+data[i].name+'</a></p><p class="evaluate-text" href="javascript:void(0);">'+data[i].description+'</p><p class="evaluate-info"><span href="javascript:void(0);">'+data[i].customer+''+data[i].time+'</span></p></li>';				
+				htmlStr += '<li><p><a href="javascript:void(0);">'+data[i].name+'</a></p><p class="evaluate-text" href="javascript:void(0);">'+data[i].description+'</p><p><span href="javascript:void(0);">'+data[i].customer+'</span><span class="pjrq" href="javascript:void(0);">'+data[i].time+'</span></p></li>';				
 			}
 			$('#evaluations').html(htmlStr);
 		}

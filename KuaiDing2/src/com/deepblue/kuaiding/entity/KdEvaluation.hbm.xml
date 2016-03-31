@@ -19,11 +19,11 @@
         <property name="customer" type="java.lang.String">
             <column name="customer" length="500" not-null="true" />
         </property>
-        <property name="time" type="java.sql.Timestamp">
-            <column name="time" length="23" not-null="true" />
+        <property name="time" type="java.util.Date">
+            <column name="time" length="10" not-null="true" />
         </property>
-        <property name="orderid" type="java.lang.Integer">
-            <column name="orderid" not-null="true" />
+        <property name="orderid" type="java.lang.String">
+            <column name="orderid" length="50" />
         </property>
         <property name="yes" type="java.lang.String">
             <column name="yes" length="36" not-null="true" />
