@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+.rst .container,.rst-left, .rst-right, .rst-right ul, .rst-lists ul{ overflow:hidden; zoom:1;/*ie6*/}
+.rst-left,.rst-left li,.rst-dc,.rst-dz{ float:left; display:inline;}
+.rst-right,.rst-right li{float:right; display:inline;}
+
+/* 餐厅信息 */
+.rst-left { width:200px; _width:auto;}/*防止页面缩放布局乱*/
+.rst-left{margin-top:20px; margin-left:10px;}
+.rst-left h4{ color:#000; font-size:14px;}
+.rst-right li {border:1px solid #dbdbdb;/* overflow:hidden;*/}
+.rst-right { margin-top:20px;}
+.rst-right li { width:180px; height:60px; cursor:pointer;}
+.rst-right .bg1 { background:#636363;}
+.rst-right .bg2 { background:#facb33;}
+.rst-right .bg3 { background:#a1c450;}
+.rst-right .bg4 { background:#32b3ed;}
+.rst-right .bg5 { background:#f93;}
+.rst-right li:hover, .rst-right .li1 { background-color:#89c935;}
+.rst-right h4 { margin-top:15px;}
+
+/* 预定点餐或预定桌位 */
+.rst-total .container {width:1200px;}
+.rst-dc,.rst-dz {width:450px; height:200px; background-color:#CCC; border:30px solid #fff;}
+.rst-dc{margin-left:95px;}
+.rst-dc a h1,.rst-dz a h1{font-size:36px; text-align:center;height:200px; line-height:200px;}
+

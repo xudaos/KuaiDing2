@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+.rst .container,.rst-left, .rst-right, .rst-right ul, .rst-lists ul{ overflow:hidden; zoom:1;/*ie6*/}
+.rst-left,.rst-left li,.dz-left .menu{ float:left; display:inline;}
+.rst-right,.rst-right li{float:right; display:inline;}
+
+/* 餐厅信息 */
+.rst-left { width:200px; _width:auto;}/*防止页面缩放布局乱*/
+.rst-left{margin-top:20px; margin-left:10px;}
+.rst-left h4{ color:#000; font-size:14px;}
+.rst-right li {border:1px solid #dbdbdb;/* overflow:hidden;*/}
+.rst-right { margin-top:20px;}
+.rst-right li { width:180px; height:60px; cursor:pointer;}
+.rst-right .bg1 { background:#636363;}
+.rst-right .bg2 { background:#facb33;}
+.rst-right .bg3 { background:#a1c450;}
+.rst-right .bg4 { background:#32b3ed;}
+.rst-right .bg5 { background:#f93;}
+.rst-right li:hover, .rst-right .li1 { background-color:#89c935;}
+.rst-right h4 { margin-top:15px;}
+
+/* 菜单（rst-dz） */
+.dz-left{margin:20px 20px 20px 80px;}
+.dz-right{width:700px; height:380px; margin-left:280px; background-image:url(../images/bg.png); padding:50px 80px;}
+.btn1{ background-color:#a1c450; color:#fff; font-size:18px; font-family:"宋体"; padding:10px 15px; float:right; margin-right:30px; margin-top:-20px;}
+.input1, .span1,.lable1,.span2{ font-size:18px; font-family:"宋体"; }
+.input1{ width:200px; height:30px; border:1px solid #ccc; margin-left:10px;}
+.radio{margin-left:15px;}
+.dz-right li h5{ margin:15px;}
+.dz-right li { margin:30px;}
+
+.menu {
+	width:150px; height:470px;font-family:"宋体";
+	border-top: #FC9 4px solid;
+	border-bottom: #FC9 4px solid;
+	background-image:url(../images/bg.png);
+}
+.menu .ListTitle {
+	margin-top:15px;
+	border-bottom: 2px #FC9 solid;
+	display: block;
+	text-align: center;
+	height: 38px;
+	line-height: 38px;
+	cursor: pointer;
+	+width:100%;
+	font-size:18px;
+}
+.ListTitlePanel {
+	position: relative;
+}
+
+.menuList {
+	display: none;
+	height: auto;
+	font-size:14px;
+}
+.menuList div {
+	height: 28px;
+	line-height: 24px;
+	border-bottom: 1px #FC9 dotted;
+}
+.menuList div a {
+	display: block;
+	background-image:url(../images/bg.png);
+	line-height: 28px;
+	height: 28px;
+	text-align: center;
+	color: #666;
+	text-decoration: none;
+}
+.menuList div a:hover {
+	color: #f30;
+	background: #0080c4;
+	color: #fff;
+}
+

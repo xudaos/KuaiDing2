@@ -52,5 +52,15 @@
 				/WEB-INF/pages/order/orderlist.jsp
 			</result>
 		</action>
+		<action name="total1" class="Total1Action" method="total1">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/rst/rest1_total.jsp
+			</result>
+		</action>
+		<action name="dz1" class="Dz1Action" method="dz1">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/rst/rest1_dz.jsp
+			</result>
+		</action>
 	</package>
 </struts>
