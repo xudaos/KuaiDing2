@@ -64,6 +64,13 @@
 				</value>
 				<value>
 					com/deepblue/kuaiding/entity/KdRstinfo.hbm.xml
+				</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdTable.hbm.xml
+				</value>
+				<value>com/deepblue/kuaiding/entity/KdDz.hbm.xml</value>
+				<value>
+					com/deepblue/kuaiding/entity/KdNumber.hbm.xml
 				</value></list>
 		</property></bean>
 
@@ -121,6 +128,23 @@
 	</bean>
 	<bean id="KdRstinfoDAO"
 		class="com.deepblue.kuaiding.dao.KdRstinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdTableDAO"
+		class="com.deepblue.kuaiding.dao.KdTableDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdDzDAO" class="com.deepblue.kuaiding.dao.KdDzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="KdNumberDAO"
+		class="com.deepblue.kuaiding.dao.KdNumberDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

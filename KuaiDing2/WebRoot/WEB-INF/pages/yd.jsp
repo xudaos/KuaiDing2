@@ -607,7 +607,7 @@ function getPagecontent(){
 			var data = result.dataList;
 			var htmlStr = '';
 			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><span class="main_left"><img class="rstpic" src="<%=path%>'+data[i].pic+'" /><h5 href="javascript:void(0);">'+data[i].sendtime+'分钟</h5></span><span class="main_right"><a target="_blank" href="rest1.do"><h3 href="javascript:void(0);">'+data[i].name+'</h3></a><h5 href="javascript:void(0);"><img src="<%=path%>/pages/KD/img_rest/star4.png" />月售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'费配送</h5><p><img src="<%=path%>/pages/KD/img_rest/zhuan.png" /><img src="<%=path%>/pages/KD/img_rest/jian.png" /><img src="<%=path%>/pages/KD/img_rest/fu.png" /></p></span></li>';				
+				htmlStr += '<li><span class="main_left"><img class="rstpic" src="<%=path%>'+data[i].pic+'" /><h5 href="javascript:void(0);">'+data[i].sendtime+'分钟</h5></span><span class="main_right"><a target="_blank" href="total1.do"><h3 href="javascript:void(0);">'+data[i].name+'</h3></a><h5 href="javascript:void(0);"><img src="<%=path%>/pages/KD/img_rest/star4.png" />月售'+data[i].sales+'单</h5><h5 href="javascript:void(0);">'+data[i].sendprice+'元起送/'+data[i].deliveryprice+'费配送</h5><p><img src="<%=path%>/pages/KD/img_rest/zhuan.png" /><img src="<%=path%>/pages/KD/img_rest/jian.png" /><img src="<%=path%>/pages/KD/img_rest/fu.png" /></p></span></li>';				
 			}						
 			$('#page-content').html(htmlStr);
 		}

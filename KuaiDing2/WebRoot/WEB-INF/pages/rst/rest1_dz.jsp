@@ -514,6 +514,7 @@ var path = '';
              <li>
                 <h5><label class="lable1">名称</label></h5>
                 <h5><label class="lable1">人数范围</label></h5>
+                <h5><label class="lable1">平均消费</label></h5>
              </li>
              <span class="span2">
                 <h2>订桌信息</h2>
