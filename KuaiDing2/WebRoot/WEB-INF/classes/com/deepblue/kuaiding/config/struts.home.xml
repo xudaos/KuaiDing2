@@ -52,14 +52,29 @@
 				/WEB-INF/pages/order/orderlist.jsp
 			</result>
 		</action>
-		<action name="total1" class="Total1Action" method="total1">
+		<action name="rest1total" class="Rest1TotalAction" method="rest1total">
 			<result name="success" type="dispatcher">
 				/WEB-INF/pages/rst/rest1_total.jsp
 			</result>
 		</action>
-		<action name="dz1" class="Dz1Action" method="dz1">
+		<action name="rest1dz" class="Rest1DZAction" method="rest1dz">
 			<result name="success" type="dispatcher">
 				/WEB-INF/pages/rst/rest1_dz.jsp
+			</result>
+		</action>
+		<action name="myorder" class="MyorderAction" method="myorder">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/myorder.jsp
+			</result>
+		</action>
+		<action name="mydz" class="MydzAction" method="mydz">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/mydz.jsp
+			</result>
+		</action>
+		<action name="mydzlist" class="MydzListAction" method="mydzlist">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/order/mydzlist.jsp
 			</result>
 		</action>
 	</package>

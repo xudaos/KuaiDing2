@@ -9,22 +9,20 @@
 <html lang="zh-cn">
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>快订-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
 
 <meta name="baidu-site-verification" content="zcXqQTs5gr" />
-<link rel="shortcut icon" href="<%=path%>/pages/KD/images/200.png" />
+<link rel="shortcut icon" href="<%=path%>/pages/Order/images/200.png" />
 
-<link href="<%=path%>/pages/KD/css/common.css" rel="stylesheet" type="text/css" />
-<link href="<%=path%>/pages/KD/css/msgbox.css" rel="stylesheet" type="text/css" />
-<link href="<%=path%>/pages/KD/css/bootstrap_modal.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/pages/Order/css/common.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/pages/Order/css/msgbox.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 var path = '';
 </style>
 
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/rebate.css" type="text/css"/>
-<link rel="stylesheet" href="<%=path%>/pages/KD/css/jBootstrapPage.css" type="text/css"/>
+<link rel="stylesheet" href="<%=path%>/pages/Order/css/mydzlist.css" type="text/css"/>
 
 </head>
 
@@ -324,14 +322,14 @@ var path = '';
             	<a class="a4" href="javascript:;"><span class="span1"></span>手机客户端<span class="span2"></span></a>
             	<ul class="top-right-ewm">
                     <li>
-                    	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                    	<img src="<%=path%>/pages/Order/images/yms-ewm.png" />
                     	<div>
                             <p>手机客户端</p>
                             <a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载 </a>
                         </div>
                     </li>
                     <li>
-                    	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                    	<img src="<%=path%>/pages/Order/images/yms-ewm.png" />
                     	<div>
                             <p>二维码</p>
                             <a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
@@ -341,129 +339,108 @@ var path = '';
             </li>
             <br class="clear" />
         </ul>
-<p class="top-right">
+            <p class="top-right">
         	
 				<span>您好，欢迎来到快订！</span>
-	            <a target="_blank" href="login.do">[登录]</a>
-	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|
-			
-			
-        </p>
+	        </p>
         <br class="clear" />
     </div>
 </div>
-<div class="header">
-	<div class="container">
-    	<div class="logo">
-        	<p>一网扫尽天下美食</p>
-        	<a href="home.do"><img src="<%=path%>/pages/KD/images/logo.png" alt="" /></a>
-        </div>
-        <div class="search">
-        	<div id="top_search_form">
-                <input class="input1" type="text" id="top_search_text" placeholder="请输入美食分类、区域位置、商圈等关键字" value="" name="keywords"/>
-                <input class="input2" type="button" value="搜索" id="top_search_btn"/>
-            </div>
-            <p id="top_search_link">
-            	<a target="_blank" title="湘间小灶" href="javascript:;">湘间小灶</a>
-                <a target="_blank" title="北京土著部落" href="javascript:;">北京土著部落</a>
-                <a target="_blank" title="波斯波利斯餐厅" href="javascript:;">波斯波利斯餐厅</a>
-                <a target="_blank" title="佐译茶餐厅" href="javascript:;">佐译茶餐厅</a>
-            </p>
-        </div>
-        <div class="order">
-        	<a class="a1" href="gwc.do">查看购物车
-        		<span>0</span>
-                
-            </a>
-            <a class="a2" href="myorder.do">我的订单</a>
-        </div>
-    </div>
-</div>
 
-<div class="nav">
-	<div class="container clearfix">
-    	<ul class="nav-ul clearfix">
-        	<li><a  href="home.do">首页</a></li>
-            <li><a  href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
-        </ul>
-        <div class="shangquan">
-        	<p>热门商圈：</p>
-            <ul>
-            	
-            		<li><a href="/BusinessCircle/1/">五道口</a></li>
-            	
-            		<li><a href="/BusinessCircle/2/">中关村</a></li>
-            	
-            		<li><a href="/BusinessCircle/11/">西直门</a></li>
-            	     
-            		<li><a href="/BusinessCircle/4/">马家堡</a></li>       	
-            		<li><a href="/BusinessCircle/3/">工体</a></li>
-                    
-            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>
-            	
-            		<li><a href="/BusinessCircle/5/">广安门</a></li>
-            	
-            		<li><a href="/BusinessCircle/13/">魏公村</a></li>
-            	
+<div class="rst">
+	<div class="container">
+       <div class="rst-left">
+          <ul class="rst-nav1">
+             <img src="<%=path%>/pages/Order/images/logo.png" />
+          </ul>
+       </div>
+      
+       <div class="rst-right">
+          <ul class="rst-nav2">
+                <li class="bg3">
+                	<h4>订桌列表</h4>
+                </li>
             </ul>
-            <a class="qbsq" href="/businesscircle/">全部商圈</a>
-        </div>
+       </div>
     </div>
 </div>
 
-<div class="rebate">
-	<div class="container">
-    	<div class="left">
-			<div class="rebate-left-nav">
-            	<h3>关键词</h3>
-                <form id="search_form">
-                	<input class="input2" type="button" id="search" value="搜索" />
-                	<input id="key" class="input1" type="text" value="" placeholder="搜索门店" />
-                	<input id="bigType" value="0" type="hidden" />
-                	<input id="sort" value="0" type="hidden" />
-                </form>
-                <h3>分类</h3>
-                <ul id="fl">
-                	<li><a class="ahover" data-log="log_params" href="/Coupons/CouponsInfo.html?page=1&params=sort_0/type_0/key_" data-flag="type_" data-id="0">不限</a></li>
-                    <li><a  data-log="log_params" href="/Coupons/CouponsInfo.html?page=1&params=sort_0/type_0/key_" data-flag="type_" data-id="1">代金券</a></li>
-                    <li><a  data-log="log_params" href="/Coupons/CouponsInfo.html?page=1&params=sort_0/type_0/key_" data-flag="type_" data-id="2">礼品券</a></li>
-                </ul>
-                <h3>排序</h3>
-                <ul id="px">
-                	<li><a class="ahover" data-log="log_params" href="/Coupons/CouponsInfo.html?page=1&params=sort_0/type_0/key_" data-flag="sort_" data-id="0" >不限</a></li>
-                    <li><a  data-log="log_params" href="/Coupons/CouponsInfo.html?page=1&params=sort_0/type_0/key_" data-flag="sort_" data-id="1" >领取量&darr;</a></li>
-                    <li><a  data-log="log_params" href="/Coupons/CouponsInfo.html?page=1&params=sort_0/type_0/key_" data-flag="sort_" data-id="2" >发行量&darr;</a></li>
-                </ul>
-            </div>
-            <div class="rebate-left-main">
-            	<ul id="page-content" class="main-ul">
-                    <div class="none">没有您要找的内容！</div>
-				</ul>
-                
-                <div class="rebate-fy">
-                  <ul class="pagination">
-                  </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="right">
-        	<div class="div1">
-            	<img src="<%=path%>/pages/KD/images/banner-app.png" />
-                <div>
-                    <p>快订手机客户端</p>
-                    <a class="down" target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
-                </div>
-            </div>
-            <div class="div1">
-            	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
-                <div>
-                    <p>快订微信点餐</p>
-                    <p class="p1">随时掌握美食新动态</p>
-                </div>
-            </div>
-            <img class="div1" src="<%=path%>/pages/KD/images/booking-table-right.png" />
+<div class="order">
+    <div class="container">
+       <div class="order-list">
+            <ul>
+                <h3>我的订单</h3>
+            </ul>
+            <table width="100%" border="0" cellspacing="1" cellpadding="0"> 
+                <tr class="column">
+                    <td class="order-bianhao">
+                        <h5>编号</h5>               
+                    </td>
+                     <td>
+                        <h5>订单时间</h5>               
+                    </td>
+                    <td class="order-info">
+                        <h5>订单内容</h5>
+                    </td>
+                    <td>
+                        <h5>消费标准</h5>
+                    </td>
+                    <td>
+                        <h5>状态</h5>
+                    </td>
+                    <td>
+                        <h5>操作</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="order-bianhao">
+                        <h5>1</h5>               
+                    </td>
+                    <td>
+                        <h3>03-16</h3>
+                        <h5>15:00</h5>
+                    </td>
+                    <td class="order-info">
+                        <h5>一楼</h5>
+                        <h5>会客厅</h5>
+                        <h5>中国全聚德大连烤鸭店</h5>              
+                    </td>
+                    <td>
+                        <h5>50/客</h5>
+                    </td>
+                    <td>
+                        <h5>订单已完成</h5>
+                    </td>
+                    <td>
+                        <a href="mydz.do"><h5>订单详情</h5></a>
+                        <a href="rest1dz.do"><h5>再订一次</h5></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="order-bianhao">
+                        <h5>2</h5>               
+                    </td>
+                    <td>
+                        <h3>03-18</h3>
+                        <h5>15:00</h5>
+                    </td>
+                    <td class="order-info">
+                        <h5>大厅</h5>
+                        <h5>宴客厅</h5>     
+                        <h5>一品三笑</h5>         
+                    </td>
+                    <td>
+                        <h5>50/客</h5>
+                    </td>
+                    <td>
+                        <h5>订单已完成</h5>
+                    </td>
+                    <td>
+                        <a href="mydz.do"><h5>订单详情</h5></a>
+                        <a href="rest1dz.do"><h5>再订一次</h5></a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
@@ -514,18 +491,18 @@ var path = '';
             </div>
             <div class="div1">
             	<p>快订微信</p>
-                <img src="<%=path%>/pages/KD/images/footer-ewm.png" />
+                <img src="<%=path%>/pages/Order/images/footer-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
                 <a href="javascript:;">关注快订微信</a>
             </div>
             <div class="div1">
             	<p>快订APP</p>
-                <img src="<%=path%>/pages/KD/images/yms-ewm.png" />
+                <img src="<%=path%>/pages/Order/images/yms-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
                 <a href="javascript:;">下载快订APP</a>
             </div>
             <div class="div1">
-            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/KD/images/footer-sj.png" /></a>
+            	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/Order/images/footer-sj.png" /></a>
             </div>
         </div>
         <div class="blogroll">
@@ -563,7 +540,7 @@ function collectp(n,t){
         		var call = function(){
         			if(t=='1'){$("#c_"+n).text("已收藏");}
         			$.fn.closePublicBox(0);
-        		};
+        		}
         		$(this).alertMsg({msg:"收藏成功！",callback:call});
 				
 			}else if(data=='2'){
@@ -575,13 +552,12 @@ function collectp(n,t){
 	}
 }
 </script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
-<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/coupons.js" ></script>
+
+<script type="text/javascript" src="<%=path%>/pages/Order/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/jquery.placeholder.js"></script>
+ <script type="text/javascript" src="<%=path%>/pages/Order/js/common.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/msgbox.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/Order/js/move-top.js"></script>
 
 </body>
 </html>

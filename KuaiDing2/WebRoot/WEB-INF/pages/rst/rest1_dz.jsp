@@ -372,7 +372,7 @@ var path = '';
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="orderlist.do">我的订单</a>
+            <a class="a2" href="myorder.do">我的订单</a>
         </div>
     </div>
 </div>
@@ -512,7 +512,7 @@ var path = '';
                 <h2>桌位信息</h2>
              </span>
              <li>
-                <h5><label class="lable1">名称</label></h5>
+                <h5><label class="lable1">桌位名称</label></h5>
                 <h5><label class="lable1">人数范围</label></h5>
                 <h5><label class="lable1">平均消费</label></h5>
              </li>
@@ -523,19 +523,19 @@ var path = '';
                 <form>
                    <h5>
                       <span class="span1">称&nbsp;&nbsp;&nbsp;&nbsp;谓</span>
-                      <input class="input1" name="name" id="name" type="text" placeholder="例如：张先生" required />
+                      <input class="input3" name="name" id="name" type="text" placeholder="例如：张先生" required />
                    </h5>
                    <h5>
                        <span class="span1">就餐时间</span>
-                       <input class="input1" name="time" id="time" type="text" placeholder="请选择就餐时间" required />
+                       <input class="input3" name="time" id="time" type="text" placeholder="请选择就餐时间" required />
                    </h5>
                    <h5>
                        <span class="span1">手&nbsp;机&nbsp;号</span>
-                       <input class="input1" name="phone" id="phone" type="text" placeholder="请输入您的手机号" required />
+                       <input class="input3" name="phone" id="phone" type="text" placeholder="请输入您的手机号" required />
                    </h5>
                    <h5>
                       <span class="span1">备&nbsp;&nbsp;&nbsp;&nbsp;注</span>
-                      <input class="input1" name="remarks" id="remarks" type="text" />
+                      <input class="input3" name="remarks" id="remarks" type="text" />
                    </h5>
                    <button class="btn1">确认订桌</button>
                 </form>

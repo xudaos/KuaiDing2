@@ -19,10 +19,10 @@ input[type=text], input[type=button] { -webkit-appearance: none;/*safari浏览�
 .rst-right .bg3 img{float:right; margin-top:-45px; margin-right:80px;}
 
 /* 订单列表信息 */
-.order .container {width:1200px; margin-top:35px;}
+.order .container {width:1200px; padding-top:35px;}
 .order-list { float:left; margin-left:70px; width:1050px; border:1px solid #a1c450;}
-.order-list table td{text-align:center; font-size:18px; font-family:"宋体"; padding:15px; width:120px;}
+.order-list table td{text-align:center; font-size:18px; font-family:"宋体"; padding:15px;}
 .order-list ul h3{margin:10px 0 10px 25px; font-size:26px; font-family:"宋体";}
-.order-list .order-info{text-align:left; margin-left:20px; width:380px;}
+.order-list .order-info{text-align:left; width:300px;}
 .order-list .order-bianhao{padding-left:20px; width:80px;}
-.order-list .list{width:380px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.order-list .list{width:300px;}

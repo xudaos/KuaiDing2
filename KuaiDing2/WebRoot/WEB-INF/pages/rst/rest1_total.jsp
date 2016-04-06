@@ -372,7 +372,7 @@ var path = '';
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="orderlist.do">我的订单</a>
+            <a class="a2" href="myorder.do">我的订单</a>
         </div>
     </div>
 </div>
@@ -456,7 +456,7 @@ var path = '';
          <a href="rest1.do"><h1>预定点餐</h1></a>
       </div>
       <div class="rst-dz">
-         <a href="dz1.do"><h1>预定桌位</h1></a>
+         <a href="rest1dz.do"><h1>预定桌位</h1></a>
       </div>          
    </div>
 </div>

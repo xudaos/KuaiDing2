@@ -351,8 +351,7 @@ var path = '';
 	<div class="container">
        <div class="rst-left">
           <ul class="rst-nav1">
-             <img src="<%=path%>/pages/Order/images/rst1.png" width="160" height="60" />
-             <h4 style="margin-left:8px">中国全聚德大连烤鸭店</h4>
+             <img src="<%=path%>/pages/Order/images/logo.png" />
           </ul>
        </div>
       
@@ -370,11 +369,11 @@ var path = '';
     <div class="container">
        <div class="order-list">
             <ul>
-                <h3>我的订单</h3>
+                <h3>我的订餐</h3>
             </ul>
             <table width="100%"> 
                 <tr class="column">
-                    <td>
+                    <td class="order-bianhao">
                         <h5>编号</h5>               
                     </td>
                      <td>
@@ -394,7 +393,7 @@ var path = '';
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="order-bianhao">
                         <h5>1</h5>               
                     </td>
                     <td>
@@ -403,11 +402,11 @@ var path = '';
                     </td>
                     <td class="order-info">
                         <h5>中国全聚德大连烤鸭店</h5>
-                        <h5>冬瓜排骨、重庆酸辣粉、土豆肉丝饭3个菜品</h5>
+                        <h5 class="list">冬瓜排骨、重庆酸辣粉、土豆肉丝饭3个菜品</h5>
                         <h5>订单号：201603230001</h5>              
                     </td>
                     <td>
-                        <h3>13.00</h3>
+                        <h3>41.00</h3>
                         <h5>在线支付</h5>
                     </td>
                     <td>
@@ -419,7 +418,7 @@ var path = '';
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="order-bianhao">
                         <h5>2</h5>               
                     </td>
                     <td>
@@ -427,12 +426,12 @@ var path = '';
                         <h5>15:00</h5>
                     </td>
                     <td class="order-info">
-                        <h5>中国全聚德大连烤鸭店</h5>
-                        <h5>冬瓜排骨、重庆酸辣粉、土豆肉丝饭3个菜品</h5>
+                        <h5>一品三笑</h5>
+                        <h5 class="list">冬瓜排骨、重庆酸辣粉、土豆肉丝饭3个菜品</h5>
                         <h5>订单号：201603230002</h5>              
                     </td>
                     <td>
-                        <h3>13.00</h3>
+                        <h3>41.00</h3>
                         <h5>在线支付</h5>
                     </td>
                     <td>

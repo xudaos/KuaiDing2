@@ -44,10 +44,19 @@
 	<bean id="OrderListAction" class="com.deepblue.kuaiding.action.OrderListAction" scope="prototype">
 
 	</bean>
-	<bean id="Dz1Action" class="com.deepblue.kuaiding.action.Dz1Action" scope="prototype">
+	<bean id="Rest1DZAction" class="com.deepblue.kuaiding.action.Rest1DZAction" scope="prototype">
 
 	</bean>
-	<bean id="Total1Action" class="com.deepblue.kuaiding.action.Total1Action" scope="prototype">
+	<bean id="Rest1TotalAction" class="com.deepblue.kuaiding.action.Rest1TotalAction" scope="prototype">
+
+	</bean>
+	<bean id="MydzAction" class="com.deepblue.kuaiding.action.MydzAction" scope="prototype">
+
+	</bean>
+	<bean id="MyorderAction" class="com.deepblue.kuaiding.action.MyorderAction" scope="prototype">
+
+	</bean>
+	<bean id="MydzListAction" class="com.deepblue.kuaiding.action.MydzListAction" scope="prototype">
 
 	</bean>
 </beans>

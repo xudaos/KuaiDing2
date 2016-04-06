@@ -373,7 +373,7 @@ var path = '';
         		<span>0</span>
                 
             </a>
-            <a class="a2" href="orderlist.do">我的订单</a>
+            <a class="a2" href="myorder.do">我的订单</a>
         </div>
     </div>
 </div>

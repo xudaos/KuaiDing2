@@ -459,8 +459,8 @@ var path = '';
                           </h5>
                           <h5>
                              <span class="span1">性&nbsp;&nbsp;&nbsp;&nbsp;别</span>
-                             <input type="radio" name="sex" value="male" required/> 男士
-                             <input type="radio" name="sex" value="female" required/>女士
+                             <input class="radio" type="radio" name="sex" value="male" required/> 男士
+                             <input class="radio" type="radio" name="sex" value="female" required/>女士
                           </h5>
                           <h5>
                               <span class="span1">地&nbsp;&nbsp;&nbsp;&nbsp;址</span>

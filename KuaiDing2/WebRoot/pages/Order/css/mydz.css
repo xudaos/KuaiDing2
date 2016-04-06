@@ -18,11 +18,16 @@ input[type=text], input[type=button] { -webkit-appearance: none;/*safari浏览�
 .rst-right h4 { margin-top:25px;margin-left:100px}
 .rst-right .bg3 img{float:right; margin-top:-45px; margin-right:80px;}
 
-/* 订单列表信息 */
-.order .container {width:1200px; margin-top:35px;}
-.order-list { float:left; margin-left:70px; width:1050px; border:1px solid #a1c450;}
-.order-list table td{text-align:center; font-size:18px; font-family:"宋体"; padding:15px; width:120px;}
-.order-list ul h3{margin:10px 0 10px 25px; font-size:26px; font-family:"宋体";}
-.order-list .order-info{text-align:left; margin-left:20px; width:380px;}
-.order-list .order-bianhao{padding-left:20px; width:80px;}
-.order-list .list{width:380px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/* 订单信息 */
+.order{margin-top:15px;}
+
+.order .container {width:1200px;}
+.order-left { float:left; margin:20px 0px 20px 50px; padding:20px; width:500px; height:300px; border:1px solid #a1c450;}
+.order-left li { margin:50px 0 0 30px;}
+.order-left li h5{ margin-bottom:20px;} 
+
+.order-right {float:right; margin:20px 50px 20px 0px; padding:20px; width:500px; height:300px; border:1px solid #a1c450;}
+.order-right li{ margin:50px 0 0 30px;}
+.order-right li h5{ margin-bottom:20px;}
+.lable1{ font-size:18px; font-family:"宋体"; margin:20px;}
+.span1 h2{ font-size:26px; font-family:"宋体"; margin-left:20px;}
