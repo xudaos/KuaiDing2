@@ -360,7 +360,7 @@ var path = '';
           <ul class="rst-nav2">
                 <li class="bg3">
                 	<h4>订餐详情</h4>
-                    <img src="<%=path%>/pages/Order/images/ddlc.png" />
+                    <img src="<%=path%>/pages/Order/images/dzlc.png" />
                 </li>
             </ul>
        </div>
@@ -383,6 +383,11 @@ var path = '';
                     </h5>
                     <h5>
                         <label class="lable1">平均消费：50/客</label>
+                    </h5>
+                </li>
+                <li>
+                    <h5>
+                        <label class="lable1">订单编号：201604070001</label>
                     </h5>
                 </li>
             </ul>

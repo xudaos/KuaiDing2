@@ -10,29 +10,29 @@
             <column name="objectid" length="36" />
             <generator class="assigned" />
         </id>
-        <property name="name" type="java.lang.String">
-            <column name="name" length="100" not-null="true" />
+        <property name="orderid" type="java.lang.String">
+            <column name="orderid" length="100" not-null="true" />
         </property>
-        <property name="address" type="java.lang.String">
-            <column name="address" length="36" not-null="true" />
+        <property name="buyer" type="java.lang.String">
+            <column name="buyer" length="36" not-null="true" />
         </property>
-        <property name="pic" type="java.lang.String">
-            <column name="pic" length="36" not-null="true" />
+        <property name="restaurant" type="java.lang.String">
+            <column name="restaurant" length="36" not-null="true" />
         </property>
-        <property name="phone" type="java.lang.String">
-            <column name="phone" length="36" not-null="true" />
+        <property name="bphone" type="java.lang.String">
+            <column name="bphone" length="36" not-null="true" />
         </property>
-        <property name="distance" type="java.lang.Double">
-            <column name="distance" precision="53" scale="0" not-null="true" />
+        <property name="rphone" type="java.lang.String">
+            <column name="rphone" length="36" not-null="true" />
         </property>
-        <property name="region" type="java.lang.String">
-            <column name="region" length="36" not-null="true" />
+        <property name="adress" type="java.lang.String">
+            <column name="adress" length="36" not-null="true" />
         </property>
-        <property name="avgprice" type="java.lang.Integer">
-            <column name="avgprice" not-null="true" />
+        <property name="time" type="java.sql.Timestamp">
+            <column name="time" length="23" not-null="true" />
         </property>
-        <property name="type" type="java.lang.String">
-            <column name="type" length="36" not-null="true" />
+        <property name="total" type="java.lang.Integer">
+            <column name="total" not-null="true" />
         </property>
         <property name="description" type="java.lang.String">
             <column name="description" length="2000" />
@@ -43,8 +43,8 @@
         <property name="creator" type="java.lang.String">
             <column name="creator" length="36" not-null="true" />
         </property>
-        <property name="createtime" type="java.sql.Timestamp">
-            <column name="createtime" length="27" />
+        <property name="createtime" type="java.util.Date">
+            <column name="createtime" length="10" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

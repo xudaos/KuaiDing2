@@ -488,7 +488,12 @@ var path = '';
                       </li>
                    </ul>
                    <ul class="sjxx-lists" id="sjxx_lists">
-                      
+                      <li><h5>商家简介:</h5></li>
+                      <li><h5>商家地址:</h5></li>
+                      <li><h5>营业时间:</h5></li>
+                      <li><h5>距离:</h5></li>
+                      <li><h5>电话:</h5></li>
+                      <li><h5>起送价:</h5></li>
                    </ul>
                 </div>
              </div>
@@ -703,7 +708,6 @@ $(function(){
 	getType();
 	getFenlei();
 	getPics();
-	getXinxi();
 	getEvaluations();
 	getComments();
 });
@@ -789,26 +793,6 @@ function getPics(){
 				htmlStr += '<li><img src="<%=path%>'+data[i].pic+'" /><h6 href="javascript:void(0);">'+data[i].name+'</h6><button class="btn4" href="javascript:void(0);">'+data[i].price+'</button><span><img src="<%=path%>'+data[i].evaluation+'" /><br /><h7 href="javascript:void(0);">月售'+data[i].quantity+'份</h7></span></li>';				
 			}
 			$('#pics').html(htmlStr);
-		}
-	});
-}
-
-//加载餐厅信息
-function getXinxi(){
-	$.ajax({
-		type: 'post',
-		url: '<%=path%>/getRstinfo.do',
-		data: {
-			objectid: '1'
-		},
-		dataType: 'json',
-		success: function(result){
-			var data = result.dataList;
-			var htmlStr = '';
-			for(var i=0;i<data.length;i++){
-				htmlStr += '<li><h5 href="javascript:void(0);">商家信息：'+data[i].description+'</h5><h5 href="javascript:void(0);">商家地址：'+data[i].address+'</h5><h5 href="javascript:void(0);">电话：'+data[i].phone+'</h5><h5 href="javascript:void(0);">起送价：'+data[i].sendprice+'</h5><h5 href="javascript:void(0);">配送价：'+data[i].deliveryprice+'</h5></li>';				
-			}
-			$('#sjxx_lists').html(htmlStr);
 		}
 	});
 }

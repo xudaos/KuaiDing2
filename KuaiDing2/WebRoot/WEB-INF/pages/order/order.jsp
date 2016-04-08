@@ -446,22 +446,20 @@ var path = '';
         
         <div class="order-right">
             <div class="info">
+                <span class="span1">
+                    <h2>订单信息</h2>
+                </span>
                 <ul>
-                    <span class="span1">
-                        <h2>订单信息</h2>
-                    </span>
-                    <li>
+                  <li>
+                    <p>
                         <h5>
                             <label class="lable1">订&nbsp;单&nbsp;号：201603230001</label>
                         </h5>
                         <h5>
                             <label class="lable1">配送方式：中国全聚德大连烤鸭店提供配送服务</label>
                         </h5>
-                        <h5>
-                            <label class="lable1">送达时间：尽快送出</label>
-                        </h5>
-                    </li>
-                    <li>
+                    </p>
+                    <p>
                         <h5>
                             <label class="lable1">联&nbsp;系&nbsp;人：吴婷</label>
                         </h5>
@@ -471,12 +469,16 @@ var path = '';
                         <h5>
                             <label class="lable1">收货地址：江苏省淮安软件园2号楼101室</label>
                         </h5>
-                    </li>
-                    <li>
+                    </p>
+                    <p>
+                        <h5>
+                            <label class="lable1">送达时间：尽快送出</label>
+                        </h5>                    
                         <h5>
                             <label class="lable1">备&nbsp;&nbsp;&nbsp;&nbsp;注：少点辣</label>
                         </h5>
-                    </li>
+                    </p>
+                  </li>
                 </ul>
             </div>
         </div>
