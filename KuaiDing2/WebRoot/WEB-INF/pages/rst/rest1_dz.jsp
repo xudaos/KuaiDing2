@@ -454,58 +454,12 @@ var path = '';
 	<div class="container">
        <div class="dz-left">
           <div class="menu">
-		<div class="menuParent">
-			<div class="ListTitlePanel">
-				<div class="ListTitle">
-					<strong>分类1</strong>
-				</div>
-			</div>
-			<div class="menuList">
-				<div> <a href="#">桌位1</a></div>
-				<div> <a href="#">桌位2 </a> </div>
-				<div> <a href="#">桌位3</a></div>
-			</div>
-		</div>
-		<div class="menuParent">
-			<div class="ListTitlePanel">
-				<div class="ListTitle">
-					<strong>分类2</strong>
-				</div>
-			</div>
-			<div class="menuList">
-				<div> <a href="#">桌位4</a></div>
-				<div> <a href="#">桌位5</a></div>
-				<div> <a href="#">桌位6</a></div>
-				<div> <a href="#">桌位7</a></div>
-			</div>
-		</div>
-		<div class="menuParent">
-			<div class="ListTitlePanel">
-				<div class="ListTitle">
-					<strong>分类3</strong>
-				</div>
-			</div>
-			<div class="menuList">
-				<div> <a href="#">桌位8</a></div>
-				<div> <a href="#">桌位9</a></div>
-				<div> <a href="#">桌位10</a></div>
-				<div> <a href="#">桌位11</a></div>
-			</div>
-		</div>
-		<div class="menuParent">
-			<div class="ListTitlePanel">
-				<div class="ListTitle">
-					<strong>分类4</strong>
-				</div>
-			</div>
-			<div class="menuList">
-				<div> <a href="#">桌位12</a></div>
-				<div> <a href="#">桌位13</a></div>
-			</div>
-		</div>
-	</div>
-
+		     <div class="menuParent" id="zwfl">
+			
+		     </div>
+	     </div>
        </div>
+       
        <div class="dz-right">
           <ul>
              <span class="span2">
@@ -660,6 +614,42 @@ $(document).ready(function() {
 <script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
 
 <script type="text/javascript">
+
+$(function(){
+	getZhuoweiList();
+});
+
+//加载菜单
+function getZhuoweiList(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/rest1dz/getTableList.do',
+		data: {
+			rst: '1'
+		},
+		dataType: 'json',
+		success: function(result){
+			var data = result.dataList;
+			var htmlStr = '';
+	        for(var i=0;i<types.length;i++){
+		        htmlStr += '<div class="ListTitlePanel">';
+		        htmlStr += '<div class="ListTitle">';
+		        htmlStr += '<strong>'+data[j].classification+'</strong>';
+		        htmlStr += '</div></div>';
+		        htmlStr += '<div class="menuList">';
+		        for(var j=0;j<data.length;j++){
+			        if(types[i] === data[j].type){
+				        htmlStr += '<div>';
+				        htmlStr += '<a>'+data[j].name+'</a>';
+				        htmlStr += '</div>';
+			        }
+		        }
+		    htmlStr += '</div>';
+	    }
+	    $('#zwfl').after(htmlStr);
+	  }
+    });
+}
 
 var collectCompany = '';
 //收藏方法

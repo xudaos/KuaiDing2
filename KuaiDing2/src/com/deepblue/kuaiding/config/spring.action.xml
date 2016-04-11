@@ -45,10 +45,14 @@
 
 	</bean>
 	<bean id="Rest1DZAction" class="com.deepblue.kuaiding.action.Rest1DZAction" scope="prototype">
-
+		<property name="kdTableBiz">
+			<ref bean="KdTableBiz" />
+		</property>
 	</bean>
 	<bean id="Rest1TotalAction" class="com.deepblue.kuaiding.action.Rest1TotalAction" scope="prototype">
-
+		<property name="kdRstinfoBiz">
+			<ref bean="KdRstinfoBiz" />
+		</property>
 	</bean>
 	<bean id="MydzAction" class="com.deepblue.kuaiding.action.MydzAction" scope="prototype">
 

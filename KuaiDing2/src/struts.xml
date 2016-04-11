@@ -20,5 +20,5 @@
 	<include file="com/deepblue/kuaiding/config/struts.home.xml" />
 	<include file="com/deepblue/kuaiding/config/struts.yd.xml" />
 	<include file="com/deepblue/kuaiding/config/struts.rest1.xml" />
-
+	<include file="com/deepblue/kuaiding/config/struts.rest1dz.xml" />
 </struts>    

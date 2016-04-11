@@ -412,9 +412,8 @@ var path = '';
 <div class="rst">
 	<div class="container">
        <div class="rst-left">
-          <ul class="rst-nav1">
-             <img src="<%=path%>/pages/Restaurant/images/rst1.png" width="160" height="60" />
-             <h4 style="margin-left:8px">中国全聚德大连烤鸭店</h4>
+          <ul class="rst-nav1" id="rst-nav">
+             
           </ul>
        </div>
       
@@ -576,6 +575,40 @@ function collectp(n,t){
      	},"text");
 	}
 }
+
+function mygetPara(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
+
+var id = mygetPara("id");
+
+//加载餐厅
+function getPagecontent(){
+	$.ajax({
+		type: 'post',
+		url: '<%=path%>/rest1total/getRest.do',
+		data: {
+			id: id
+		},
+		dataType: 'json',
+		success: function(result){
+			var htmlStr = '';
+			for(var i=0;i<types.length;i++){
+		        htmlStr += '<img src="<%=path%>'+data[i].pic+'" width="160" height="60" />';
+		        htmlStr += '<h4 style="margin-left:8px">'+data[j].name+'</h4>';	
+		    }
+								
+			$('#rst-nav').html(htmlStr);
+		}
+	});
+}
+
+$(function(){
+	getPagecontent();
+});
+
 </script>
 
 </body>

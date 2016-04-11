@@ -34,4 +34,10 @@
 		</property>
 	</bean>
 	
+	<bean id="KdTableBiz" class="com.deepblue.kuaiding.biz.KdTableBiz">
+		<property name="kdTableDAO">
+			<ref bean="KdTableDAO" />
+		</property>
+	</bean>
+	
 </beans>
