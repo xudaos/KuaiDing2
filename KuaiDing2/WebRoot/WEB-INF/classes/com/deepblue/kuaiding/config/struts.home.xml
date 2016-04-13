@@ -77,5 +77,10 @@
 				/WEB-INF/pages/order/mydzlist.jsp
 			</result>
 		</action>
+		<action name="register" class="RegisterAction" method="register">
+			<result name="success" type="dispatcher">
+				/WEB-INF/pages/register.jsp
+			</result>
+		</action>
 	</package>
 </struts>

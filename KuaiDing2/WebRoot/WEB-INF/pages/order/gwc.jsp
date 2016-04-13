@@ -341,7 +341,7 @@ var path = '';
         </ul>
             <p class="top-right">
         	
-				<span>您好，欢迎来到快订！</span>
+				<span>您好，欢迎来到快订！</span>&nbsp;&nbsp;|
 	        </p>
         <br class="clear" />
     </div>

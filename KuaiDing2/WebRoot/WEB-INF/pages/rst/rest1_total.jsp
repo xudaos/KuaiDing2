@@ -344,7 +344,7 @@ var path = '';
         	
 				<span>您好，欢迎来到快订！</span>
 	            <a target="_blank" href="login.do">[登录]</a>
-	            <a href="/register/" target="_blank">[免费注册]</a>&nbsp;|			
+	            <a href="register.do" target="_blank">[免费注册]</a>&nbsp;|			
         </p>
         <br class="clear" />
     </div>

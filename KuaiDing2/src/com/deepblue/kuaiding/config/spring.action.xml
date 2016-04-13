@@ -63,4 +63,7 @@
 	<bean id="MydzListAction" class="com.deepblue.kuaiding.action.MydzListAction" scope="prototype">
 
 	</bean>
+	<bean id="RegisterAction" class="com.deepblue.kuaiding.action.RegisterAction" scope="prototype">
+
+	</bean>
 </beans>

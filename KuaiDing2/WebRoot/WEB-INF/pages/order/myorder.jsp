@@ -341,7 +341,7 @@ var path = '';
         </ul>
             <p class="top-right">
         	
-				<span>您好，欢迎来到快订！</span>
+				<span>您好，欢迎来到快订！</span>&nbsp;&nbsp;|
 	        </p>
         <br class="clear" />
     </div>
@@ -351,7 +351,7 @@ var path = '';
 	<div class="container">
        <div class="rst-left">
           <ul class="rst-nav1">
-             <img src="<%=path%>/pages/Order/images/logo.png" />
+             <a href="home.do"><img src="<%=path%>/pages/Order/images/logo.png" /></a>
           </ul>
        </div>
       

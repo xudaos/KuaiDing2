@@ -113,7 +113,7 @@ var path = '';
                 <p class="cuowu sj-mmcw"></p>
             </div>
       </div>
-      <a class="zc" href="/register/">免费注册&raquo;</a>
+      <a class="zc" href="register.do">免费注册&raquo;</a>
 </div>
 <div class="footer">
 	<p>公司地址：北京市海淀区清华大学紫光大楼 邮编：100084 电话：010-62789898 传真：010-62547462<br />京ICP备15022253号 Copyright © 2014 紫光美食云(北京)信息服务有限公司.All rights reserved<span style="padding-left:5px;display: inline-block;vertical-align: middle;"></span></p>
