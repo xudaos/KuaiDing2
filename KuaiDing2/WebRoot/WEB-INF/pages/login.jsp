@@ -62,7 +62,19 @@ var path = '';
                           <input class="input1" name="loginPass" id="loginPass" type="password" />
            
                      </p>
-        
+        			 <div class="p1">
+        	            <div>
+            	            <span class="span1">验证码：</span>
+            	            <input class="input2" type="text" name="vcode" id="verifyCode" />
+                        </div>
+                        <div class="yzmtp">
+            	            <img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
+                        </div>
+                        <div class="gh">
+                            <span>看不清？</span>
+                            <a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
+                        </div>
+                    </div>        			 
                     <p class="p2">
                           <span class="span1"></span>
                           <input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />
@@ -136,6 +148,65 @@ var path = '';
 	<script type="text/javascript" src="<%=path%>/pages/Login/js/login/login.js"></script>
     
     <script>
+    	
+    	$(function(){
+	        Operate.login.init();
+	        Operate.mobile_login.init();
+	        //头步切换
+	        $(".right-nav li").live("click",function(){
+		        $(".right-nav li").removeClass("lihover");
+		        $(this).addClass("lihover");
+		        if($(this).attr("data-type")==1){
+			    $("#general_login").removeClass("fonm-none");
+			        $("#dynamic_login").addClass("fonm-none");	
+		        }else{
+			        $("#general_login").addClass("fonm-none");
+			        $("#dynamic_login").removeClass("fonm-none");
+		        }
+	        });
+	
+	        //普通方式登录
+	        $("#pt_login").click(function(){
+		        _login_ing();
+		        $("#general_login_form").submit();
+	        });
+	
+	        //动态方式登录
+	        $("#dt_login").click(function(){
+		        _login_ing();
+		        $("#dynamic_login_form").submit();
+	        });
+	
+	        //获取动态验证码
+	        $("#loadCode").click(function(){
+		        var v = $('#loginMobile').val();
+		        if(v =='' || !mfilter.test(v)){
+			        $(".sj-yhmcw").html("请输入正确手机号！");
+			        $(".sj-yhmcw").show();
+					}else{
+						$(".sj-yhmcw").html("");
+						$(".sj-yhmcw").hide();
+						$.ajax({
+			   			 	type: 'POST', 
+	            			dataType: 'text', 
+							url		:  path+'/Operate/GetDynamicCode.do',
+							data	:  'mobile='+v,
+							error: function (XMLHttpRequest, textStatus, errorThrown) { },
+							success:function(data){
+								if(data==1){
+									yes_Send();
+								}else if(data=='4085'){
+									$(".sj-yhmcw").html("同一手机号一天只能接收5次短信!");
+									$(".sj-yhmcw").show();
+								}else {
+									no_Send();
+								}
+							}
+						});
+					}
+				});
+		});
+    	
     	$("#pt_login").click(function(){
     		var data = $("#general_login_form").serializeArray();
     		$.ajax({
