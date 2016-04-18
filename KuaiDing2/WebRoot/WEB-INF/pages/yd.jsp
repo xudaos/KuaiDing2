@@ -309,7 +309,7 @@ var path = '';
             	<a class="a3" href="javascript:;">代理中心</a>&nbsp;|
             	<ul>
             		<li><a target="_blank" href="http://info.unisapp.cn/Agents/">代理商入口</a></li>
-                    <li><a target="_blank" href="http://www.youmeishi.com.cn/ymsSite/downloads/紫光有美食·云餐饮管理系统agent.zip">软件下载</a></li>
+                    <li><a target="_blank" href="">软件下载</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -384,25 +384,19 @@ var path = '';
     	<ul class="nav-ul clearfix">
         	<li><a  href="home.do">首页</a></li>
             <li><a  class="ahover" href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
+            <li><a  class="a1" href="dz.do">预订桌位</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>
             <ul>
             	
-            		<li><a href="/BusinessCircle/1/">五道口</a></li>
-            	
-            		<li><a href="/BusinessCircle/2/">中关村</a></li>
-            	
-            		<li><a href="/BusinessCircle/11/">西直门</a></li>
-            	     
+            		<li><a href="/BusinessCircle/1/">五道口</a></li>            	
+            		<li><a href="/BusinessCircle/2/">中关村</a></li>           	
+            		<li><a href="/BusinessCircle/11/">西直门</a></li>            	     
             		<li><a href="/BusinessCircle/4/">马家堡</a></li>       	
-            		<li><a href="/BusinessCircle/3/">工体</a></li>
-                    
-            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>
-            	
-            		<li><a href="/BusinessCircle/5/">广安门</a></li>
-            	
+            		<li><a href="/BusinessCircle/3/">工体</a></li>                  
+            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>         	
+            		<li><a href="/BusinessCircle/5/">广安门</a></li>          	
             		<li><a href="/BusinessCircle/13/">魏公村</a></li>
             	
             </ul>

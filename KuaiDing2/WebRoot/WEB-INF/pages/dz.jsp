@@ -10,7 +10,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>有美食-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
+<title>快订-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
 
 <meta name="baidu-site-verification" content="zcXqQTs5gr" />
 <link rel="shortcut icon" href="<%=path%>/pages/KD/images/200.png" />
@@ -307,7 +307,7 @@ var path = '';
             	<a class="a3" href="javascript:;">代理中心</a>&nbsp;|
             	<ul>
             		<li><a target="_blank" href="http://info.unisapp.cn/Agents/">代理商入口</a></li>
-                    <li><a target="_blank" href="http://www.youmeishi.com.cn/ymsSite/downloads/紫光有美食·云餐饮管理系统agent.zip">软件下载</a></li>
+                    <li><a target="_blank" href="">软件下载</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -342,11 +342,9 @@ var path = '';
         </ul>
 <p class="top-right">
         	
-				<span>您好，欢迎来到有美食！</span>
+				<span>您好，欢迎来到快订！</span>
 	            <a target="_blank" href="login.do">[登录]</a>
-	            <a href="register.do" target="_blank">[免费注册]</a>&nbsp;|
-			
-			
+	            <a href="register.do" target="_blank">[免费注册]</a>&nbsp;|	
         </p>
         <br class="clear" />
     </div>
@@ -371,8 +369,7 @@ var path = '';
         </div>
         <div class="order">
         	<a class="a1" href="gwc.do">查看购物车
-        		<span>0</span>
-                
+        		<span>0</span>               
             </a>
             <a class="a2" href="myorder.do">我的订单</a>
         </div>
@@ -390,19 +387,13 @@ var path = '';
         	<p>热门商圈：</p>
             <ul>
             	
-            		<li><a href="/BusinessCircle/1/">五道口</a></li>
-            	
-            		<li><a href="/BusinessCircle/2/">中关村</a></li>
-            	
-            		<li><a href="/BusinessCircle/11/">西直门</a></li>
-            	     
-            		<li><a href="/BusinessCircle/4/">马家堡</a></li>       	
-            		<li><a href="/BusinessCircle/3/">工体</a></li>
-                    
-            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>
-            	
-            		<li><a href="/BusinessCircle/5/">广安门</a></li>
-            	
+            		<li><a href="/BusinessCircle/1/">五道口</a></li>           	
+            		<li><a href="/BusinessCircle/2/">中关村</a></li>           	
+            		<li><a href="/BusinessCircle/11/">西直门</a></li>            	     
+            		<li><a href="/BusinessCircle/4/">马家堡</a></li>            		       	
+            		<li><a href="/BusinessCircle/3/">工体</a></li>                    
+            		<li><a href="/BusinessCircle/7/">白纸坊</a></li>            	
+            		<li><a href="/BusinessCircle/5/">广安门</a></li>           	
             		<li><a href="/BusinessCircle/13/">魏公村</a></li>
             	
             </ul>
@@ -452,14 +443,14 @@ var path = '';
         	<div class="div1">
             	<img src="<%=path%>/pages/KD/images/banner-app.png" />
                 <div>
-                    <p>有美食手机客户端</p>
+                    <p>快订手机客户端</p>
                      <a class="down" target="_blank" href="http://self.youmeishi.cn/TrainPlatform/downloads/yms.apk">立即下载</a>
                 </div>
             </div>
             <div class="div1">
             	<img src="<%=path%>/pages/KD/images/yms-ewm.png" />
                 <div>
-                    <p>有美食微信点餐</p>
+                    <p>快订微信点餐</p>
                     <p class="p1">随时掌握美食新动态</p>
                 </div>
             </div>
@@ -474,7 +465,7 @@ var path = '';
         	<div>
             	<p class="p1">关于我们</p>
                 <ul>
-                	<li><a target="_blank" href="/introduction/">有美食简介</a></li>
+                	<li><a target="_blank" href="/introduction/">快订简介</a></li>
                     <li><a target="_blank" href="/contact/">联系我们</a></li>
                     <li><a target="_blank" href="/partners/">合作伙伴</a></li>
                     <li><a target="_blank" href="http://self.youmeishi.cn/TrainPlatform/RecType/ConListPre.do">诚聘英才</a></li>
@@ -513,16 +504,16 @@ var path = '';
                 </ul>
             </div>
             <div class="div1">
-            	<p>有美食微信</p>
+            	<p>快订微信</p>
                 <img src="<%=path%>/pages/KD/images/footer-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
-                <a href="javascript:;">关注有美食微信</a>
+                <a href="javascript:;">关注快订微信</a>
             </div>
             <div class="div1">
-            	<p>有美食APP</p>
+            	<p>快订APP</p>
                 <img src="<%=path%>/pages/KD/images/yms-ewm.png" />
                 <a href="javascript:;">扫描二维码</a>
-                <a href="javascript:;">下载有美食APP</a>
+                <a href="javascript:;">下载快订APP</a>
             </div>
             <div class="div1">
             	<a href="http://platformucb.youmeishi.cn" target="_blank"><img class="img1" src="<%=path%>/pages/KD/images/footer-sj.png" /></a>
@@ -546,7 +537,7 @@ var path = '';
 <!-- 弹框提示 -->
 <div id="bj_div" style="top:0;left:0;position:absolute;z-index:10000;background:#666;filter:alpha(opacity=50);opacity:0.5; display:none;"></div>
 <div id="msg_box" class="msg-box">
-	<div class="p1"><a id="close_msg" href="javascript:;">&times;</a>有美食提醒您！</div>
+	<div class="p1"><a id="close_msg" href="javascript:;">&times;</a>快订提醒您！</div>
 	<p class="p2" id="msg_info"></p>
     <a id="msg_btn" href="javascript:void(0)" class="input_btn" name="yes">确定</a>
     <a id="no_btn" href="javascript:void(0)" class="input_btn" name="no">取消</a>

@@ -308,7 +308,7 @@ var path = '';
             	<a class="a3" href="javascript:;">代理中心</a>&nbsp;|
             	<ul>
             		<li><a target="_blank" href="http://info.unisapp.cn/Agents/">代理商入口</a></li>
-                    <li><a target="_blank" href="http://www.youmeishi.com.cn/ymsSite/downloads/紫光有美食·云餐饮管理系统agent.zip">软件下载</a></li>
+                    <li><a target="_blank" href="">软件下载</a></li>
                 </ul>
             </li>
             <li class="li1">
@@ -385,7 +385,7 @@ var path = '';
     	<ul class="nav-ul clearfix">
         	<li><a class="ahover" href="home.do">首页</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
+            <li><a class="a1" href="dz.do">预订桌位</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>

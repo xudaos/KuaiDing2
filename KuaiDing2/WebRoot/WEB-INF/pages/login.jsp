@@ -52,29 +52,30 @@ var path = '';
             </ul>
             <div id="general_login" class="form" onkeydown="Enterpt(event)">
     	         <form action="/Operate/Login.do" method="post" id="general_login_form">
-    	             <p>
-        	              <span class="span1">用户名：</span>
-                          <input class="input1" name="loginName" id="loginName" type="text" placeholder="邮箱/手机号" />
+    	            <p>
+        	             <span class="span1">用户名：</span>
+                         <input class="input1" name="loginName" id="loginName" type="text" placeholder="邮箱/手机号" />
             
-                     </p>
-                     <p>
-                          <span class="span1">密&nbsp;&nbsp;&nbsp;码：</span>
-                          <input class="input1" name="loginPass" id="loginPass" type="password" />
+                    </p>
+                    <p>
+                         <span class="span1">密&nbsp;&nbsp;&nbsp;码：</span>
+                         <input class="input1" name="loginPass" id="loginPass" type="password" />
            
-                     </p>
-        			 <div class="p1">
-        	            <div>
-            	            <span class="span1">验证码：</span>
-            	            <input class="input2" type="text" name="vcode" id="verifyCode" />
-                        </div>
-                        <div class="yzmtp">
-            	            <img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
-                        </div>
-                        <div class="gh">
-                            <span>看不清？</span>
-                            <a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
-                        </div>
-                    </div>        			 
+                    </p>
+                    <div class="p1">
+        				<div>
+            				<span class="span1">验证码：</span>
+            				<input class="input2" type="text" name="vcode" id="verifyCode" />
+            			</div>
+            			<div class="yzmtp">
+            				<img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
+            			</div>
+            			<div class="gh">
+                			<span>看不清？</span>
+                			<a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
+            			</div>
+        			</div>
+                            			 
                     <p class="p2">
                           <span class="span1"></span>
                           <input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />

@@ -59,19 +59,6 @@
             	<input class="input1" name="loginPass2" id="loginPass" type="password2" />
            
         	</p>
-        	<div class="p1">
-        		<div>
-            		<span class="span1">验证码：</span>
-            		<input class="input2" type="text" name="vcode" id="verifyCode" />
-            	</div>
-            	<div class="yzmtp">
-            		<img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
-            	</div>
-            	<div class="gh">
-                	<span>看不清？</span>
-                	<a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
-            	</div>
-        	</div>
         	<p class="p2">
             	<span class="span1"></span>
             	<input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />
@@ -99,19 +86,7 @@
             	<span class="span1">动态码：</span>
             	<input class="input2" id="mobileCode" name="mobileCode" type="text" />
         	</p>
-        	<div class="p1">
-        		<div>
-            		<span class="span1">验证码：</span>
-            		<input class="input2" type="text" name="vcode" id="verifyCode" />
-            	</div>
-            	<div class="yzmtp">
-            		<img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
-            	</div>
-            	<div class="gh">
-                	<span>看不清？</span>
-                	<a href="javascript:;" onclick="jQuery('#v_pic').click();">换一张</a>
-            	</div>
-        	</div>
+        	
         	<p class="p2">
             	<span class="span1"></span>
             	<input class="input3" name="chkRememberLoginName" id="chkRememberLoginName" type="checkbox" />
