@@ -382,7 +382,7 @@ var path = '';
     	<ul class="nav-ul clearfix">
         	<li><a  href="home.do">首页</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
+            <li><a  href="dz.do" class="a1">预订桌位</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>

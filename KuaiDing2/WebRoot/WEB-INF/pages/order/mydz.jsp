@@ -359,7 +359,7 @@ var path = '';
        <div class="rst-right">
           <ul class="rst-nav2">
                 <li class="bg3">
-                	<h4>订餐详情</h4>
+                	<h4>订桌详情</h4>
                     <img src="<%=path%>/pages/Order/images/dzlc.png" />
                 </li>
             </ul>
@@ -376,18 +376,22 @@ var path = '';
                 </span>
                 <li>
                     <h5>
-                        <label class="lable1">桌位名称：会客厅（一楼）</label>
+                        <label class="lable4">桌位名称</label>
+                        <label class="lable1">会客厅（一楼）</label>
                     </h5>
                     <h5>
-                        <label class="lable1">人数范围：5-8人</label>
+                        <label class="lable4">人数范围</label>
+                        <label class="lable1">5-8人</label>
                     </h5>
                     <h5>
-                        <label class="lable1">平均消费：50/客</label>
+                        <label class="lable4">平均消费</label>
+                        <label class="lable1">50/客</label>
                     </h5>
                 </li>
                 <li>
                     <h5>
-                        <label class="lable1">订单编号：201604070001</label>
+                        <label class="lable4">订单编号</label>
+                        <label class="lable1">201604070001</label>
                     </h5>
                 </li>
             </ul>
@@ -401,18 +405,22 @@ var path = '';
                     </span>
                     <li>
                         <h5>
-                            <label class="lable1">称&nbsp;&nbsp;&nbsp;&nbsp;谓：</label>
+                            <label class="lable2">称　　谓</label>
+                            <label class="lable1">小豆丁</label>
                         </h5>
                         <h5>
-                            <label class="lable1">就餐时间：</label>
+                            <label class="lable3">联系方式</label>
+                            <label class="lable1">18817376392</label>
                         </h5>
                         <h5>
-                            <label class="lable1">手&nbsp;机&nbsp;号：</label>
+                            <label class="lable4">就餐时间</label>
+                            <label class="lable1">5月1日 周日下午六点半</label>
                         </h5>
                     </li>
                     <li>
                         <h5>
-                            <label class="lable1">备&nbsp;&nbsp;&nbsp;&nbsp;注：少点辣</label>
+                            <label class="lable2">备　　注</label>
+                            <label class="lable1">不能吃辣</label>
                         </h5>
                     </li>
                 </ul>

@@ -448,32 +448,34 @@ var path = '';
         <div class="order-right">
             <div class="info">
                 <ul>
-                    <span class="span2">
+                    <span class="span0">
                         <h2>订单信息</h2>
                     </span>
                     <li>
                        <form>
                           <h5>
-                             <span class="span1">姓&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                             <span class="span1">姓　　名</span>
                              <input class="input1" name="name" id="name" type="text" placeholder="请输入您的姓名" required />
                           </h5>
                           <h5>
-                             <span class="span1">性&nbsp;&nbsp;&nbsp;&nbsp;别</span>
+                             <span class="span1">性　　别</span>
                              <input class="radio" type="radio" name="sex" value="male" required/> 男士
                              <input class="radio" type="radio" name="sex" value="female" required/>女士
                           </h5>
                           <h5>
-                              <span class="span1">地&nbsp;&nbsp;&nbsp;&nbsp;址</span>
+                              <span class="span1">地　　址</span>
                               <input class="input1" name="adress" id="adress" type="text" placeholder="单元、门牌号" required />
                           </h5>
                           <h5>
-                              <span class="span1">手&nbsp;机&nbsp;号</span>
+                              <span class="span1">电　　话</span>
                               <input class="input1" name="phone" id="phone" type="text" placeholder="请输入您的手机号" required />
                           </h5>
                           <button class="btn2">保存信息</button>
                        </form>
                     </li>
-                    <span class="span2">
+                </ul>
+                <ul>
+                    <span class="span0">
                         <h2>其他信息</h2>
                     </span>
                     <li>

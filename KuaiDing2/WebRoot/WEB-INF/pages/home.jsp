@@ -5,7 +5,7 @@
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
   
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="zh-cn">
 <head>
 
@@ -384,7 +384,7 @@ var path = '';
 	<div class="container clearfix">
     	<ul class="nav-ul clearfix">
         	<li><a class="ahover" href="home.do">首页</a></li>
-            <li><a  href="yd.do">预订点餐</a></li>
+            <li><a href="yd.do">预订点餐</a></li>
             <li><a class="a1" href="dz.do">预订桌位</a></li>
         </ul>
         <div class="shangquan">

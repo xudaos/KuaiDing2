@@ -450,35 +450,40 @@ var path = '';
                     <h2>订单信息</h2>
                 </span>
                 <ul>
-                  <li>
-                    <p>
+                    <li>
                         <h5>
-                            <label class="lable1">订&nbsp;单&nbsp;号：201603230001</label>
+                            <label class="lable1">订单编号</label>
+                            <label class="lable1">201603230001</label>
                         </h5>
                         <h5>
-                            <label class="lable1">配送方式：中国全聚德大连烤鸭店提供配送服务</label>
+                            <label class="lable1">配送方式</label>
+                            <label class="lable1">中国全聚德大连烤鸭店提供配送服务</label>
                         </h5>
-                    </p>
-                    <p>
+                    </li>
+                    <li>
                         <h5>
-                            <label class="lable1">联&nbsp;系&nbsp;人：吴婷</label>
+                            <label class="lable1">姓　　名</label>
+                            <label class="lable1">Kris</label>
                         </h5>
                         <h5>
-                            <label class="lable1">联系电话：18252357156</label>
+                            <label class="lable1">联系电话</label>
+                            <label class="lable1">18817376392</label>
                         </h5>
                         <h5>
-                            <label class="lable1">收货地址：江苏省淮安软件园2号楼101室</label>
+                            <label class="lable1">收货地址</label>
+                            <label class="lable1">江苏省淮安软件园2号楼101室</label>
                         </h5>
-                    </p>
-                    <p>
+                    </li>
+                    <li>
                         <h5>
-                            <label class="lable1">送达时间：尽快送出</label>
+                            <label class="lable1">送达时间</label>
+                            <label class="lable1">尽快送出</label>
                         </h5>                    
                         <h5>
-                            <label class="lable1">备&nbsp;&nbsp;&nbsp;&nbsp;注：少点辣</label>
+                            <label class="lable1">备　　注</label>
+                            <label class="lable1">少点辣</label>
                         </h5>
-                    </p>
-                  </li>
+                	</li>
                 </ul>
             </div>
         </div>

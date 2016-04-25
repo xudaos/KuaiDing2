@@ -5,7 +5,7 @@
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="zh-cn">
 <head>
 
@@ -68,7 +68,7 @@ var path = '';
             				<input class="input2" type="text" name="vcode" id="verifyCode" />
             			</div>
             			<div class="yzmtp">
-            				<img id="v_pic" name="v_pic" alt="点击刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
+            				<img id="v_pic" name="v_pic" alt="刷新验证码" src="/ImageServlet?time=+new Date().getTime()" />
             			</div>
             			<div class="gh">
                 			<span>看不清？</span>

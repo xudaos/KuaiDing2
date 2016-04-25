@@ -5,7 +5,7 @@
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="zh-cn">
 <head>
 
@@ -383,7 +383,7 @@ var path = '';
     	<ul class="nav-ul clearfix">
         	<li><a  href="home.do">首页</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
+            <li><a  href="dz.do" class="a1">预订桌位</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>
@@ -415,31 +415,13 @@ var path = '';
       
        <div class="rst-right">
           <ul class="rst-nav2">
-                <li class="bg5">
-                	<a href=#>
-                		<h4 style="margin-left:65px">留言</h4>
-                    </a>
-                </li>
-                <li class="bg4">
-                	<a href=#>
-                		<h4 style="margin-left:65px">评价</h4>
-                    </a>
-                </li>
-                <li class="bg3">
-                	<a href=#>
-                		<h4 style="margin-left:55px">美食墙</h4>
-                    </a>
-                </li>
-                <li class="bg2">
-                	<a href=#>
-                		<h4 style="margin-left:40px">商家信息</h4>
-                    </a>
-                </li>
-                <li class="bg1">
-                	<a href=#>
-                		<h4 style="margin-left:65px">菜单</h4>
-                	</a>
-                </li>
+          
+                <li class="bg5"><a href=#><h4>留言</h4></a></li>
+                <li class="bg4"><a href=#><h4>评价</h4></a></li>
+                <li class="bg3"><a href=#><h4>美食墙</h4></a></li>
+                <li class="bg2"><a href=#><h4>商家信息</h4></a></li>
+                <li class="bg1"><a href=#><h4>菜单</h4></a></li>
+                
             </ul>
        </div>
     </div>

@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>快订-专业的餐饮服务平台,提供餐厅自助点餐、外卖、预订及美食社区资讯</title>
 
-<meta name="baidu-site-verification" content="zcXqQTs5gr" />
+<meta name="baidu-site-verification" content="zcXqQTs5gr" /> 
 <link rel="shortcut icon" href="<%=path%>/pages/Restaurant/images/200.png" />
 
 <link href="<%=path%>/pages/Restaurant/css/common.css" rel="stylesheet" type="text/css" />
@@ -382,7 +382,7 @@ var path = '';
     	<ul class="nav-ul clearfix">
         	<li><a  href="home.do">首页</a></li>
             <li><a  href="yd.do">预订点餐</a></li>
-            <li><a  href="dz.do">预订桌位</a></li>
+            <li><a  href="dz.do" class="a1">预订桌位</a></li>
         </ul>
         <div class="shangquan">
         	<p>热门商圈：</p>
@@ -414,31 +414,11 @@ var path = '';
       
        <div class="rst-right">
           <ul class="rst-nav2">
-                <li class="bg5">
-                	<a href=#>
-                		<h4 style="margin-left:65px">留言</h4>
-                    </a>
-                </li>
-                <li class="bg4">
-                	<a href=#>
-                		<h4 style="margin-left:65px">评价</h4>
-                    </a>
-                </li>
-                <li class="bg3">
-                	<a href=#>
-                		<h4 style="margin-left:55px">美食墙</h4>
-                    </a>
-                </li>
-                <li class="bg2">
-                	<a href=#>
-                		<h4 style="margin-left:40px">商家信息</h4>
-                    </a>
-                </li>
-                <li class="bg1">
-                	<a href=#>
-                		<h4 style="margin-left:65px">菜单</h4>
-                	</a>
-                </li>
+                <li class="bg5"><a href=#><h4>留言</h4></a></li>
+                <li class="bg4"><a href=#><h4>评价</h4></a></li>
+                <li class="bg3"><a href=#><h4>美食墙</h4></a></li>
+                <li class="bg2"><a href=#><h4>商家信息</h4></a></li>
+                <li class="bg1"><a href=#><h4>菜单</h4></a></li>
             </ul>
        </div>
     </div>
@@ -449,8 +429,51 @@ var path = '';
        <div class="dz-left">
           <div class="menu">
 		     <div class="menuParent" id="zwfl">
-			
-		     </div>
+			    <div class="ListTitlePanel">
+				    <div class="ListTitle">
+					    <strong>分类1</strong>
+				    </div>
+			    </div>
+			    <div class="menuList">
+				    <div> <a href="#">桌位1</a></div>
+				    <div> <a href="#">桌位2 </a> </div>
+				    <div> <a href="#">桌位3</a></div>
+			    </div>
+			    
+			    <div class="ListTitlePanel">
+				    <div class="ListTitle">
+					    <strong>分类2</strong>
+				    </div>
+			    </div>
+			    <div class="menuList">
+				    <div> <a href="#">桌位4</a></div>
+					<div> <a href="#">桌位5</a></div>
+					<div> <a href="#">桌位6</a></div>
+					<div> <a href="#">桌位7</a></div>
+				</div>
+				
+				<div class="ListTitlePanel">
+					<div class="ListTitle">
+						<strong>分类3</strong>
+					</div>
+				</div>
+				<div class="menuList">
+					<div> <a href="#">桌位8</a></div>
+					<div> <a href="#">桌位9</a></div>
+					<div> <a href="#">桌位10</a></div>
+					<div> <a href="#">桌位11</a></div>
+				</div>
+				
+				<div class="ListTitlePanel">
+					<div class="ListTitle">
+						<strong>分类4</strong>
+					</div>
+				</div>
+				<div class="menuList">
+					<div> <a href="#">桌位12</a></div>
+					<div> <a href="#">桌位13</a></div>
+				</div>
+			</div>
 	     </div>
        </div>
        
@@ -464,30 +487,34 @@ var path = '';
                 <h5><label class="lable1">人数范围</label></h5>
                 <h5><label class="lable1">平均消费</label></h5>
              </li>
+         </ul>
+         <ul>    
              <span class="span2">
                 <h2>订桌信息</h2>
              </span>
              <li>
-                <form>
-                   <h5>
-                      <span class="span1">称&nbsp;&nbsp;&nbsp;&nbsp;谓</span>
-                      <input class="input3" name="name" id="name" type="text" placeholder="例如：张先生" required />
-                   </h5>
-                   <h5>
-                       <span class="span1">就餐时间</span>
-                       <input class="input3" name="time" id="time" type="text" placeholder="请选择就餐时间" required />
-                   </h5>
-                   <h5>
-                       <span class="span1">手&nbsp;机&nbsp;号</span>
-                       <input class="input3" name="phone" id="phone" type="text" placeholder="请输入您的手机号" required />
-                   </h5>
-                   <h5>
-                      <span class="span1">备&nbsp;&nbsp;&nbsp;&nbsp;注</span>
-                      <input class="input3" name="remarks" id="remarks" type="text" />
-                   </h5>
-                   <button class="btn1">确认订桌</button>
-                </form>
+                 <h5>
+                    <span class="span1"><p class="w2">称　　谓</p></span>
+                    <input class="input3" name="name" id="name" type="text" placeholder="例如：张先生" required />
+                 </h5>
+                 <h5>
+                     <span class="span1"><p class="w3">电　　话</p></span>
+                     <input class="input3" name="phone" id="phone" type="text" placeholder="请输入您的手机号" required />
+                 </h5>
+                 <h5>
+                     <span class="span1"><p class="w4">就餐时间</p></span>
+                     <input class="input3" name="time" id="time" type="text" placeholder="请选择就餐时间" required />
+                 </h5>
+                 <h5>
+                     <span class="span1"><p class="w2">备　　注</p></span>
+                     <input class="input3" name="remarks" id="remarks" type="text" />
+                 </h5> 
              </li>
+          </ul>
+          <ul>
+              <li>
+                  <button class="btn1">确认订桌</button>
+              </li>
           </ul>
        </div>
     </div>

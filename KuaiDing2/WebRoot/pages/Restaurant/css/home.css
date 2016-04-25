@@ -18,7 +18,7 @@
 .rst-right .bg4 { background:#32b3ed;}
 .rst-right .bg5 { background:#f93;}
 .rst-right li:hover, .rst-right .li1 { background-color:#89c935;}
-.rst-right h4 { margin-top:15px;}
+.rst-right h4 { margin-top:15px; text-align:center;}
 
 /* 菜单（rst-menu） */
 .menu-top{ cursor:pointer; margin-top:30px;}
