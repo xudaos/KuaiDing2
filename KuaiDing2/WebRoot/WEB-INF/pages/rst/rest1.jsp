@@ -446,6 +446,8 @@ var path = '';
                    <ul id="menuLists" class="menu-lists">
                    </ul>
                 </div>
+                <div id="menuMeals" class="menu-meals">
+                </div>
              </div>
           </div>         
        
@@ -513,7 +515,7 @@ var path = '';
                          <span>
                                <img  src="<%=path%>/pages/Restaurant/images/star5.png" />
                                <br />
-                               <h7 style="margin-left:20px">320人评价</h7>
+                               <h7>320人评价</h7>
                           </span> 
                       </li>
                       <li class="pingjia1">
@@ -549,7 +551,7 @@ var path = '';
           </div>
           
           <div class="rst-comments">
-          <div class="comments-top">
+          	<div class="comments-top">
                 <ul class="bg5">
                 	  <li><h4 style="margin-left:50px">留言</h4></li>
                 </ul>
@@ -748,9 +750,11 @@ function getMenuList(){
 				htmlStr += '</li>';
 			}
 		}
-		htmlStr += '</ul></div></div>';
+		htmlStr += '</ul>';
+		htmlStr += '</div>';
+		htmlStr += '</div>';
 	}
-	$('#menuKinds').after(htmlStr);
+	$('#menuMeals').after(htmlStr);
 }
 
 //加载美食墙

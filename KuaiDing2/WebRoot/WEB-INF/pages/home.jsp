@@ -656,6 +656,14 @@ var path = '';
 </div>
 <!-- jQuery -->
 <script src="<%=path%>/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
+<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
+<script type="text/javascript" src="<%=path%>/pages/KD/js/home.js"></script>
+
 <script type="text/javascript">
 
 $(function(){
@@ -797,14 +805,6 @@ function collectp(n,t){
 	}
 }
 </script>
-
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/common.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/jquery.placeholder.js"></script>
-<script src="<%=path%>/pages/KD/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/msgbox.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/move-top.js"></script>
-<script type="text/javascript" src="<%=path%>/pages/KD/js/home.js"></script>
 
 </body>
 
